@@ -7,8 +7,8 @@ import firstCard from '../assets/firstCard.png'
 import secondCard from '../assets/secondCard.png'
 import starsSub from '../assets/starsSub.png'
 import logo1 from '../assets/logo1.png'
-import starStart from '../assets/stare-animation-start.png'
-import starEnd from '../assets/stare-animation-end.png'
+import starStart from '../assets/stare-animation-end.png'
+import platStar from '../assets/platform-star.png'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -117,7 +117,7 @@ export function Main() {
 				'.platform-footer',
 				{
 					opacity: 0,
-					y: 200,
+					y: 230,
 				},
 				{
 					opacity: 1,
@@ -165,12 +165,14 @@ export function Main() {
 									<div className='star-left'>
 										<img
 											src={starStart}
+											alt='starStart'
 											className='star-animation star-left-animation'
 										/>
 									</div>
 									<div className='star-right'>
 										<img
 											src={starStart}
+											alt='starStart'
 											className='star-animation star-right-animation'
 										/>
 									</div>
@@ -180,12 +182,14 @@ export function Main() {
 									<div className='star-left'>
 										<img
 											src={starStart}
+											alt='starStart'
 											className='star-animation star-left-animation'
 										/>
 									</div>
 									<div className='star-right'>
 										<img
 											src={starStart}
+											alt='starStart'
 											className='star-animation star-right-animation'
 										/>
 									</div>
@@ -195,12 +199,14 @@ export function Main() {
 									<div className='star-left'>
 										<img
 											src={starStart}
+											alt='starStart'
 											className='star-animation star-left-animation'
 										/>
 									</div>
 									<div className='star-right'>
 										<img
 											src={starStart}
+											alt='starStart'
 											className='star-animation star-right-animation'
 										/>
 									</div>
@@ -259,7 +265,24 @@ export function Main() {
 						</div>
 						<div className='platform-footer'>
 							<div className='platform-footer-text'>
-								Experience with Industry Leaders
+								Let’s explore how PRO-AI can transform your business.
+							</div>
+
+							<div className='platform-stars'>
+								<div className='platformLeft-star'>
+									<img
+										src={platStar}
+										alt='platStar'
+										className='platform-star '
+									/>
+								</div>
+								<div className='platformRight-star'>
+									<img
+										src={platStar}
+										alt='platStar'
+										className='platform-star '
+									/>
+								</div>
 							</div>
 						</div>
 					</div>

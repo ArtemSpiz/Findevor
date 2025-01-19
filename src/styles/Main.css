@@ -101,10 +101,12 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	overflow: hidden;
 }
 
 .main-star {
 	display: flex;
+
 	align-items: center;
 	justify-content: space-between;
 }
@@ -129,7 +131,7 @@
 .star-animation {
 	opacity: 0;
 	transform: scale(0.5);
-	animation: fadeAndMove 2s infinite ease-in-out;
+	animation: fadeAndMove 3s infinite ease-in-out;
 }
 
 .star-left-animation {
@@ -143,31 +145,52 @@
 @keyframes leftToCenter {
 	0% {
 		opacity: 0;
-		transform: translateX(-100px) scale(0.5);
+		filter: brightness(0.5); /* Дуже яскрава зірка */
+		transform: translateX(100px) scale(0.5);
 	}
 	50% {
 		opacity: 1;
+		filter: brightness(1); /* Нормальна яскравість */
 		transform: translateX(0) scale(1);
 	}
 	100% {
 		opacity: 0;
-		transform: translateX(100px) scale(0.5);
+		filter: brightness(2); /* Менш яскрава зірка */
+		transform: translateX(-30%) scale(0.7);
 	}
 }
 
 @keyframes rightToCenter {
 	0% {
 		opacity: 0;
+		filter: brightness(0.5); /* Дуже яскрава зірка */
 		transform: translateX(100px) scale(0.5);
 	}
 	50% {
 		opacity: 1;
+		filter: brightness(1); /* Нормальна яскравість */
 		transform: translateX(0) scale(1);
 	}
 	100% {
 		opacity: 0;
-		transform: translateX(-100px) scale(0.5);
+		filter: brightness(2); /* Менш яскрава зірка */
+		transform: translateX(-30%) scale(0.7);
 	}
+}
+
+.star-animation {
+	opacity: 0;
+	transform: scale(0.5);
+	filter: brightness(2); /* Початкова яскравість */
+	animation: 3s infinite ease-in-out;
+}
+
+.star-left-animation {
+	animation-name: leftToCenter;
+}
+
+.star-right-animation {
+	animation-name: rightToCenter;
 }
 
 .main-carts {
@@ -397,4 +420,44 @@
 
 .platform-texts {
 	transition: all 0.3s ease;
+}
+
+.platform-stars {
+	overflow: hidden;
+	height: 100px;
+	position: absolute;
+	justify-content: space-between;
+	width: 120%;
+	display: flex;
+	right: 50%;
+	top: 40%;
+	transform: translate(50%, -40%);
+}
+
+.platform-star {
+	opacity: 0;
+	transform: scale(0.5);
+	animation: fadeAndMove 3s infinite ease-in-out;
+}
+
+.platform-star {
+	animation-name: topToBottom;
+}
+
+@keyframes topToBottom {
+	0% {
+		opacity: 0;
+		filter: brightness(2);
+		transform: translateY(-55px) scale(1);
+	}
+	50% {
+		opacity: 1;
+		filter: brightness(1);
+		transform: translateY(0px) scale(1);
+	}
+	100% {
+		opacity: 0;
+		filter: brightness(0.5);
+		transform: translateY(55px) scale(0.5);
+	}
 }
