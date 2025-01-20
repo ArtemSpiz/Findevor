@@ -1,13 +1,14 @@
+.allScreens {
+	margin-top: 262px;
+}
+
 .screens {
 	background-color: #0a0a0a;
-	min-height: 100vh;
-	margin-top: 262px;
+	height: 100vh;
 	align-items: center;
 	display: flex;
 	backface-visibility: hidden;
 	perspective: 1000;
-	will-change: transform;
-	transform: translateZ(0);
 }
 
 .screens-container {
@@ -226,7 +227,9 @@
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 8px;
-	overflow-y: hidden;
+	flex-direction: column;
+	overflow-y: scroll;
+	scrollbar-width: none;
 	height: 513px;
 }
 
@@ -294,10 +297,9 @@
 
 .screensSecond {
 	background-color: #0a0a0a;
-	min-height: 100vh;
+	height: 100vh;
 	overflow: hidden;
 	align-items: center;
-
 	display: flex;
 }
 
@@ -416,7 +418,7 @@
 
 .screensThird {
 	background-color: #0a0a0a;
-	min-height: 100vh;
+	height: 100vh;
 	overflow: hidden;
 	align-items: center;
 	display: flex;
@@ -498,18 +500,7 @@
 	overflow-y: hidden;
 }
 
-.firstScreen-left-title,
-.firstScreen-left-Fill,
-.firstScreenFill {
-	opacity: 1;
-}
-
-.screens {
-	position: relative;
-	overflow: hidden;
-}
-
-.firstScreen-texts,
+/* .firstScreen-texts,
 .firstScreen-left-container,
 .firstScreenFill,
 .secondScreen-texts,
@@ -519,5 +510,18 @@
 .thirdScreen-left-title,
 .thirdScreen-left-container,
 .thirdScreenFill {
-	transition: opacity 0.5s ease;
+	transition: opacity 0.5s ease, visibility 0.5s ease;
+	opacity: 0;
+	visibility: hidden;
+} */
+
+.screens {
+	position: relative;
+}
+
+.firstScreen-texts,
+.firstScreen-left-container,
+.firstScreenFill {
+	opacity: 1;
+	visibility: visible;
 }

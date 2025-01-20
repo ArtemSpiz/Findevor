@@ -14,7 +14,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 export function Main() {
 	React.useEffect(() => {
-		const timeline = gsap.timeline({
+		const mainTimeline = gsap.timeline({
 			scrollTrigger: {
 				trigger: '.box.a',
 				start: 'bottom bottom', // Починаємо, коли нижній край боксу доходить до нижнього краю вікна
@@ -24,17 +24,17 @@ export function Main() {
 				onEnter: () => {
 					// Затримка перед початком анімації
 					setTimeout(() => {
-						timeline.play() // Запускаємо анімацію після затримки
+						mainTimeline.play() // Запускаємо анімацію після затримки
 					}, 500) // Затримка 500 мс
 				},
 				onLeaveBack: () => {
-					timeline.pause(0) // Скидаємо анімацію при поверненні назад
+					mainTimeline.pause(0) // Скидаємо анімацію при поверненні назад
 				},
 			},
 			paused: true, // Спочатку анімація зупинена
 		})
 
-		timeline
+		mainTimeline
 			// Зникає Header
 			.to('.Header', {
 				opacity: 0,
@@ -133,7 +133,7 @@ export function Main() {
 		gsap.set('.platform-texts, .platform-footer', { clearProps: 'all' })
 
 		return () => {
-			if (timeline) timeline.kill()
+			if (mainTimeline) mainTimeline.kill()
 		}
 	}, [])
 
