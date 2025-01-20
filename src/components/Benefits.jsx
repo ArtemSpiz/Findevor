@@ -225,7 +225,7 @@ export function Benefits() {
 	}, [])
 
 	useEffect(() => {
-		const interval = setInterval(() => scrollBenefit('up'), 3000)
+		const interval = setInterval(() => scrollBenefit('up'), 4000)
 		return () => clearInterval(interval)
 	}, [])
 

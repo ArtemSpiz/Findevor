@@ -1,0 +1,145 @@
+.quotes {
+	background: var(--black-900, #0a0a0a);
+	height: 100%;
+	overflow-x: scroll;
+	scrollbar-width: none;
+}
+
+.quote-container {
+	display: flex;
+	padding: 40px 0px;
+	flex-direction: column;
+	align-items: center;
+	gap: 40px;
+}
+
+.quote-wrapper::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: radial-gradient(
+			50% 50% at 50% 50%,
+			rgba(10, 10, 10, 0) 65%,
+			rgba(10, 10, 10, 0.4) 100%
+		),
+		linear-gradient(
+			0deg,
+			rgba(13, 15, 19, 0) 0%,
+			rgba(40, 48, 60, 0.6) 30%,
+			#313b4a 50%,
+			rgba(40, 48, 60, 0.6) 70%,
+			rgba(13, 15, 19, 0) 100%
+		);
+	display: inline-flex;
+	height: 80%;
+	justify-content: center;
+	align-items: flex-start;
+	flex-shrink: 0;
+}
+
+.quote-wrapper {
+	display: flex;
+	align-items: center;
+	gap: 80px;
+	width: 200%;
+}
+
+.quote {
+	border-radius: 36px;
+	background: var(
+		--dark-oxford-blue-1,
+		linear-gradient(180deg, #111319 0%, #101b2c 100%)
+	);
+	box-shadow: 0px 0px 28px 0px #344b6d;
+	width: 80%;
+}
+
+.quote-wrapper-container {
+	display: flex;
+	padding: 80px 48px;
+	flex-direction: column;
+	align-items: center;
+	gap: 56px;
+}
+
+.quote-wrapper-top {
+	display: flex;
+	align-items: flex-start;
+	gap: 40px;
+	align-self: stretch;
+}
+
+.quote-wrapper-leftImg {
+	display: flex;
+	align-items: start;
+	display: flex;
+	width: 48px;
+	height: 48px;
+	justify-content: center;
+	align-items: center;
+}
+
+.quote-wrapper-rightImg {
+	display: flex;
+	align-items: end;
+	rotate: 180deg;
+}
+
+.quote-wrapper-text {
+	color: var(--oxford-blue-400, #7c92b8);
+
+	/* text L */
+	font-family: 'Open Sans';
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%; /* 38.4px */
+	opacity: 0.8;
+}
+
+.quote-wrapper-bottom {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	gap: 24px;
+}
+
+.wrapper-bottom-right {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 8px;
+}
+
+.wrapper-bottom-name {
+	color: var(--white-800, #ebeaef);
+
+	/* text S bold */
+	font-family: 'Open Sans';
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 150%; /* 24px */
+}
+
+.wrapper-bottom-position {
+	color: var(--oxford-blue-300, #abaecd);
+
+	/* text S */
+	font-family: 'Open Sans';
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 150%; /* 24px */
+}
+
+.quotePictureImg {
+	width: 80px;
+	border-radius: 18px;
+}
+
+.quote-starImgTop {
+	rotate: 180deg;
+}
