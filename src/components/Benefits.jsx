@@ -77,6 +77,64 @@ export function Benefits() {
 					/>
 				</svg>
 			),
+			iconMob: (
+				<svg
+					xmlns='http://www.w3.org/2000/svg'
+					width='30'
+					height='30'
+					viewBox='0 0 20 20'
+					fill='none'
+				>
+					<path
+						d='M14 11C11.2386 11 9 9.8807 9 8.5C9 7.11929 11.2386 6 14 6C16.7614 6 19 7.11929 19 8.5C19 9.8807 16.7614 11 14 11Z'
+						stroke='#2E3F5C'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M9 12.5C9 13.8807 11.2386 15 14 15C16.7614 15 19 13.8807 19 12.5'
+						stroke='#2E3F5C'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M1 7.5C1 8.8807 3.23858 10 6 10C7.12583 10 8.1647 9.814 9.0005 9.5'
+						stroke='#2E3F5C'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M1 11C1 12.3807 3.23858 13.5 6 13.5C7.12561 13.5 8.1643 13.314 9 13.0002'
+						stroke='#2E3F5C'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M1 3.5V14.5C1 15.8807 3.23858 17 6 17C7.12563 17 8.1643 16.8139 9 16.5'
+						stroke='#2E3F5C'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M11 6.5V3.5'
+						stroke='#2E3F5C'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M9 8.5V16.5C9 17.8807 11.2386 19 14 19C16.7614 19 19 17.8807 19 16.5V8.5'
+						stroke='#2E3F5C'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M6 6C3.23858 6 1 4.88071 1 3.5C1 2.11929 3.23858 1 6 1C8.7614 1 11 2.11929 11 3.5C11 4.88071 8.7614 6 6 6Z'
+						stroke='#2E3F5C'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+				</svg>
+			),
 		},
 		{
 			id: 2,
@@ -136,6 +194,33 @@ export function Benefits() {
 					/>
 				</svg>
 			),
+			iconMob: (
+				<svg
+					xmlns='http://www.w3.org/2000/svg'
+					width='35'
+					height='35'
+					viewBox='0 0 24 24'
+					fill='none'
+				>
+					<path
+						d='M20 20H4V4'
+						stroke='#2E3F5C'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M4 16.5L12 9L15 12L19.5 7.5'
+						stroke='#2E3F5C'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path d='M9 20L9 14.5' stroke='#2E3F5C' stroke-linecap='round' />
+					<path d='M6 20L6 17.5' stroke='#2E3F5C' stroke-linecap='round' />
+					<path d='M11.9942 20L12 12' stroke='#2E3F5C' stroke-linecap='round' />
+					<path d='M15 20L15 14' stroke='#2E3F5C' stroke-linecap='round' />
+					<path d='M18 20L18 12' stroke='#2E3F5C' stroke-linecap='round' />
+				</svg>
+			),
 		},
 		{
 			id: 3,
@@ -193,15 +278,106 @@ export function Benefits() {
 					/>
 				</svg>
 			),
+			iconMob: (
+				<svg
+					xmlns='http://www.w3.org/2000/svg'
+					width='35'
+					height='35'
+					viewBox='0 0 24 24'
+					fill='none'
+				>
+					<path
+						d='M6 3H3M3 3V6M3 3L6 6'
+						stroke='#2E3F5C'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M18 3H21M21 3V6M21 3L18 6'
+						stroke='#2E3F5C'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M6 21H3M3 21V18M3 21L6 18'
+						stroke='#2E3F5C'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M18 21H21M21 21V18M21 21L18 18'
+						stroke='#2E3F5C'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M12.5145 17.6914L16.5145 15.2914C16.8157 15.1107 17 14.7852 17 14.4339V10.5663C17 10.215 16.8157 9.88949 16.5145 9.70877L12.5145 7.30877C12.1978 7.11876 11.8022 7.11876 11.4855 7.30877L7.4855 9.70877C7.1843 9.88949 7 10.215 7 10.5663V14.4339C7 14.7852 7.1843 15.1107 7.4855 15.2914L11.4855 17.6914C11.8022 17.8814 12.1978 17.8814 12.5145 17.6914Z'
+						stroke='#2E3F5C'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M7.5 10.5L12 12.9995M12 12.9995C12 12.9995 15.7637 10.9492 16.5 10.5M12 12.9995V17.5'
+						stroke='#2E3F5C'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+				</svg>
+			),
 		},
 		{
 			id: 4,
 			title: 'Launch products faster',
 			subtitle: 'with streamlined workflows.',
 			icon: <img src={rocket} alt='Rocket icon' />,
+			iconMob: (
+				<svg
+					xmlns='http://www.w3.org/2000/svg'
+					width='35'
+					height='35'
+					viewBox='0 0 48 48'
+					fill='none'
+				>
+					<path
+						d='M32.3076 27.1435L19.717 33.8342L13.9928 28.11L20.6836 15.5194C22.5915 11.9292 26.1214 9.46774 30.1272 8.93426L38.6783 7.7955C39.4714 7.68984 40.1371 8.35557 40.0315 9.1487L38.8927 17.6997C38.3592 21.7055 35.8978 25.2354 32.3076 27.1435Z'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M9.60815 32.4948C6.68508 35.4178 8.08564 39.7414 8.08564 39.7414C8.08564 39.7414 12.4093 41.142 15.3323 38.2189'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M18.4233 19.3867C9.76082 18.0319 6.77678 26.7401 6.77678 26.7401L13.993 28.1102'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M29.0577 30.021C30.4125 38.6835 21.7043 41.6675 21.7043 41.6675L20.3342 34.4513'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M25.6241 22.203C24.0434 20.6223 24.0707 18.0323 25.6851 16.4179C27.2995 14.8035 29.8895 14.7762 31.4702 16.3569C33.051 17.9376 33.0236 20.5277 31.4093 22.1421C29.7949 23.7565 27.2048 23.7838 25.6241 22.203Z'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+				</svg>
+			),
 		},
 	]
-
+	// Функція перемикання слайдів
 	const scrollBenefit = direction => {
 		setActiveBenefit(prev =>
 			direction === 'up'
@@ -214,18 +390,8 @@ export function Benefits() {
 		)
 	}
 
-	const handleScroll = e => {
-		e.deltaY > 0 ? scrollBenefit('up') : scrollBenefit('down')
-	}
-
 	useEffect(() => {
-		const slider = document.querySelector('.benefits-slider')
-		slider.addEventListener('wheel', handleScroll)
-		return () => slider.removeEventListener('wheel', handleScroll)
-	}, [])
-
-	useEffect(() => {
-		const interval = setInterval(() => scrollBenefit('up'), 4000)
+		const interval = setInterval(() => scrollBenefit('up'), 2000)
 		return () => clearInterval(interval)
 	}, [])
 
@@ -235,10 +401,10 @@ export function Benefits() {
 		const isPrev = index === (activeBenefit - 2 + total) % total
 		const isNext = index === activeBenefit % total
 
-		if (isActive) return 'benefit visible' // Активний
-		if (isPrev) return 'benefit above' // Попередній
-		if (isNext) return 'benefit below' // Наступний
-		return 'benefit hidden' // Інші
+		if (isActive) return 'benefit visible'
+		if (isPrev) return 'benefit above'
+		if (isNext) return 'benefit below'
+		return 'benefit hidden'
 	}
 
 	return (
@@ -251,10 +417,12 @@ export function Benefits() {
 					<div className='benefits-circle'>
 						<img src={benefitsCircle} className='benefits-img' alt='Circle' />
 					</div>
+
 					<div className='benefits-slider'>
 						{benefits.map((benefit, index) => (
 							<div key={benefit.id} className={getClassName(index)}>
-								{benefit.icon}
+								<div className='benefit-icon'>{benefit.icon}</div>
+								<div className='benefit-iconMob'>{benefit.iconMob}</div>
 								<div className='benefit-right'>
 									<div className='benefit-title'>{benefit.title}</div>
 									<div className='benefit-subtitle'>{benefit.subtitle}</div>

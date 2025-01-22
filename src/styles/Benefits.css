@@ -1,14 +1,14 @@
 .benefits {
 	background: var(--black-900, #0a0a0a);
 	height: 100%;
-	position: relative;
-	z-index: -2;
+	padding: 136px 0;
 	overflow: hidden;
+	position: relative;
 }
 
 .benefits-container {
 	display: flex;
-	padding: 135px 40px;
+	padding: 0px 40px;
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 56px;
@@ -33,13 +33,6 @@
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-
-	/* h2 */
-	font-family: 'Open Sans';
-	font-size: 40px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 120%;
 }
 
 .benefits-main {
@@ -58,6 +51,7 @@
 
 .benefits-img {
 	height: 100%;
+	width: 100%;
 	object-fit: cover;
 	margin-left: -40px;
 }
@@ -164,4 +158,125 @@
 	opacity: 0; /* Приховані елементи */
 	transform: scale(0.8) translateY(200%);
 	z-index: 1;
+}
+
+.benefit-iconMob {
+	display: none;
+}
+
+@media (max-width: 1200px) {
+	.benefit-title {
+		font-size: 25px;
+	}
+
+	.benefit-subtitle {
+		font-size: 18px;
+	}
+
+	.benefits-title {
+		font-size: 35px;
+	}
+
+	.benefit {
+		padding: 16px 80px;
+	}
+
+	.benefits-circle {
+		width: 60%;
+	}
+}
+
+@media (max-width: 1000px) {
+	.benefits-img {
+		margin-left: -30%;
+	}
+
+	.benefits-container {
+		padding: 0px 30px;
+		gap: 40px;
+	}
+
+	.benefit {
+		gap: 30px;
+		padding: 16px 60px;
+		width: 400px;
+	}
+	.benefit.above {
+		opacity: 0.5;
+		transform: translateX(-10%) translateY(-120%);
+		z-index: 2;
+	}
+
+	.benefit.below {
+		opacity: 0.5;
+		transform: translateX(-10%) translateY(120%);
+		z-index: 2;
+	}
+
+	.benefits-slider {
+		height: 400px;
+	}
+
+	.benefits {
+		padding: 100px 0px;
+	}
+}
+
+@media (max-width: 700px) {
+	.benefit-iconMob {
+		display: flex;
+	}
+	.benefit-icon {
+		display: none;
+	}
+
+	.benefit-title {
+		font-size: 20px;
+	}
+
+	.benefits {
+		padding: 68px 0px;
+	}
+
+	.benefit {
+		padding: 16px 30px;
+		width: 350px;
+	}
+
+	.benefits-title {
+		font-size: 30px;
+	}
+
+	.benefits-circle {
+		width: 100%;
+	}
+}
+
+@media (max-width: 550px) {
+	.benefits-title {
+		font-size: 22px;
+	}
+
+	.benefit-title {
+		font-size: 16px;
+	}
+
+	.benefit-subtitle {
+		font-size: 14px;
+	}
+
+	.benefit {
+		padding: 12px 16px;
+		width: 280px;
+		height: 40px;
+	}
+
+	.benefits-slider {
+		height: 300px;
+	}
+
+	.benefits-container {
+		padding: 0px 20px;
+		gap: 32px;
+	}
 }

@@ -2,6 +2,8 @@ import { Main } from './components/Main'
 import { Screens } from './components/Screens'
 import { Benefits } from './components/Benefits'
 import { Quote } from './components/Quote'
+import { Portfolio } from './components/Portfolio'
+import { Footer } from './components/Footer'
 
 function App() {
 	return (
@@ -10,6 +12,8 @@ function App() {
 			<Screens></Screens>
 			<Benefits></Benefits>
 			<Quote></Quote>
+			<Portfolio></Portfolio>
+			<Footer></Footer>
 		</div>
 	)
 }

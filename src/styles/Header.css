@@ -1,5 +1,6 @@
 .header {
 	justify-content: center;
+	background: var(--black-900, #0a0a0a);
 }
 
 .container {

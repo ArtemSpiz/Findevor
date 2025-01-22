@@ -4,8 +4,93 @@ import JenKyung from '../assets/JenKyung.png'
 import Vijay from '../assets/Vijay.png'
 import RobBrewer from '../assets/RobBrewer.png'
 import leftQuote from '../assets/leftQuote.png'
+import { useState, useEffect } from 'react'
 
 export function Quote() {
+	useEffect(() => {
+		const quotes = document.querySelectorAll('.quote')
+		const stars = document.querySelectorAll(
+			'.quote-star-left, .quote-star-right'
+		)
+
+		const starsScroll = document.querySelectorAll(
+			'.quote-star-top, .quote-star-bottom'
+		)
+
+		const container = document.querySelector('.quote-wrapcont')
+		let isScrolling = false
+
+		const handleScroll = () => {
+			isScrolling = true
+
+			container.classList.add('scrolling-gap')
+
+			quotes.forEach(quote => {
+				const rect = quote.getBoundingClientRect()
+				const isVisible = rect.left >= 0 && rect.right <= window.innerWidth
+
+				if (isVisible) {
+					quote.classList.add('active')
+				} else {
+					quote.classList.remove('active')
+				}
+			})
+
+			// Ховаємо зірочки під час скролу
+			stars.forEach(star => {
+				star.classList.add('hidden-star') // Додаємо клас для приховування
+			})
+
+			starsScroll.forEach(stars => {
+				stars.classList.add('hidden-stars') // Додаємо клас для приховування
+			})
+
+			container.classList.add('scrolling-gap')
+		}
+
+		const stopScrolling = () => {
+			if (isScrolling) {
+				isScrolling = false
+
+				container.classList.remove('scrolling-gap')
+
+				// Видаляємо клас active після завершення скролу
+				quotes.forEach(quote => {
+					quote.classList.remove('active')
+				})
+
+				// Повертаємо зірочки після завершення скролу
+				stars.forEach(star => {
+					star.classList.remove('hidden-star') // Відновлюємо видимість
+				})
+
+				starsScroll.forEach(stars => {
+					stars.classList.remove('hidden-stars') // Додаємо клас для приховування
+				})
+			}
+		}
+
+		container.addEventListener('scroll', handleScroll)
+
+		// Додаємо затримку для визначення завершення скролу
+		let scrollTimeout
+		container.addEventListener('scroll', () => {
+			clearTimeout(scrollTimeout)
+			scrollTimeout = setTimeout(stopScrolling, 300) // 100 мс після завершення скролу
+		})
+
+		// Зміщуємо контейнер, щоб другий елемент був головним
+		container.scrollTo({
+			left: container.scrollWidth / 4, // Коригуємо відповідно до ширини другого елемента
+			behavior: 'auto',
+		})
+
+		return () => {
+			container.removeEventListener('scroll', handleScroll)
+			container.removeEventListener('scroll', stopScrolling)
+		}
+	}, [])
+
 	const quotes = [
 		{
 			id: 1,
@@ -30,62 +115,86 @@ export function Quote() {
 			picture: RobBrewer,
 		},
 	]
+
 	return (
 		<>
 			<div className='quotes'>
 				<div className='quote-container'>
-					<div className='quote-star-top quote-star-animation'>
+					<div className='quote-star-top'>
 						<img
 							src={quoteStar}
 							alt='quote-star'
-							className='quote-starImg quote-starImgTop'
-						></img>
+							className='quote-starImgLeft'
+						/>
 					</div>
-
 					<div className='quote-wrapper'>
-						{quotes.map(quotes => (
-							<div key={quotes.id} className='quote'>
-								<div className='quote-wrapper-container'>
-									<div className='quote-wrapper-top'>
+						<div className='quote-wrapcont'>
+							{quotes.map(quote => (
+								<div className='quoteStars'>
+									<div className='quote-star-left'>
 										<img
-											className='quote-wrapper-leftImg'
-											src={leftQuote}
-											alt='leftQuote'
-										></img>
-										<p className='quote-wrapper-text'>{quotes.text}</p>
-										<div className='quote-wrapper-right'>
-											<img
-												className='quote-wrapper-rightImg'
-												src={leftQuote}
-												alt='leftQuote'
-											></img>
-										</div>
-									</div>
-									<div className='quote-wrapper-bottom'>
-										<img
-											src={quotes.picture}
-											alt={quotes.author}
-											className='quotePictureImg'
+											src={quoteStar}
+											alt='quote-star'
+											className='quote-starImgLeft'
 										/>
+									</div>
+									<div
+										key={quote.id}
+										className={`quote ${quote.active ? 'active' : ''}`}
+									>
+										<div className='quote-wrapper-container'>
+											<div className='quote-wrapper-top'>
+												<img
+													className='quote-wrapper-leftImg'
+													src={leftQuote}
+													alt='leftQuote'
+												/>
+												<div className='quote-wrapper-text'>{quote.text}</div>
+												<div className='quote-wrapper-right'>
+													<img
+														className='quote-wrapper-rightImg'
+														src={leftQuote}
+														alt='leftQuote'
+													/>
+												</div>
+											</div>
 
-										<div className='wrapper-bottom-right'>
-											<div className='wrapper-bottom-name'>{quotes.author}</div>
-											<div className='wrapper-bottom-position'>
-												{quotes.position}
+											<div className='quote-wrapper-bottom'>
+												<img
+													src={quote.picture}
+													alt={quote.author}
+													className='quotePictureImg'
+												/>
+
+												<div className='wrapper-bottom-right'>
+													<div className='wrapper-bottom-name'>
+														{quote.author}
+													</div>
+													<div className='wrapper-bottom-position'>
+														{quote.position}
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
+									{/* Зірочка справа */}
+									<div className='quote-star-right'>
+										<img
+											src={quoteStar}
+											alt='quote-star'
+											className='quote-starImgRight'
+										/>
+									</div>
 								</div>
-							</div>
-						))}
+							))}
+						</div>
 					</div>
-
-					<div className='quote-star-bottom quote-star-animation'>
+					<div className='quote-star-bottom'>
 						<img
 							src={quoteStar}
 							alt='quote-star'
-							className='quote-starImg quote-starImgBottom'
-						></img>
+							className='quote-starImgRight'
+						/>
 					</div>
 				</div>
 			</div>
