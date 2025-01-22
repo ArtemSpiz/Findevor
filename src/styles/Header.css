@@ -27,6 +27,11 @@
 	line-height: 150%;
 }
 
+.text:hover {
+	cursor: pointer;
+	color: var(--oxford-blue-500, #64799d);
+}
+
 .btn {
 	font-family: 'Open Sans';
 	font-size: 16px;
@@ -47,6 +52,11 @@
 	background: var(--oxford-blue-200, #e5eff9);
 	color: var(--black-900, #0a0a0a);
 	text-align: center;
+}
+
+.btn:hover {
+	background: var(--oxford-blue-300, #abaecd);
+	transition: background-color 0.3s ease, background-size 0.3s ease;
 }
 
 .button {

@@ -43,7 +43,7 @@ export function Screens() {
 			scrollTrigger: {
 				trigger: screensElement,
 				start: 'top top',
-				end: `+=${screenSection.current.children.length}`,
+				end: `+=3000`,
 				scrub: 1,
 				markers: true,
 				id: 'Screens',

@@ -36,9 +36,12 @@ export function Footer() {
 							<div className='footer-link'>
 								<div className='footer-link-title'>Contacts</div>
 								<div className='footer-link-bottom'>
-									<div className='footer-link-subtitle'>
+									<a
+										className='footer-link-subtitle e-mail'
+										href='mailto:partner@findevor.ai'
+									>
 										partner@findevor.ai
-									</div>
+									</a>
 									<div className='footer-link-subtitle'>Social media</div>
 								</div>
 							</div>

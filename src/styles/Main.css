@@ -16,7 +16,7 @@
 	background-size: cover;
 	position: relative;
 	width: 100%;
-	height: 100vh;
+	height: 110vh;
 	background-position: bottom;
 }
 
@@ -91,6 +91,30 @@
 	font-weight: 700;
 	line-height: 140%;
 	border: 0;
+}
+
+.main-btn:hover {
+	box-shadow: 0px 0px 14px 0px #2e70d3, 0px 0px 28px 0px #133e5c inset;
+}
+
+.main-btn:hover .star-path {
+	fill: url(#paint0_linear_2790_12227);
+}
+
+.main-btn:hover .star-path-bottom {
+	fill: url(#paint1_linear_2790_12227);
+}
+
+.main-btn-clicked {
+	box-shadow: 0px 0px 14px 0px #2e70d3, 0px 0px 28px 0px #133e5c inset;
+}
+
+.main-btn-clicked .star-path {
+	fill: url(#paint0_linear_2790_12227);
+}
+
+.main-btn-clicked .star-path-bottom {
+	fill: url(#paint1_linear_2790_12227);
 }
 
 .stars-btn {

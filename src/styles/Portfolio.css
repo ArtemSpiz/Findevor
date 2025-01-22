@@ -112,6 +112,30 @@
 	border: none;
 }
 
+.portfolio-btn:hover {
+	box-shadow: 0px 0px 14px 0px #2e70d3, 0px 0px 28px 0px #133e5c inset;
+}
+
+.portfolio-btn:hover .star-path {
+	fill: url(#paint0_linear_2790_12227);
+}
+
+.portfolio-btn:hover .star-path-bottom {
+	fill: url(#paint1_linear_2790_12227);
+}
+
+.portfolio-btn-clicked {
+	box-shadow: 0px 0px 14px 0px #2e70d3, 0px 0px 28px 0px #133e5c inset;
+}
+
+.portfolio-btn-clicked .star-path {
+	fill: url(#paint0_linear_2790_12227);
+}
+
+.portfolio-btn-clicked .star-path-bottom {
+	fill: url(#paint1_linear_2790_12227);
+}
+
 .starePort {
 	width: 24px;
 	height: 24px;
@@ -124,7 +148,7 @@
 
 .portfolio-star-right {
 	position: absolute;
-	right: 5%;
+	right: -5%;
 }
 
 .portfolio-stars {
