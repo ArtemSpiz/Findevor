@@ -16,6 +16,24 @@
 	perspective: 1000;
 }
 
+.logo-mob,
+.firstScreen-text-mob,
+.firstScreen-title2-mob,
+.firstScreen-title-mob {
+	display: none;
+}
+.cardTop-img-mob,
+.cardBottom-img-mob,
+.cardBottom-img-mob,
+.firstScreen-left-FillMob,
+.secondScreen-right-fill-mob,
+.thirdScreen-left-Fill-mob,
+.secondScreenFillImageMob,
+.cardTop-imgMob,
+.cardBottom-imgMob {
+	display: none;
+}
+
 .screens-container {
 	display: flex;
 	padding: 0px 40px;
@@ -521,7 +539,6 @@
 
 .screensRight {
 	right: 50%;
-	transform: translate(50%, 0);
 }
 
 .firstScreen-right {
@@ -597,21 +614,143 @@
 @media (max-width: 1300px) {
 	.screens-container {
 		flex-direction: column-reverse;
+		height: 100%;
 	}
 
 	.firstScreens {
 		justify-content: center;
+		align-items: flex-start;
 	}
 
 	.screen-left {
 		flex-direction: column-reverse;
 		position: relative;
-	}
-
-	.screen-stars {
-		rotate: 90deg;
+		bottom: -5%;
 	}
 
 	.screenLeftText {
+		width: 300px;
+		text-align: center;
+		align-items: center;
+		display: flex;
+	}
+
+	.firstScreen-titles {
+		display: flex;
+		gap: 8px;
+		justify-content: center;
+		width: 500px;
+	}
+	.screen-stars {
+		rotate: -90deg;
+	}
+
+	.screensLeftFill {
+		height: 500px;
+		overflow: hidden;
+		border-radius: 20px;
+	}
+
+	.firstScreen-right {
+		height: 500px;
+	}
+
+	.screenLeftText {
+		transform: translate(50%, -65%);
+		right: 50%;
+		gap: 8px;
+	}
+
+	.screens {
+		height: 100vh;
+	}
+
+	.firstScreen-left-container {
+		right: 50%;
+		padding: 32px 32px;
+	}
+
+	.firstScreen-left-topScroll {
+		overflow-y: hidden;
+		align-items: center;
+		height: 390px;
+		align-self: center;
+	}
+
+	.firstScreen-left-Top {
+		align-self: center;
+		overflow: scroll;
+		scrollbar-width: none;
+		height: 100%;
+	}
+
+	.firstScreen-left-footer {
+		background-color: #101b2c;
+		margin-top: -80px;
+	}
+
+	.firstScreenFill-container {
+		height: 340px;
+	}
+
+	.firstScreen-right-container {
+		padding: 32px 32px;
+		gap: 20px;
+	}
+
+	.secondScreens-left-container {
+		padding: 32px 32px;
+	}
+
+	.secondScreen-left-container {
+		height: 345px;
+	}
+
+	.secondScreen-fill-left {
+		height: 352px;
+	}
+
+	.secondScreenFill {
+		overflow-y: scroll;
+		height: 345px;
+		scrollbar-width: none;
+	}
+
+	.thirdScreen-left-footer {
+		margin-top: -75px;
+	}
+
+	.screens-container {
+		padding: 0px 20px;
+	}
+}
+
+@media (max-width: 1000px) {
+	/* .cardTop-img-mob,
+	.cardBottom-img-mob,
+	.cardBottom-img-mob,
+	.firstScreen-left-FillMob,
+	.secondScreen-right-fill-mob,
+	.thirdScreen-left-Fill-mob,
+	.secondScreenFillImageMob,
+	.cardTop-imgMob,
+	.cardBottom-imgMob {
+		display: block;
+	}
+
+	.cardTop-img,
+	.cardBottom-img,
+	.cardBottom-img,
+	.firstScreen-left-Fill,
+	.secondScreen-right-fill,
+	.thirdScreen-left-Fill,
+	.secondScreenFillImage,
+	.cardTop-img,
+	.cardBottom-img {
+		display: none;
+	} */
+
+	.screensLeft.closed {
+		width: 80px;
 	}
 }
