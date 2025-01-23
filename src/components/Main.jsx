@@ -7,7 +7,6 @@ import firstCard from '../assets/firstCard.png'
 import secondCard from '../assets/secondCard.png'
 import logo1 from '../assets/logo1.png'
 import starStart from '../assets/stare-animation-end.png'
-import cardMob from '../assets/cards-mob.png'
 import { useState } from 'react'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -19,7 +18,7 @@ export function Main() {
 		setIsButtonClicked(!isButtonClicked)
 	}
 	React.useEffect(() => {
-		if (window.innerWidth >= 600) {
+		if (window.innerWidth >= 1200) {
 			const mainTimeline = gsap.timeline({
 				scrollTrigger: {
 					trigger: '.main',
@@ -31,26 +30,48 @@ export function Main() {
 				paused: true,
 			})
 
+			gsap.set('.firstCard', {
+				position: 'absolute',
+				zIndex: -2,
+				rotate: '4deg',
+			})
+
+			gsap.set('.secondCard', {
+				position: 'absolute',
+				zIndex: -1,
+			})
+
 			mainTimeline
 				.to('.Header', { opacity: 0.3, duration: 0.5 })
 				.to('.main-top', { opacity: 0.3, duration: 0.7, zIndex: -4 }, '<')
 				.to('.main-footer', { opacity: 0.3, duration: 0.7 }, '<')
-				.to(
+				.fromTo(
 					'.firstCard',
 					{
-						width: '400px',
-						zIndex: -4,
-						y: '-30%',
+						y: '-20%',
 						duration: 1,
+						x: '75%',
+					},
+					{
+						y: '-42%',
+						duration: 1,
+						x: '80%',
+						width: '80%',
+						rotate: '9deg',
 					},
 					'<'
 				)
-				.to(
+				.fromTo(
 					'.secondCard',
 					{
-						width: '400px',
-						zIndex: -3,
-						y: '-30%',
+						y: '-20%',
+						duration: 1,
+						x: '70%',
+					},
+					{
+						width: '80%',
+						x: '70%',
+						y: '-35%',
 						duration: 1,
 					},
 					'<'
@@ -61,8 +82,8 @@ export function Main() {
 			}
 		}
 
-		if (window.innerWidth < 600) {
-			const mainTimelineMob = gsap.timeline({
+		if (window.innerWidth > 600 && window.innerWidth < 1200) {
+			const mainTimelineSecond = gsap.timeline({
 				scrollTrigger: {
 					trigger: '.main',
 					start: 'top top',
@@ -73,23 +94,125 @@ export function Main() {
 				paused: true,
 			})
 
-			mainTimelineMob
+			gsap.set('.firstCard', {
+				position: 'absolute',
+				zIndex: -2,
+				rotate: '4deg',
+				width: 280,
+			})
+
+			gsap.set('.secondCard', {
+				position: 'absolute',
+				zIndex: -1,
+				width: 280,
+			})
+
+			mainTimelineSecond
 				.to('.Header', { opacity: 0.3, duration: 0.5 })
 				.to('.main-top', { opacity: 0.3, duration: 0.7, zIndex: -4 }, '<')
 				.to('.main-footer', { opacity: 0.3, duration: 0.7 }, '<')
-				.to(
-					'.main-cards-img',
+				.to('.mainStars-Mob', { opacity: 0.3, duration: 0.7 }, '<')
+				.fromTo(
+					'.firstCard',
 					{
-						width: '300px',
-						zIndex: -4,
-						y: '-30%',
+						y: -250,
+						duration: 1,
+						x: '75%',
+					},
+					{
+						y: '-90%',
+						duration: 1,
+						x: '90%',
+						width: 300,
+						rotate: '9deg',
+					},
+					'<'
+				)
+				.fromTo(
+					'.secondCard',
+					{
+						y: -270,
+						duration: 1,
+						x: '70%',
+					},
+					{
+						width: 300,
+						x: '65%',
+						y: '-80%',
 						duration: 1,
 					},
 					'<'
 				)
 
 			return () => {
-				mainTimelineMob.kill()
+				mainTimelineSecond.kill()
+			}
+		}
+
+		if (window.innerWidth <= 600) {
+			const mainTimelineSecond = gsap.timeline({
+				scrollTrigger: {
+					trigger: '.main',
+					start: 'top top',
+					end: '+=1000',
+					scrub: true,
+					pin: true,
+				},
+				paused: true,
+			})
+
+			gsap.set('.firstCard', {
+				position: 'absolute',
+				zIndex: -2,
+				rotate: '4deg',
+				width: 280,
+			})
+
+			gsap.set('.secondCard', {
+				position: 'absolute',
+				zIndex: -1,
+				width: 280,
+			})
+
+			mainTimelineSecond
+				.to('.Header', { opacity: 0.3, duration: 0.5 })
+				.to('.main-top', { opacity: 0.3, duration: 0.7, zIndex: -4 }, '<')
+				.to('.main-footer', { opacity: 0.3, duration: 0.7 }, '<')
+				.to('.mainStars-Mob', { opacity: 0.3, duration: 0.7 }, '<')
+				.fromTo(
+					'.firstCard',
+					{
+						y: -250,
+						duration: 1,
+						x: '75%',
+					},
+					{
+						y: -300,
+						duration: 1,
+						x: '90%',
+						width: 300,
+						rotate: '9deg',
+					},
+					'<'
+				)
+				.fromTo(
+					'.secondCard',
+					{
+						y: -270,
+						duration: 1,
+						x: '70%',
+					},
+					{
+						width: 300,
+						x: '65%',
+						y: -300,
+						duration: 1,
+					},
+					'<'
+				)
+
+			return () => {
+				mainTimelineSecond.kill()
 			}
 		}
 	}, [])
@@ -250,17 +373,22 @@ export function Main() {
 							</div>
 
 							<div className='main-carts'>
-								<img
-									className='secondCard'
-									src={secondCard}
-									alt='Second Card'
-								/>
-								<img className='firstCard' src={firstCard} alt='First Card' />
+								<div className='secondCard'>
+									<img
+										className='secondCardImg'
+										src={secondCard}
+										alt='Second Card'
+									/>
+								</div>
+								<div className='firstCard'>
+									<img
+										className='firstCardImg'
+										src={firstCard}
+										alt='First Card'
+									/>
+								</div>
 							</div>
 
-							<div className='main-cards'>
-								<img src={cardMob} className='main-cards-img'></img>
-							</div>
 							<div className='main-footer'>
 								<div className='main-text'>
 									Experience with Industry Leaders
@@ -268,14 +396,23 @@ export function Main() {
 								<div className='main-wrapper'>
 									<div className='main-logos'>
 										<div className='logo-track'>
-											{[...Array(16)].map((_, i) => (
-												<img
-													key={i}
-													className='main-logo'
-													src={logo1}
-													alt={`Logo ${i + 1}`}
-												/>
-											))}
+											<img className='main-logo' src={logo1} alt={logo1} />
+											<img className='main-logo' src={logo1} alt={logo1} />
+											<img className='main-logo' src={logo1} alt={logo1} />
+											<img className='main-logo' src={logo1} alt={logo1} />
+											<img className='main-logo' src={logo1} alt={logo1} />
+											<img className='main-logo' src={logo1} alt={logo1} />
+											<img className='main-logo' src={logo1} alt={logo1} />
+											<img className='main-logo' src={logo1} alt={logo1} />
+
+											<img className='main-logo' src={logo1} alt={logo1} />
+											<img className='main-logo' src={logo1} alt={logo1} />
+											<img className='main-logo' src={logo1} alt={logo1} />
+											<img className='main-logo' src={logo1} alt={logo1} />
+											<img className='main-logo' src={logo1} alt={logo1} />
+											<img className='main-logo' src={logo1} alt={logo1} />
+											<img className='main-logo' src={logo1} alt={logo1} />
+											<img className='main-logo' src={logo1} alt={logo1} />
 										</div>
 									</div>
 								</div>

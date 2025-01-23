@@ -19,6 +19,7 @@ import leftFirstScreenMob from '../assets/leftFirstScreenMob.png'
 import rightFirstScreenMobTop from '../assets/rightFirstScreenMobTop.png'
 import leftFirstScreenMobCenter from '../assets/leftFirstScreenMobCenter.png'
 import leftFirstScreenMobBottom from '../assets/leftFirstScreenMobBottom.png'
+import askMob from '../assets/askMob.png'
 
 import secondScreenImageMob from '../assets/secondScreenImageMob.png'
 import secondScreenImageMob2 from '../assets/secondScreenImageMob2.png'
@@ -39,17 +40,21 @@ export function Screens() {
 	const screensLeftFillRef = useRef(null)
 	const screensRightFillRef = useRef(null)
 	const screenSection = useRef(null)
-	const subtitles = ['SAM', 'Pre-Qualifier', 'Step Up'] // Сабтайтли
+	const subtitles = ['SAM', 'Pre-Qualifier', 'Step Up']
+	const subtitlesMob = ['SAM', 'Pre-Qualifier', 'Underwriting']
 	const [activeSubtitle, setActiveSubtitle] = React.useState(null)
 
-	const [isRightCardOpen, setRightCardOpen] = useState(false)
-
-	const handleRightCardClick = () => {
-		setRightCardOpen(true) // Відкрити праву картку
-	}
+	const [isLeftCardOpen, setIsLeftCardOpen] = useState(false)
+	const [isRightCardOpen, setIsRightCardOpen] = useState(true)
 
 	const handleLeftCardClick = () => {
-		setRightCardOpen(false) // Закрити праву картку і відкрити ліву
+		setIsLeftCardOpen(true)
+		setIsRightCardOpen(false)
+	}
+
+	const handleRightCardClick = () => {
+		setIsLeftCardOpen(false)
+		setIsRightCardOpen(true)
 	}
 
 	React.useEffect(() => {
@@ -76,12 +81,22 @@ export function Screens() {
 				onUpdate(self) {
 					const progress = self.progress
 
-					const activeIndex = Math.floor(progress * subtitles.length)
-					setActiveSubtitle(activeIndex)
+					if (progress >= 1) {
+						setActiveSubtitle(subtitles.length - 1)
+					} else {
+						const activeIndex = Math.floor(progress * subtitles.length)
+						setActiveSubtitle(activeIndex)
+					}
+
+					if (progress >= 1) {
+						setActiveSubtitle(subtitlesMob.length - 1)
+					} else {
+						const activeIndex = Math.floor(progress * subtitlesMob.length)
+						setActiveSubtitle(activeIndex)
+					}
 
 					const activeStars = progress * stars.length
 
-					// Оновити анімацію для зірочок
 					stars.forEach((star, index) => {
 						const starProgress = Math.min(Math.max(activeStars - index, 0), 1)
 						gsap.to(star, {
@@ -92,7 +107,6 @@ export function Screens() {
 						})
 					})
 
-					// Оновити довжину лінії
 					const progressBar = document.querySelector('.progress-line')
 					if (progressBar) {
 						gsap.to(progressBar, {
@@ -150,7 +164,7 @@ export function Screens() {
 		return () => {
 			if (screensTimeline) screensTimeline.kill()
 		}
-	}, [])
+	}, [subtitles.length, subtitlesMob.length])
 
 	return (
 		<>
@@ -225,8 +239,12 @@ export function Screens() {
 								<div className='leftBlocksText' ref={leftBlocksRef}>
 									<div className='firstScreen-texts screenLeftText'>
 										<div className='firstScreen-titles'>
-											<div className='firstScreen-title'>Portfolio</div>
-											<div className='firstScreen-title2'>Intelligence </div>
+											<div className='firstScreen-title desktop-title-first'>
+												Portfolio
+											</div>
+											<div className='firstScreen-title2 desktop-title-first'>
+												Intelligence{' '}
+											</div>
 											<div className='firstScreen-title-mob'>Strategic </div>
 											<div className='firstScreen-title2-mob'>
 												Analytics Manager
@@ -278,230 +296,363 @@ export function Screens() {
 									</div>
 								</div>
 							</div>
-							<div className='firstScreens screen-section' ref={screenSection}>
-								<div className='screensLeftFill'>
+							<div
+								className={`firstScreens screen-section ${
+									isRightCardOpen ? 'open' : 'closed'
+								}`}
+								ref={screenSection}
+							>
+								<div
+									className={`screensMobLeft ${
+										isLeftCardOpen ? 'open' : 'closed'
+									}`}
+								>
 									<div
-										className={`screensLeft ${
-											isRightCardOpen ? 'closed' : 'open'
+										className={`screensLeftFill ${
+											isLeftCardOpen ? 'open' : 'closed'
 										}`}
-										onClick={handleLeftCardClick}
-										ref={screensLeftFillRef}
 									>
-										<div className='firstScreenLeftMob'>
-											<div className='logo-mob'>
-												<img src={logoMobCLose} className='logo-mob-img'></img>
+										<div
+											className={`logo-mob ${
+												isLeftCardOpen ? 'open' : 'closed'
+											}`}
+											onClick={
+												!isLeftCardOpen ? handleLeftCardClick : undefined
+											}
+										>
+											<img src={logoMobCLose} className='logo-mob-img'></img>
+										</div>
+										<div
+											className={`screensLeft ${
+												isLeftCardOpen ? 'open' : 'closed'
+											}`}
+											ref={screensLeftFillRef}
+										>
+											<div className='firstScreenLeftMob'>
+												<div className='firstScreen-left-container'>
+													<div className='firstScreen-left-topScroll'>
+														<div className='firstScreen-left-Top'>
+															<div className='firstScreen-left-title'>
+																PRO-AI’s Chat
+															</div>
+															<img
+																src={leftFirstScreen}
+																alt='leftFirstScreen'
+																className='firstScreen-left-Fill'
+															></img>
+
+															<img
+																src={leftFirstScreenMob}
+																alt='leftFirstScreen'
+																className='firstScreen-left-FillMob'
+																width={'100%'}
+															></img>
+														</div>
+													</div>
+													<div className='firstScreen-left-footer'>
+														<div className='firstScreen-left-footerText'>
+															<svg
+																xmlns='http://www.w3.org/2000/svg'
+																width='25'
+																height='24'
+																viewBox='0 0 25 24'
+																fill='none'
+															>
+																<path
+																	d='M12.2804 6.00339C13.3126 5.97103 14.3393 6.1675 15.2867 6.57871C16.2341 6.98991 17.0788 7.60566 17.7602 8.3818C18.4415 9.15794 18.9427 10.0752 19.2278 11.0679C19.5128 12.0606 19.5747 13.104 19.4089 14.1235C19.2432 15.1429 18.8539 16.1129 18.269 16.9642C17.6841 17.8154 16.9181 18.5266 16.0259 19.0469C15.1338 19.5672 14.1375 19.8836 13.1086 19.9734C12.0797 20.0633 11.0437 19.9243 10.0749 19.5666L12.4997 13L12.2804 6.00339Z'
+																	fill='url(#paint0_radial_2418_8681)'
+																/>
+																<defs>
+																	<radialGradient
+																		id='paint0_radial_2418_8681'
+																		cx='0'
+																		cy='0'
+																		r='1'
+																		gradientUnits='userSpaceOnUse'
+																		gradientTransform='translate(12.4997 13) rotate(30) scale(7)'
+																	>
+																		<stop
+																			offset='0.686804'
+																			stop-color='#1D2738'
+																		/>
+																		<stop offset='1' stop-color='#ABAECD' />
+																	</radialGradient>
+																</defs>
+															</svg>
+															Drafting SQL Script
+														</div>
+														<div className='firstScreen-left-footerTextMob'>
+															<svg
+																xmlns='http://www.w3.org/2000/svg'
+																width='16'
+																height='17'
+																viewBox='0 0 16 17'
+																fill='none'
+															>
+																<g clip-path='url(#clip0_2172_14325)'>
+																	<path
+																		d='M7.78036 2.50345C8.81265 2.47109 9.8393 2.66756 10.7867 3.07877C11.7341 3.48997 12.5788 4.10572 13.2602 4.88186C13.9415 5.658 14.4427 6.5753 14.7278 7.56798C15.0128 8.56065 15.0747 9.60411 14.9089 10.6235C14.7432 11.6429 14.3539 12.613 13.769 13.4642C13.1841 14.3154 12.4181 15.0267 11.5259 15.547C10.6338 16.0672 9.63751 16.3836 8.60863 16.4735C7.57975 16.5633 6.54374 16.4244 5.57489 16.0666L7.99968 9.50002L7.78036 2.50345Z'
+																		fill='url(#paint0_radial_2172_14325)'
+																	/>
+																</g>
+																<defs>
+																	<radialGradient
+																		id='paint0_radial_2172_14325'
+																		cx='0'
+																		cy='0'
+																		r='1'
+																		gradientUnits='userSpaceOnUse'
+																		gradientTransform='translate(7.99968 9.50002) rotate(30) scale(7)'
+																	>
+																		<stop
+																			offset='0.686804'
+																			stop-color='#1D2738'
+																		/>
+																		<stop offset='1' stop-color='#ABAECD' />
+																	</radialGradient>
+																	<clipPath id='clip0_2172_14325'>
+																		<rect
+																			width='16'
+																			height='16'
+																			fill='white'
+																			transform='translate(0 0.5)'
+																		/>
+																	</clipPath>
+																</defs>
+															</svg>
+															Running calculations
+														</div>
+														<img
+															src={ask}
+															alt='ask'
+															className='firstScreen-left-footerImg'
+														></img>
+														<img
+															src={askMob}
+															alt='askMob'
+															className='askMob'
+															width={'100%'}
+														></img>
+													</div>
+												</div>
 											</div>
-											<div className='firstScreen-left-container'>
-												<div className='firstScreen-left-topScroll'>
-													<div className='firstScreen-left-Top'>
-														<div className='firstScreen-left-title'>
+											<div className='firstScreenLeftMob'>
+												<div className='secondScreens-left-container'>
+													<div className='secondScreen-left-title '>
+														PRO-AI Platform
+													</div>
+
+													<div className='secondScreen-left'>
+														<div className='secondScreen-left-container'>
+															<div className='secondScreen-fill-left'>
+																<div className='firstScreenFill-title '>
+																	<svg
+																		xmlns='http://www.w3.org/2000/svg'
+																		width='24'
+																		height='24'
+																		viewBox='0 0 24 24'
+																		fill='none'
+																	>
+																		<g clip-path='url(#clip0_2418_8772)'>
+																			<path
+																				d='M11.9994 22.096C6.42346 22.096 1.90325 17.5758 1.90325 11.9999C1.90325 6.42395 6.42346 1.90373 11.9994 1.90373C17.5753 1.90373 22.0956 6.42395 22.0956 11.9999C22.0956 17.5758 17.5753 22.096 11.9994 22.096ZM11.9994 23.5383C18.3719 23.5383 23.5379 18.3724 23.5379 11.9999C23.5379 5.62738 18.3719 0.461426 11.9994 0.461426C5.62689 0.461426 0.460938 5.62738 0.460938 11.9999C0.460938 18.3724 5.62689 23.5383 11.9994 23.5383Z'
+																				fill='#98D9FF'
+																			/>
+																			<path
+																				d='M10.5605 16.3268C10.5605 15.5303 11.2063 14.8845 12.0029 14.8845C12.7994 14.8845 13.4452 15.5303 13.4452 16.3268C13.4452 17.1234 12.7994 17.7691 12.0029 17.7691C11.2063 17.7691 10.5605 17.1234 10.5605 16.3268Z'
+																				fill='#98D9FF'
+																			/>
+																			<path
+																				d='M10.7019 7.66587C10.6251 6.89745 11.2285 6.23071 12.0007 6.23071C12.773 6.23071 13.3763 6.89745 13.2995 7.66587L12.7937 12.7247C12.7529 13.1321 12.4101 13.4423 12.0007 13.4423C11.5913 13.4423 11.2486 13.1321 11.2078 12.7247L10.7019 7.66587Z'
+																				fill='#98D9FF'
+																			/>
+																			<path
+																				d='M21.8651 11.9999C21.8651 17.4485 17.4482 21.8653 11.9997 21.8653V22.3269C17.7031 22.3269 22.3266 17.7034 22.3266 11.9999H21.8651ZM11.9997 2.13456C17.4482 2.13456 21.8651 6.55144 21.8651 11.9999H22.3266C22.3266 6.29653 17.7031 1.67302 11.9997 1.67302V2.13456ZM2.13431 11.9999C2.13431 6.55144 6.55119 2.13456 11.9997 2.13456V1.67302C6.29628 1.67302 1.67278 6.29653 1.67278 11.9999H2.13431ZM11.9997 21.8653C6.55119 21.8653 2.13431 17.4485 2.13431 11.9999H1.67278C1.67278 17.7034 6.29628 22.3269 11.9997 22.3269V21.8653ZM23.3074 11.9999C23.3074 18.245 18.2448 23.3076 11.9997 23.3076V23.7692C18.4997 23.7692 23.7689 18.4999 23.7689 11.9999H23.3074ZM11.9997 0.692251C18.2448 0.692251 23.3074 5.75487 23.3074 11.9999H23.7689C23.7689 5.49996 18.4997 0.230713 11.9997 0.230713V0.692251ZM0.692007 11.9999C0.692007 5.75487 5.75462 0.692251 11.9997 0.692251V0.230713C5.49972 0.230713 0.230469 5.49996 0.230469 11.9999H0.692007ZM11.9997 23.3076C5.75462 23.3076 0.692007 18.245 0.692007 11.9999H0.230469C0.230469 18.4999 5.49972 23.7692 11.9997 23.7692V23.3076ZM10.7904 16.3269C10.7904 15.6578 11.3328 15.1153 12.0019 15.1153V14.6538C11.0779 14.6538 10.3288 15.4029 10.3288 16.3269H10.7904ZM12.0019 15.1153C12.6711 15.1153 13.2135 15.6578 13.2135 16.3269H13.675C13.675 15.4029 12.9259 14.6538 12.0019 14.6538V15.1153ZM13.2135 16.3269C13.2135 16.996 12.6711 17.5384 12.0019 17.5384V17.9999C12.9259 17.9999 13.675 17.2509 13.675 16.3269H13.2135ZM12.0019 17.5384C11.3328 17.5384 10.7904 16.996 10.7904 16.3269H10.3288C10.3288 17.2509 11.0779 17.9999 12.0019 17.9999V17.5384ZM10.9305 7.64288C10.8673 7.01034 11.364 6.46148 11.9997 6.46148V5.99994C11.0909 5.99994 10.3809 6.78456 10.4713 7.68881L10.9305 7.64288ZM11.9997 6.46148C12.6354 6.46148 13.1321 7.01034 13.0689 7.64288L13.5281 7.68881C13.6185 6.78456 12.9085 5.99994 11.9997 5.99994V6.46148ZM13.0689 7.64288L12.563 12.7017L13.0222 12.7476L13.5281 7.68881L13.0689 7.64288ZM12.563 12.7017C12.5341 12.9911 12.2905 13.2115 11.9997 13.2115V13.673C12.5277 13.673 12.9697 13.273 13.0222 12.7476L12.563 12.7017ZM11.9997 13.2115C11.7089 13.2115 11.4653 12.9911 11.4364 12.7017L10.9772 12.7476C11.0297 13.273 11.4717 13.673 11.9997 13.673V13.2115ZM11.4364 12.7017L10.9305 7.64288L10.4713 7.68881L10.9772 12.7476L11.4364 12.7017Z'
+																				fill='#98D9FF'
+																			/>
+																		</g>
+																		<defs>
+																			<clipPath id='clip0_2418_8772'>
+																				<rect
+																					width='24'
+																					height='24'
+																					fill='white'
+																				/>
+																			</clipPath>
+																		</defs>
+																	</svg>
+																	Risk Analysis Results
+																</div>
+																<div className='secondScreenFill-subtitles'>
+																	<div className='cardTop-subtitle'>
+																		Risk Score
+																	</div>
+																	<div className=' number'>68/100</div>
+																	<div className='cardTop-subtitle'>
+																		(Moderate Risk)
+																	</div>
+																</div>
+
+																<div className='secondScreen-right-fill'>
+																	<img
+																		src={secondScreenImage}
+																		alt='secondScreenImage'
+																		className='secondScreenImage'
+																	></img>
+																	<img
+																		src={secondScreenImage2}
+																		alt='secondScreenImage2'
+																		className='secondScreenImage2'
+																	></img>
+																</div>
+
+																<div className='secondScreen-right-fill-mob'>
+																	<img
+																		src={secondScreenImageMob}
+																		alt='secondScreenImage'
+																		className='secondScreenImage'
+																	></img>
+																	<img
+																		src={secondScreenImageMob2}
+																		alt='secondScreenImage2'
+																		className='secondScreenImage2'
+																	></img>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div className='firstScreenLeftMob'>
+												<div className='thirdScreen-left-container'>
+													<div className='thirdScreen-left-Top'>
+														<div className='thirdScreen-left-title'>
 															PRO-AI’s Chat
 														</div>
 														<img
-															src={leftFirstScreen}
-															alt='leftFirstScreen'
-															className='firstScreen-left-Fill'
+															src={thirdScreenImage}
+															alt='thirdScreenImage'
+															className='thirdScreen-left-Fill'
 														></img>
+														<img
+															src={thirdScreenImageMob}
+															alt='thirdScreenImageMob'
+															className='thirdScreen-left-Fill-mob'
+														></img>
+													</div>
+													<div className='thirdScreen-left-footer'>
+														<div className='thirdScreen-left-footerText'>
+															<svg
+																xmlns='http://www.w3.org/2000/svg'
+																width='25'
+																height='24'
+																viewBox='0 0 25 24'
+																fill='none'
+															>
+																<path
+																	d='M12.2804 6.00339C13.3126 5.97103 14.3393 6.1675 15.2867 6.57871C16.2341 6.98991 17.0788 7.60566 17.7602 8.3818C18.4415 9.15794 18.9427 10.0752 19.2278 11.0679C19.5128 12.0606 19.5747 13.104 19.4089 14.1235C19.2432 15.1429 18.8539 16.1129 18.269 16.9642C17.6841 17.8154 16.9181 18.5266 16.0259 19.0469C15.1338 19.5672 14.1375 19.8836 13.1086 19.9734C12.0797 20.0633 11.0437 19.9243 10.0749 19.5666L12.4997 13L12.2804 6.00339Z'
+																	fill='url(#paint0_radial_2418_8681)'
+																/>
+																<defs>
+																	<radialGradient
+																		id='paint0_radial_2418_8681'
+																		cx='0'
+																		cy='0'
+																		r='1'
+																		gradientUnits='userSpaceOnUse'
+																		gradientTransform='translate(12.4997 13) rotate(30) scale(7)'
+																	>
+																		<stop
+																			offset='0.686804'
+																			stop-color='#1D2738'
+																		/>
+																		<stop offset='1' stop-color='#ABAECD' />
+																	</radialGradient>
+																</defs>
+															</svg>
+															Drafting SQL Script
+														</div>
+
+														<div className='thirdScreen-left-footerTextMob'>
+															<svg
+																xmlns='http://www.w3.org/2000/svg'
+																width='16'
+																height='17'
+																viewBox='0 0 16 17'
+																fill='none'
+															>
+																<g clip-path='url(#clip0_2172_14355)'>
+																	<path
+																		d='M7.78036 2.50339C8.81265 2.47103 9.8393 2.6675 10.7867 3.07871C11.7341 3.48991 12.5788 4.10566 13.2602 4.8818C13.9415 5.65794 14.4427 6.57524 14.7278 7.56792C15.0128 8.56059 15.0747 9.60405 14.9089 10.6235C14.7432 11.6429 14.3539 12.6129 13.769 13.4642C13.1841 14.3154 12.4181 15.0266 11.5259 15.5469C10.6338 16.0672 9.63751 16.3836 8.60863 16.4734C7.57975 16.5633 6.54374 16.4243 5.57489 16.0666L7.99968 9.49996L7.78036 2.50339Z'
+																		fill='url(#paint0_radial_2172_14355)'
+																	/>
+																</g>
+																<defs>
+																	<radialGradient
+																		id='paint0_radial_2172_14355'
+																		cx='0'
+																		cy='0'
+																		r='1'
+																		gradientUnits='userSpaceOnUse'
+																		gradientTransform='translate(7.99968 9.49996) rotate(30) scale(7)'
+																	>
+																		<stop
+																			offset='0.686804'
+																			stop-color='#1D2738'
+																		/>
+																		<stop offset='1' stop-color='#ABAECD' />
+																	</radialGradient>
+																	<clipPath id='clip0_2172_14355'>
+																		<rect
+																			width='16'
+																			height='16'
+																			fill='white'
+																			transform='translate(0 0.5)'
+																		/>
+																	</clipPath>
+																</defs>
+															</svg>
+															Simulation is running
+														</div>
 
 														<img
-															src={leftFirstScreenMob}
-															alt='leftFirstScreen'
-															className='firstScreen-left-FillMob'
+															src={ask}
+															alt='ask'
+															className='thirdScreen-left-footerImg'
+														></img>
+														<img
+															src={askMob}
+															alt='askMob'
+															className='askMob'
 														></img>
 													</div>
-												</div>
-												<div className='firstScreen-left-footer'>
-													<div className='firstScreen-left-footerText'>
-														<svg
-															xmlns='http://www.w3.org/2000/svg'
-															width='25'
-															height='24'
-															viewBox='0 0 25 24'
-															fill='none'
-														>
-															<path
-																d='M12.2804 6.00339C13.3126 5.97103 14.3393 6.1675 15.2867 6.57871C16.2341 6.98991 17.0788 7.60566 17.7602 8.3818C18.4415 9.15794 18.9427 10.0752 19.2278 11.0679C19.5128 12.0606 19.5747 13.104 19.4089 14.1235C19.2432 15.1429 18.8539 16.1129 18.269 16.9642C17.6841 17.8154 16.9181 18.5266 16.0259 19.0469C15.1338 19.5672 14.1375 19.8836 13.1086 19.9734C12.0797 20.0633 11.0437 19.9243 10.0749 19.5666L12.4997 13L12.2804 6.00339Z'
-																fill='url(#paint0_radial_2418_8681)'
-															/>
-															<defs>
-																<radialGradient
-																	id='paint0_radial_2418_8681'
-																	cx='0'
-																	cy='0'
-																	r='1'
-																	gradientUnits='userSpaceOnUse'
-																	gradientTransform='translate(12.4997 13) rotate(30) scale(7)'
-																>
-																	<stop
-																		offset='0.686804'
-																		stop-color='#1D2738'
-																	/>
-																	<stop offset='1' stop-color='#ABAECD' />
-																</radialGradient>
-															</defs>
-														</svg>
-														Drafting SQL Script
-													</div>
-													<img
-														src={ask}
-														alt='ask'
-														className='firstScreen-left-footerImg'
-													></img>
-												</div>
-											</div>
-										</div>
-										<div className='firstScreenLeftMob'>
-											<div className='logo-mob'>
-												<img src={logoMobCLose} className='logo-mob-img'></img>
-											</div>
-											<div className='secondScreens-left-container'>
-												<div className='secondScreen-left-title '>
-													PRO-AI Platform
-												</div>
-
-												<div className='secondScreen-left'>
-													<div className='secondScreen-left-container'>
-														<div className='secondScreen-fill-left'>
-															<div className='firstScreenFill-title '>
-																<svg
-																	xmlns='http://www.w3.org/2000/svg'
-																	width='24'
-																	height='24'
-																	viewBox='0 0 24 24'
-																	fill='none'
-																>
-																	<g clip-path='url(#clip0_2418_8772)'>
-																		<path
-																			d='M11.9994 22.096C6.42346 22.096 1.90325 17.5758 1.90325 11.9999C1.90325 6.42395 6.42346 1.90373 11.9994 1.90373C17.5753 1.90373 22.0956 6.42395 22.0956 11.9999C22.0956 17.5758 17.5753 22.096 11.9994 22.096ZM11.9994 23.5383C18.3719 23.5383 23.5379 18.3724 23.5379 11.9999C23.5379 5.62738 18.3719 0.461426 11.9994 0.461426C5.62689 0.461426 0.460938 5.62738 0.460938 11.9999C0.460938 18.3724 5.62689 23.5383 11.9994 23.5383Z'
-																			fill='#98D9FF'
-																		/>
-																		<path
-																			d='M10.5605 16.3268C10.5605 15.5303 11.2063 14.8845 12.0029 14.8845C12.7994 14.8845 13.4452 15.5303 13.4452 16.3268C13.4452 17.1234 12.7994 17.7691 12.0029 17.7691C11.2063 17.7691 10.5605 17.1234 10.5605 16.3268Z'
-																			fill='#98D9FF'
-																		/>
-																		<path
-																			d='M10.7019 7.66587C10.6251 6.89745 11.2285 6.23071 12.0007 6.23071C12.773 6.23071 13.3763 6.89745 13.2995 7.66587L12.7937 12.7247C12.7529 13.1321 12.4101 13.4423 12.0007 13.4423C11.5913 13.4423 11.2486 13.1321 11.2078 12.7247L10.7019 7.66587Z'
-																			fill='#98D9FF'
-																		/>
-																		<path
-																			d='M21.8651 11.9999C21.8651 17.4485 17.4482 21.8653 11.9997 21.8653V22.3269C17.7031 22.3269 22.3266 17.7034 22.3266 11.9999H21.8651ZM11.9997 2.13456C17.4482 2.13456 21.8651 6.55144 21.8651 11.9999H22.3266C22.3266 6.29653 17.7031 1.67302 11.9997 1.67302V2.13456ZM2.13431 11.9999C2.13431 6.55144 6.55119 2.13456 11.9997 2.13456V1.67302C6.29628 1.67302 1.67278 6.29653 1.67278 11.9999H2.13431ZM11.9997 21.8653C6.55119 21.8653 2.13431 17.4485 2.13431 11.9999H1.67278C1.67278 17.7034 6.29628 22.3269 11.9997 22.3269V21.8653ZM23.3074 11.9999C23.3074 18.245 18.2448 23.3076 11.9997 23.3076V23.7692C18.4997 23.7692 23.7689 18.4999 23.7689 11.9999H23.3074ZM11.9997 0.692251C18.2448 0.692251 23.3074 5.75487 23.3074 11.9999H23.7689C23.7689 5.49996 18.4997 0.230713 11.9997 0.230713V0.692251ZM0.692007 11.9999C0.692007 5.75487 5.75462 0.692251 11.9997 0.692251V0.230713C5.49972 0.230713 0.230469 5.49996 0.230469 11.9999H0.692007ZM11.9997 23.3076C5.75462 23.3076 0.692007 18.245 0.692007 11.9999H0.230469C0.230469 18.4999 5.49972 23.7692 11.9997 23.7692V23.3076ZM10.7904 16.3269C10.7904 15.6578 11.3328 15.1153 12.0019 15.1153V14.6538C11.0779 14.6538 10.3288 15.4029 10.3288 16.3269H10.7904ZM12.0019 15.1153C12.6711 15.1153 13.2135 15.6578 13.2135 16.3269H13.675C13.675 15.4029 12.9259 14.6538 12.0019 14.6538V15.1153ZM13.2135 16.3269C13.2135 16.996 12.6711 17.5384 12.0019 17.5384V17.9999C12.9259 17.9999 13.675 17.2509 13.675 16.3269H13.2135ZM12.0019 17.5384C11.3328 17.5384 10.7904 16.996 10.7904 16.3269H10.3288C10.3288 17.2509 11.0779 17.9999 12.0019 17.9999V17.5384ZM10.9305 7.64288C10.8673 7.01034 11.364 6.46148 11.9997 6.46148V5.99994C11.0909 5.99994 10.3809 6.78456 10.4713 7.68881L10.9305 7.64288ZM11.9997 6.46148C12.6354 6.46148 13.1321 7.01034 13.0689 7.64288L13.5281 7.68881C13.6185 6.78456 12.9085 5.99994 11.9997 5.99994V6.46148ZM13.0689 7.64288L12.563 12.7017L13.0222 12.7476L13.5281 7.68881L13.0689 7.64288ZM12.563 12.7017C12.5341 12.9911 12.2905 13.2115 11.9997 13.2115V13.673C12.5277 13.673 12.9697 13.273 13.0222 12.7476L12.563 12.7017ZM11.9997 13.2115C11.7089 13.2115 11.4653 12.9911 11.4364 12.7017L10.9772 12.7476C11.0297 13.273 11.4717 13.673 11.9997 13.673V13.2115ZM11.4364 12.7017L10.9305 7.64288L10.4713 7.68881L10.9772 12.7476L11.4364 12.7017Z'
-																			fill='#98D9FF'
-																		/>
-																	</g>
-																	<defs>
-																		<clipPath id='clip0_2418_8772'>
-																			<rect
-																				width='24'
-																				height='24'
-																				fill='white'
-																			/>
-																		</clipPath>
-																	</defs>
-																</svg>
-																Risk Analysis Results
-															</div>
-															<div className='secondScreenFill-subtitles'>
-																<div className='cardTop-subtitle'>
-																	Risk Score
-																</div>
-																<div className=' number'>68/100</div>
-																<div className='cardTop-subtitle'>
-																	(Moderate Risk)
-																</div>
-															</div>
-
-															<div className='secondScreen-right-fill'>
-																<img
-																	src={secondScreenImage}
-																	alt='secondScreenImage'
-																></img>
-																<img
-																	src={secondScreenImage2}
-																	alt='secondScreenImage2'
-																></img>
-															</div>
-
-															<div className='secondScreen-right-fill-mob'>
-																<img
-																	src={secondScreenImageMob}
-																	alt='secondScreenImage'
-																></img>
-																<img
-																	src={secondScreenImageMob2}
-																	alt='secondScreenImage2'
-																></img>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<div className='firstScreenLeftMob'>
-											<div className='logo-mob'>
-												<img src={logoMobCLose} className='logo-mob-img'></img>
-											</div>
-											<div className='thirdScreen-left-container'>
-												<div className='thirdScreen-left-Top'>
-													<div className='thirdScreen-left-title'>
-														PRO-AI’s Chat
-													</div>
-													<img
-														src={thirdScreenImage}
-														alt='thirdScreenImage'
-														className='thirdScreen-left-Fill'
-													></img>
-													<img
-														src={thirdScreenImageMob}
-														alt='thirdScreenImageMob'
-														className='thirdScreen-left-Fill-mob'
-													></img>
-												</div>
-												<div className='thirdScreen-left-footer'>
-													<div className='thirdScreen-left-footerText'>
-														<svg
-															xmlns='http://www.w3.org/2000/svg'
-															width='25'
-															height='24'
-															viewBox='0 0 25 24'
-															fill='none'
-														>
-															<path
-																d='M12.2804 6.00339C13.3126 5.97103 14.3393 6.1675 15.2867 6.57871C16.2341 6.98991 17.0788 7.60566 17.7602 8.3818C18.4415 9.15794 18.9427 10.0752 19.2278 11.0679C19.5128 12.0606 19.5747 13.104 19.4089 14.1235C19.2432 15.1429 18.8539 16.1129 18.269 16.9642C17.6841 17.8154 16.9181 18.5266 16.0259 19.0469C15.1338 19.5672 14.1375 19.8836 13.1086 19.9734C12.0797 20.0633 11.0437 19.9243 10.0749 19.5666L12.4997 13L12.2804 6.00339Z'
-																fill='url(#paint0_radial_2418_8681)'
-															/>
-															<defs>
-																<radialGradient
-																	id='paint0_radial_2418_8681'
-																	cx='0'
-																	cy='0'
-																	r='1'
-																	gradientUnits='userSpaceOnUse'
-																	gradientTransform='translate(12.4997 13) rotate(30) scale(7)'
-																>
-																	<stop
-																		offset='0.686804'
-																		stop-color='#1D2738'
-																	/>
-																	<stop offset='1' stop-color='#ABAECD' />
-																</radialGradient>
-															</defs>
-														</svg>
-														Drafting SQL Script
-													</div>
-													<img
-														src={ask}
-														alt='ask'
-														className='thirdScreen-left-footerImg'
-													></img>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 
-								<div className='firstScreen-right'>
-									<div className='firstScreen-right-container'>
+								<div
+									className={`firstScreen-right ${
+										isRightCardOpen ? 'open' : 'closed'
+									}`}
+								>
+									<div
+										className={`logo-mob-right ${
+											isRightCardOpen ? 'open' : 'closed'
+										}`}
+										onClick={
+											!isRightCardOpen ? handleRightCardClick : undefined
+										}
+									>
+										<img src={logoMobCLose} className='logo-mob-img'></img>
+									</div>
+									<div
+										className={`firstScreen-right-container ${
+											isRightCardOpen ? 'open' : 'closed'
+										}`}
+									>
 										<div className='firstScreen-title-right'>
 											PRO-AI Platform
 										</div>
@@ -536,20 +687,39 @@ export function Screens() {
 											))}
 										</div>
 
-										<div
-											className={`screensRightFill ${
-												isRightCardOpen ? 'open' : 'closed'
-											}`}
-											onClick={handleRightCardClick}
-											ref={screensRightFillRef}
-										>
-											<div className='firstScreenRightMob'>
-												<div className='logo-mob'>
-													<img
-														src={logoMobCLose}
-														className='logo-mob-img'
-													></img>
+										<div className='firstScreen-subtitles-mob'>
+											{subtitlesMob.map((subtitle, index) => (
+												<div
+													key={index}
+													className={`subtitle ${
+														activeSubtitle === index ? 'active' : ''
+													}`}
+												>
+													{activeSubtitle === index && (
+														<svg
+															xmlns='http://www.w3.org/2000/svg'
+															width='16'
+															height='16'
+															viewBox='0 0 24 24'
+															fill='none'
+														>
+															<path
+																d='M12.115 6.99644C12.1148 6.23911 14.9341 6.76747 16.1658 5.64288C17.5224 4.40427 17.1002 1.25385 17.8577 1.25377C18.6152 1.25368 18.1931 4.40428 19.5497 5.64288C20.7814 6.76743 23.5907 6.49731 23.6004 6.99644C23.61 7.49557 20.7619 7.47618 19.5497 8.68839C18.3375 9.90062 18.4476 12.7504 17.8577 12.7391C17.2678 12.7278 17.378 9.90063 16.1658 8.68839C14.9536 7.47614 12.1152 7.75377 12.115 6.99644Z'
+																fill='#98D9FF'
+															/>
+															<path
+																d='M1.05264 13.7427C1.06762 13.2164 3.87166 13.5137 5.10341 12.3891C6.46002 11.1505 6.17702 3.50004 6.79531 3.50003C7.4136 3.50002 7.13067 11.1505 8.48731 12.3891C9.71904 13.5137 12.5226 13.2001 12.538 13.7427C12.5534 14.2853 9.92922 13.8693 8.48731 15.4347C7.0454 17 7.54541 23 6.79532 23C6.04522 23.0001 7.04532 17.0001 5.1034 15.4347C3.16148 13.8693 1.03766 14.269 1.05264 13.7427Z'
+																fill='#98D9FF'
+															/>
+														</svg>
+													)}
+													{subtitle}
 												</div>
+											))}
+										</div>
+
+										<div className='screensRightFill' ref={screensRightFillRef}>
+											<div className='firstScreenRightMob'>
 												<div className='screensRight'>
 													<div className='firstScreenFill'>
 														<div className='firstScreenFill-container'>
@@ -599,6 +769,7 @@ export function Screens() {
 																	<img
 																		src={firstScreenFillImage}
 																		alt='firstScreenFillImage'
+																		className='firstScreenFillImage'
 																	></img>
 																</div>
 
@@ -606,6 +777,7 @@ export function Screens() {
 																	<img
 																		src={rightFirstScreenMobTop}
 																		alt='rightFirstScreenMobTop'
+																		className='rightFirstScreenMobTop'
 																	></img>
 																</div>
 															</div>
@@ -648,6 +820,7 @@ export function Screens() {
 																	<img
 																		src={firstScreenFillImage2}
 																		alt='firstScreenFillImage2'
+																		className='firstScreenFillImage2'
 																	></img>
 																</div>
 
@@ -655,6 +828,7 @@ export function Screens() {
 																	<img
 																		src={leftFirstScreenMobCenter}
 																		alt='leftFirstScreenMobCenter'
+																		className='leftFirstScreenMobCenter'
 																	></img>
 																</div>
 															</div>
@@ -662,6 +836,7 @@ export function Screens() {
 																<img
 																	src={firstScreenFillImage3}
 																	alt='firstScreenFillImage3'
+																	className='firstScreenFillImage3'
 																></img>
 															</div>
 
@@ -669,6 +844,7 @@ export function Screens() {
 																<img
 																	src={leftFirstScreenMobBottom}
 																	alt='leftFirstScreenMobBottom'
+																	className='leftFirstScreenMobBottom'
 																></img>
 															</div>
 														</div>
@@ -677,12 +853,6 @@ export function Screens() {
 											</div>
 
 											<div className='firstScreenRightMob'>
-												<div className='logo-mob'>
-													<img
-														src={logoMobCLose}
-														className='logo-mob-img'
-													></img>
-												</div>
 												<div className='screensRight'>
 													<div className='secondScreenFill'>
 														<img
@@ -701,12 +871,6 @@ export function Screens() {
 											</div>
 
 											<div className='firstScreenRightMob'>
-												<div className='logo-mob'>
-													<img
-														src={logoMobCLose}
-														className='logo-mob-img'
-													></img>
-												</div>
 												<div className='screensRight'>
 													<div className='thirdScreenFill'>
 														<div className='firstScreenFill-container'>
@@ -758,6 +922,7 @@ export function Screens() {
 																		<img
 																			src={thirdScreenFill}
 																			alt='thirdScreenFill'
+																			className='thirdScreenFill'
 																		></img>
 																	</div>
 
@@ -765,6 +930,7 @@ export function Screens() {
 																		<img
 																			src={thirdScreenFilMob}
 																			alt='thirdScreenFilMob'
+																			className='thirdScreenFilMob'
 																		></img>
 																	</div>
 																</div>
@@ -777,12 +943,14 @@ export function Screens() {
 																		<img
 																			src={thirdScreenFill2}
 																			alt='thirdScreenFill'
+																			className='thirdScreenFill2'
 																		></img>
 																	</div>
 																	<div className='cardBottom-imgMob'>
 																		<img
 																			src={thirdScreenFilMob2}
 																			alt='thirdScreenFilMob2'
+																			className='thirdScreenFilMob2'
 																		></img>
 																	</div>
 																</div>

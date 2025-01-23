@@ -27,21 +27,24 @@ export function Platform() {
 						</div>
 
 						<div className='platformCards'>
-							<img src={platformCards} alt='platformCards'></img>
+							<img
+								src={platformCards}
+								className='platformCardsImg'
+								alt='platformCards'
+							></img>
 						</div>
 					</div>
+
 					<div className='platform-footer'>
+						<div className='platformLeft-star'>
+							<img src={platStar} alt='platStar' className='platform-star ' />
+						</div>
 						<div className='platform-footer-text'>
 							Let’s explore how PRO-AI can transform your business.
 						</div>
 
-						<div className='platform-stars'>
-							<div className='platformLeft-star'>
-								<img src={platStar} alt='platStar' className='platform-star ' />
-							</div>
-							<div className='platformRight-star'>
-								<img src={platStar} alt='platStar' className='platform-star ' />
-							</div>
+						<div className='platformRight-star'>
+							<img src={platStar} alt='platStar' className='platform-star' />
 						</div>
 					</div>
 				</div>

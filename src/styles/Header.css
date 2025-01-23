@@ -9,6 +9,10 @@
 	align-items: center;
 }
 
+.headerLogo {
+	width: 100%;
+}
+
 .menu {
 	display: flex;
 	padding: 8px 0px;
@@ -91,6 +95,9 @@
 }
 
 @media (max-width: 700px) {
+	.headerLogo {
+		width: 50%;
+	}
 	.menu {
 		display: none;
 	}

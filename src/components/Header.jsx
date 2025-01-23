@@ -30,7 +30,7 @@ export function Header() {
 		<div className='header'>
 			<div className='container'>
 				<div className='logo'>
-					<img src={headerLogo} alt='headerLogo' className='img' />
+					<img src={headerLogo} alt='headerLogo' className='headerLogo' />
 				</div>
 				<div className='menu '>
 					<div className='text'>Company</div>
