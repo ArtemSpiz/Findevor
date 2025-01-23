@@ -176,17 +176,17 @@
 	0% {
 		opacity: 0;
 		filter: brightness(2);
-		transform: translateX(60px) scale(1);
+		transform: translateX(150px) scale(1);
 	}
 	50% {
 		opacity: 1;
 		filter: brightness(1);
-		transform: translateX(0px) scale(1);
+		transform: translateX(80px) scale(1);
 	}
 	100% {
 		opacity: 0;
 		filter: brightness(0.5);
-		transform: translateX(-60px) scale(0.5);
+		transform: translateX(20px) scale(0.5);
 	}
 }
 
@@ -204,17 +204,17 @@
 	0% {
 		opacity: 0;
 		filter: brightness(2);
-		transform: translateX(60px) scale(1);
+		transform: translateX(150px) scale(1);
 	}
 	50% {
 		opacity: 1;
 		filter: brightness(1);
-		transform: translateX(0px) scale(1);
+		transform: translateX(80px) scale(1);
 	}
 	100% {
 		opacity: 0;
 		filter: brightness(0.5);
-		transform: translateX(-60px) scale(0.5);
+		transform: translateX(20px) scale(0.5);
 	}
 }
 

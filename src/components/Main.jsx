@@ -56,7 +56,7 @@ export function Main() {
 						y: '-42%',
 						duration: 1,
 						x: '80%',
-						width: '80%',
+						width: '65%',
 						rotate: '9deg',
 					},
 					'<'
@@ -69,7 +69,7 @@ export function Main() {
 						x: '70%',
 					},
 					{
-						width: '80%',
+						width: '65%',
 						x: '70%',
 						y: '-35%',
 						duration: 1,

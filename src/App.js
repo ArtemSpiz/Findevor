@@ -9,13 +9,14 @@ import { Footer } from './components/Footer'
 function App() {
 	return (
 		<div>
-			<Main></Main>
+			{/* <Main></Main>
+			<Platform></Platform> */}
 			<Screens></Screens>
-			<Platform></Platform>
+			{/* 
 			<Benefits></Benefits>
 			<Quote></Quote>
 			<Portfolio></Portfolio>
-			<Footer></Footer>
+			<Footer></Footer> */}
 		</div>
 	)
 }

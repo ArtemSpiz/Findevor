@@ -1,5 +1,5 @@
 .platform {
-	height: 100vh;
+	height: 100%;
 	background-color: #0a0a0a;
 }
 
@@ -19,7 +19,7 @@
 
 .platform-top {
 	display: flex;
-	gap: 80px;
+	justify-content: space-between;
 }
 
 .platform-texts {
@@ -75,6 +75,7 @@
 }
 
 .platform-text {
+	width: 400px;
 	color: var(--oxford-blue-300, #abaecd);
 
 	/* text S */
@@ -83,6 +84,10 @@
 	font-style: normal;
 	font-weight: 400;
 	line-height: 150%; /* 24px */
+}
+
+.platformCards {
+	width: 50%;
 }
 
 .platformCardsImg {
@@ -133,6 +138,7 @@
 	justify-content: center;
 	width: 100%;
 	gap: 40px;
+	padding-bottom: 50px;
 }
 
 @media (max-width: 1000px) {

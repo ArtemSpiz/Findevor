@@ -647,15 +647,20 @@
 
 .secondScreen-left-container {
 	width: 355px;
-	height: 525px;
+	height: 510px;
 }
 
 .screensRight {
-	width: 392px;
+	width: 373px;
 }
 
 .firstScreenFill-container {
-	width: 368px;
+	width: 340px;
+	height: 475px;
+}
+
+.firstScreen-left-footer {
+	margin-top: -90px;
 }
 
 .screensRight {
@@ -1180,6 +1185,10 @@
 	.thirdScreenFilMob2,
 	.thirdScreenFilMob {
 		width: 100%;
+	}
+
+	.screens-container {
+		justify-content: space-around;
 	}
 }
 

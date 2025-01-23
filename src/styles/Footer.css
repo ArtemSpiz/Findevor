@@ -109,7 +109,14 @@
 	text-decoration: none;
 }
 
+.footer-logo {
+	width: 15%;
+}
+
 @media (max-width: 800px) {
+	.footer-logo {
+		width: 20%;
+	}
 	.footer-top {
 		flex-direction: column;
 		gap: 56px;
