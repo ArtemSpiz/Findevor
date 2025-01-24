@@ -1,7 +1,7 @@
 .benefits {
 	background: var(--black-900, #0a0a0a);
 	height: 100%;
-	padding: 136px 0;
+	padding-top: 136px;
 	overflow: hidden;
 	position: relative;
 }
@@ -118,9 +118,7 @@
 	flex-direction: column;
 	justify-content: center;
 	position: relative;
-	overflow: hidden;
 	height: 500px;
-	gap: 20px; /* Відстань між елементами */
 }
 
 .benefit {
@@ -131,31 +129,31 @@
 	width: 45%;
 	opacity: 0;
 	transition: all 0.5s ease;
-	transform: translateX(0) translateY(120%); /* Початковий стан */
-	position: absolute; /* Щоб елементи перекривали один одного */
+	transform: translateX() translateY(100%);
+	position: absolute;
 }
 
 .benefit.visible {
-	opacity: 1; /* Видимість для активного елемента */
-	transform: scale(1) translateY(0); /* Центрування */
-	position: relative; /* Центр */
-	z-index: 3; /* Найвищий пріоритет */
+	opacity: 1;
+	transform: scale(1.1) translateY(0%);
+	position: relative;
+	z-index: 3;
 }
 
 .benefit.above {
-	opacity: 0.6; /* Зниження прозорості */
-	transform: translateX(-10%) translateY(-120%); /* Попередній елемент зверху */
+	opacity: 0.6;
+	transform: scale(0.9) translateX(-10%) translateY(-120%);
 	z-index: 2;
 }
 
 .benefit.below {
-	opacity: 0.6; /* Зниження прозорості */
-	transform: translateX(-10%) translateY(120%); /* Наступний елемент знизу */
+	opacity: 0.6;
+	transform: scale(0.9) translateX(-10%) translateY(120%);
 	z-index: 2;
 }
 
 .benefit.hidden {
-	opacity: 0; /* Приховані елементи */
+	opacity: 0;
 	transform: scale(0.8) translateY(200%);
 	z-index: 1;
 }
@@ -218,7 +216,7 @@
 	}
 
 	.benefits {
-		padding: 100px 0px;
+		padding-top: 100px;
 	}
 }
 
@@ -235,7 +233,8 @@
 	}
 
 	.benefits {
-		padding: 68px 0px;
+		padding: 0px 0px;
+		padding-top: 68px;
 	}
 
 	.benefit {

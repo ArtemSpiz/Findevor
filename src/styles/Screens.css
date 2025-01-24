@@ -1,5 +1,5 @@
 .allScreens-wrapper {
-	padding: 136px 0px;
+	padding-top: 136px;
 	background-color: #0a0a0a;
 }
 
@@ -926,7 +926,7 @@
 	}
 
 	.allScreens-wrapper {
-		padding: 100px 0px;
+		padding-top: 100px;
 	}
 
 	.thirdScreen-left-footerText {
@@ -948,6 +948,9 @@
 }
 
 @media (max-width: 700px) {
+	.allScreens-wrapper {
+		padding-top: 64px;
+	}
 	.cardTop-img-mob,
 	.cardBottom-img-mob,
 	.cardBottom-img-mob,
@@ -1191,7 +1194,11 @@
 	}
 
 	.screens-container {
-		justify-content: space-around;
+		justify-content: center;
+	}
+
+	.main-footer {
+		gap: 8px;
 	}
 }
 

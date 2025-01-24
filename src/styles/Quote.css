@@ -1,13 +1,10 @@
 .quotes {
 	background: var(--black-900, #0a0a0a);
 	height: 100%;
-	padding-bottom: 135px;
 }
 
 .quote-container {
 	display: flex;
-	background: var(--black-900, #0a0a0a);
-	padding: 40px 0px;
 	flex-direction: column;
 	align-items: center;
 	height: auto;
@@ -27,7 +24,8 @@
 			rgba(40, 48, 60, 0.6) 70%,
 			rgba(13, 15, 19, 0) 100%
 		);
-	height: 80%;
+	height: 100%;
+	position: relative;
 }
 
 .quote-wrapper {
@@ -47,7 +45,17 @@
 	overflow-y: hidden;
 	scroll-snap-type: x mandatory;
 	scrollbar-width: none;
-	padding: 70px 20%;
+	padding: 146px 20%;
+}
+
+.quote-star-top {
+	position: absolute;
+	top: 8%;
+}
+
+.quote-star-bottom {
+	position: absolute;
+	bottom: 8%;
 }
 
 .quote {
@@ -71,7 +79,6 @@
 	flex-direction: column;
 	align-items: center;
 	gap: 56px;
-	height: 100%;
 }
 
 .quote-wrapper-top {
@@ -110,7 +117,6 @@
 	font-style: normal;
 	font-weight: 400;
 	line-height: 120%; /* 38.4px */
-	opacity: 0.8;
 }
 
 .quote-wrapper-bottom {
@@ -201,7 +207,7 @@
 	0% {
 		opacity: 0;
 		filter: brightness(2);
-		transform: translateX(-50px) scale(1);
+		transform: translateX(50px) scale(1);
 	}
 	50% {
 		opacity: 1;
@@ -211,7 +217,7 @@
 	100% {
 		opacity: 0;
 		filter: brightness(0.5);
-		transform: translateX(50px) scale(0.5);
+		transform: translateX(-50px) scale(0.5);
 	}
 }
 
@@ -336,10 +342,6 @@
 		width: 700px;
 	}
 
-	.quotes {
-		padding-bottom: 100px;
-	}
-
 	.quote-wrapper-right {
 		display: none;
 	}
@@ -361,6 +363,7 @@
 
 	.quote-wrapcont {
 		gap: 80px;
+		padding: 110px 20%;
 	}
 }
 
@@ -371,6 +374,10 @@
 }
 
 @media (max-width: 800px) {
+	.quote-wrapper-container {
+		height: 87%;
+		justify-content: center;
+	}
 	.quote {
 		width: 100%;
 	}
@@ -395,12 +402,19 @@
 		width: 100%;
 	}
 
-	.quote-wrapcont {
-		align-items: center;
+	.quote-star-top {
+		top: 5%;
+	}
+
+	.quote-star-bottom {
+		bottom: 5%;
 	}
 }
 
 @media (max-width: 600px) {
+	.quote-wrapper-text {
+		font-size: 18px;
+	}
 	.quote-wrapper-container {
 		padding: 32px 24px;
 		gap: 24px;
@@ -440,13 +454,9 @@
 		background: linear-gradient(180deg, #141c33 0%, #798db0 100%);
 	}
 
-	.quotes {
-		padding-bottom: 64px;
-	}
-
 	.quote-wrapcont {
-		gap: 75%;
-		padding: 80px 28%;
+		gap: 32px;
+		padding: 78px 28%;
 	}
 
 	.quote-container {
@@ -455,7 +465,7 @@
 
 	.quote-starImgLeft,
 	.quote-starImgRight {
-		width: 80px;
+		width: 120px;
 		height: 8px;
 	}
 
@@ -463,7 +473,7 @@
 		0% {
 			opacity: 0;
 			filter: brightness(2);
-			transform: translateX(10px) scale(1);
+			transform: translateX(50px) scale(1);
 		}
 		50% {
 			opacity: 1;
@@ -473,7 +483,7 @@
 		100% {
 			opacity: 0;
 			filter: brightness(0.5);
-			transform: translateX(-10px) scale(0.5);
+			transform: translateX(-50px) scale(0.5);
 		}
 	}
 
@@ -481,7 +491,7 @@
 		0% {
 			opacity: 0;
 			filter: brightness(2);
-			transform: translateX(10px) scale(1);
+			transform: translateX(50px) scale(1);
 		}
 		50% {
 			opacity: 1;
@@ -491,66 +501,7 @@
 		100% {
 			opacity: 0;
 			filter: brightness(0.5);
-			transform: translateX(-10px) scale(0.5);
-		}
-	}
-
-	.quote-container {
-		flex-direction: row;
-		overflow: hidden;
-	}
-
-	.quote-star-bottom {
-		position: absolute;
-		right: 0;
-		overflow: hidden;
-	}
-
-	.quote-star-top {
-		position: absolute;
-		overflow: hidden;
-		left: 0;
-	}
-
-	.hide-stars {
-		display: none;
-	}
-}
-
-@media (max-width: 500px) {
-	@keyframes rightToLeftQuot {
-		0% {
-			opacity: 0;
-			filter: brightness(2);
-			transform: translateX(80px) scale(1);
-		}
-		50% {
-			opacity: 1;
-			filter: brightness(1);
-			transform: translateX(50px) scale(1);
-		}
-		100% {
-			opacity: 0;
-			filter: brightness(0.5);
-			transform: translateX(-10px) scale(0.5);
-		}
-	}
-
-	@keyframes leftToRight {
-		0% {
-			opacity: 0;
-			filter: brightness(2);
-			transform: translateX(80px) scale(1);
-		}
-		50% {
-			opacity: 1;
-			filter: brightness(1);
-			transform: translateX(50px) scale(1);
-		}
-		100% {
-			opacity: 0;
-			filter: brightness(0.5);
-			transform: translateX(-10px) scale(0.5);
+			transform: translateX(-50px) scale(0.5);
 		}
 	}
 }
