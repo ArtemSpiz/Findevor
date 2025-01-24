@@ -36,7 +36,7 @@
 	flex-direction: column;
 	height: 100%;
 	width: 100%;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
 .main-top {
@@ -123,6 +123,8 @@
 	font-size: 16px;
 	font-weight: 700;
 	line-height: 140%;
+	cursor: pointer;
+
 	border: 0;
 }
 
@@ -158,6 +160,7 @@
 .main-button {
 	justify-content: center;
 	display: flex;
+	cursor: pointer;
 }
 
 .top-stars {
@@ -306,32 +309,53 @@
 	line-height: 150%;
 	position: relative;
 }
-
 .main-wrapper {
-	background: var(--black-900, #0a0a0a);
-	display: flex;
-	justify-content: center;
-	overflow-x: hidden;
 	width: 100%;
+	overflow: hidden;
+	position: relative;
+	mask-image: linear-gradient(
+		to right,
+		transparent,
+		black 20%,
+		black 80%,
+		transparent
+	);
+	-webkit-mask-image: linear-gradient(
+		to left,
+		transparent,
+		black 20%,
+		black 80%,
+		transparent
+	);
+	mask-repeat: no-repeat;
+	-webkit-mask-repeat: no-repeat;
 }
 
 .main-logos {
-	width: 100%;
+	width: 200%;
 	display: flex;
-	align-items: center;
-	white-space: nowrap;
+	position: relative;
 }
 
 .logo-track {
+	position: relative;
+	display: flex;
+	width: 200%;
+}
+
+.logos {
+	animation: scroll 15s linear infinite;
 	width: 100%;
 	display: flex;
-	animation: scroll 5s linear infinite;
-	padding: 24px 0px;
-	gap: 64px;
 }
 
 .main-logo {
 	width: 12%;
+	flex-shrink: 0;
+	height: 35px;
+	opacity: 1;
+	object-fit: contain;
+	transition: opacity 0.3s ease;
 }
 
 @keyframes scroll {
@@ -339,7 +363,9 @@
 		transform: translateX(0);
 	}
 	to {
-		transform: translateX(-97%);
+		transform: translateX(
+			-100%
+		); /* Зсуваємо на 50% ширини, щоб створити ефект петлі */
 	}
 }
 
@@ -354,8 +380,9 @@
 }
 
 @media (min-width: 1600px) {
-	.platform {
-		height: 100%;
+	.firstCardImg,
+	.secondCardImg {
+		width: 50%;
 	}
 }
 

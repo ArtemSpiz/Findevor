@@ -13,7 +13,8 @@
 	align-items: center;
 	display: flex;
 	backface-visibility: hidden;
-	perspective: 1000;
+	height: 100vh;
+	justify-content: center;
 }
 
 .thirdScreen-left-footerTextMob,
@@ -625,6 +626,8 @@
 	transform: translate(50%, 0);
 }
 
+.firstScreenFillImage3,
+.thirdScreenFill,
 .thirdScreen-left-Fill,
 .thirdScreenFill2,
 .secondScreenImage,

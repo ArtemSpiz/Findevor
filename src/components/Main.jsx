@@ -6,6 +6,13 @@ import '../styles/Main.css'
 import firstCard from '../assets/firstCard.png'
 import secondCard from '../assets/secondCard.png'
 import logo1 from '../assets/logo1.png'
+import logo2 from '../assets/logo2.png'
+import logo3 from '../assets/logo3.png'
+import logo4 from '../assets/logo4.png'
+import logo5 from '../assets/logo5.png'
+import logo6 from '../assets/logo6.png'
+import logo7 from '../assets/logo7.png'
+
 import starStart from '../assets/stare-animation-end.png'
 import { useState } from 'react'
 
@@ -51,6 +58,7 @@ export function Main() {
 						y: '-20%',
 						duration: 1,
 						x: '75%',
+						width: '40%',
 					},
 					{
 						y: '-42%',
@@ -67,6 +75,7 @@ export function Main() {
 						y: '-20%',
 						duration: 1,
 						x: '70%',
+						width: '40%',
 					},
 					{
 						width: '65%',
@@ -396,23 +405,26 @@ export function Main() {
 								<div className='main-wrapper'>
 									<div className='main-logos'>
 										<div className='logo-track'>
-											<img className='main-logo' src={logo1} alt={logo1} />
-											<img className='main-logo' src={logo1} alt={logo1} />
-											<img className='main-logo' src={logo1} alt={logo1} />
-											<img className='main-logo' src={logo1} alt={logo1} />
-											<img className='main-logo' src={logo1} alt={logo1} />
-											<img className='main-logo' src={logo1} alt={logo1} />
-											<img className='main-logo' src={logo1} alt={logo1} />
-											<img className='main-logo' src={logo1} alt={logo1} />
-
-											<img className='main-logo' src={logo1} alt={logo1} />
-											<img className='main-logo' src={logo1} alt={logo1} />
-											<img className='main-logo' src={logo1} alt={logo1} />
-											<img className='main-logo' src={logo1} alt={logo1} />
-											<img className='main-logo' src={logo1} alt={logo1} />
-											<img className='main-logo' src={logo1} alt={logo1} />
-											<img className='main-logo' src={logo1} alt={logo1} />
-											<img className='main-logo' src={logo1} alt={logo1} />
+											<div className='logos'>
+												<img className='main-logo' src={logo1} alt={logo1} />
+												<img className='main-logo' src={logo2} alt={logo2} />
+												<img className='main-logo' src={logo3} alt={logo3} />
+												<img className='main-logo' src={logo4} alt={logo4} />
+												<img className='main-logo' src={logo5} alt={logo5} />
+												<img className='main-logo' src={logo6} alt={logo6} />
+												<img className='main-logo' src={logo7} alt={logo5} />
+												<img className='main-logo' src={logo1} alt={logo1} />
+											</div>
+											<div className='logos'>
+												<img className='main-logo' src={logo1} alt={logo1} />
+												<img className='main-logo' src={logo2} alt={logo1} />
+												<img className='main-logo' src={logo3} alt={logo1} />
+												<img className='main-logo' src={logo4} alt={logo1} />
+												<img className='main-logo' src={logo5} alt={logo1} />
+												<img className='main-logo' src={logo6} alt={logo1} />
+												<img className='main-logo' src={logo7} alt={logo1} />
+												<img className='main-logo' src={logo1} alt={logo1} />
+											</div>
 										</div>
 									</div>
 								</div>

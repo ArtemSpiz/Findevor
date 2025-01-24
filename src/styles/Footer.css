@@ -110,13 +110,10 @@
 }
 
 .footer-logo {
-	width: 15%;
+	width: 148px;
 }
 
 @media (max-width: 800px) {
-	.footer-logo {
-		width: 20%;
-	}
 	.footer-top {
 		flex-direction: column;
 		gap: 56px;
@@ -174,5 +171,9 @@
 	.footer-links {
 		gap: 24px;
 		flex-direction: column;
+	}
+
+	.footer-logo {
+		width: 120px;
 	}
 }
