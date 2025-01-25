@@ -451,6 +451,10 @@
 	.logos {
 		gap: 32px;
 	}
+
+	.logo-track {
+		gap: 32px;
+	}
 }
 
 @media (max-width: 1000px) {
@@ -480,6 +484,9 @@
 }
 
 @media (max-width: 600px) {
+	.main-title-mob {
+		width: 300px;
+	}
 	.firstCardImg,
 	.secondCardImg {
 		width: 200px;
