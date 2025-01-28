@@ -4,15 +4,10 @@ import burgerMenuOpen from '../assets/burger-open.png'
 import burgerMenuClose from '../assets/burger-close.png'
 
 import '../styles/Header.css'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 export function Header() {
-	const [isButtonClicked, setIsButtonClicked] = useState(false)
 	const [isMenuOpen, setIsMenuOpen] = useState(false) // Стан для випадаючого меню
-
-	const handleButtonClick = () => {
-		setIsButtonClicked(!isButtonClicked)
-	}
 
 	const toggleMenu = () => {
 		setIsMenuOpen(!isMenuOpen)
@@ -39,8 +34,10 @@ export function Header() {
 				</div>
 				<div className='button'>
 					<button
-						className={`btn ${isButtonClicked ? 'btn-clicked' : ''}`}
-						onClick={handleButtonClick}
+						className='btn'
+						onClick={() =>
+							(window.location.href = 'https://www.findevor.ai/early-access')
+						}
 					>
 						Schedule a Demo
 					</button>
@@ -86,10 +83,11 @@ export function Header() {
 
 								<div className='burgerMenu-button'>
 									<button
-										className={`burgerMenu-btn ${
-											isButtonClicked ? 'burgerMenu-btn-clicked' : ''
-										}`}
-										onClick={handleButtonClick}
+										className='burgerMenu-btn'
+										onClick={() =>
+											(window.location.href =
+												'https://www.findevor.ai/early-access')
+										}
 									>
 										Schedule a Demo
 										<svg

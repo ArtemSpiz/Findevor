@@ -1,14 +1,9 @@
 import '../styles/Portfolio.css'
 import starStartPort from '../assets/stare-animation-end.png'
 import starPort from '../assets/startAnimationPort.png'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 export function Portfolio() {
-	const [isButtonClicked, setIsButtonClicked] = useState(false)
-
-	const handleButtonClick = () => {
-		setIsButtonClicked(!isButtonClicked)
-	}
 	return (
 		<>
 			<div className='portfolios'>
@@ -47,10 +42,11 @@ export function Portfolio() {
 								</div>
 								<div className='portfolio-button'>
 									<button
-										className={`portfolio-btn ${
-											isButtonClicked ? 'portfolio-btn-clicked' : ''
-										}`}
-										onClick={handleButtonClick}
+										className='portfolio-btn'
+										onClick={() =>
+											(window.location.href =
+												'https://www.findevor.ai/early-access')
+										}
 									>
 										Schedule a Demo
 										<svg

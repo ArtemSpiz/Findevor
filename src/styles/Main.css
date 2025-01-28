@@ -132,6 +132,10 @@
 	box-shadow: 0px 0px 14px 0px #2e70d3, 0px 0px 28px 0px #133e5c inset;
 }
 
+.main-btn:active {
+	box-shadow: 0px 0px 14px 0px #2e70d3, 0px 0px 28px 0px #133e5c inset;
+}
+
 .main-btn:hover .star-path {
 	fill: url(#paint0_linear_2790_12227);
 }
@@ -316,8 +320,10 @@
 	mask-image: linear-gradient(
 		to right,
 		transparent,
-		black 20%,
-		black 80%,
+		#0a0a0a 0%,
+		rgba(10, 10, 10, 0) 20%,
+		rgba(10, 10, 10, 0) 80%,
+		#0a0a0a 100%,
 		transparent
 	);
 	-webkit-mask-image: linear-gradient(
@@ -341,16 +347,19 @@
 	position: relative;
 	display: flex;
 	width: 200%;
+	gap: 20px;
 }
 
 .logos {
-	animation: scroll 15s linear infinite;
-	width: 100%;
+	animation: scroll 20s linear infinite;
 	display: flex;
+	width: 100%;
 }
 
 .main-logo {
-	width: 12%;
+	display: flex;
+	justify-content: center;
+	width: 160px;
 	flex-shrink: 0;
 	height: 35px;
 	opacity: 1;
@@ -363,9 +372,7 @@
 		transform: translateX(0);
 	}
 	to {
-		transform: translateX(
-			-100%
-		); /* Зсуваємо на 50% ширини, щоб створити ефект петлі */
+		transform: translateX(-100%);
 	}
 }
 

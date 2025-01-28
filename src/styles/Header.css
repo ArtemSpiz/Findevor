@@ -10,7 +10,7 @@
 }
 
 .headerLogo {
-	width: 100%;
+	width: 148px;
 }
 
 .menu {
@@ -97,7 +97,7 @@
 
 @media (max-width: 700px) {
 	.headerLogo {
-		width: 50%;
+		width: 118px;
 	}
 	.menu {
 		display: none;
