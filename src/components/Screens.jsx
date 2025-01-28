@@ -74,7 +74,7 @@ export function Screens() {
 			scrollTrigger: {
 				trigger: screensElement,
 				start: 'top top',
-				end: `+=4000`,
+				end: `+=3000`,
 				scrub: 1,
 				markers: true,
 				id: 'Screens',

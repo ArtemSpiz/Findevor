@@ -17,6 +17,7 @@
 .portfolios-container {
 	display: flex;
 	padding: 0px 40px;
+
 	justify-content: center;
 	align-items: center;
 	gap: 56px;

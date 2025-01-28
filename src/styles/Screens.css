@@ -1,5 +1,5 @@
 .allScreens-wrapper {
-	padding: 136px 0px;
+	padding-top: 136px;
 	background-color: #0a0a0a;
 }
 
@@ -41,6 +41,7 @@
 }
 
 .screens-container {
+	max-width: 1440px;
 	display: flex;
 	padding: 0px 40px;
 	align-items: center;

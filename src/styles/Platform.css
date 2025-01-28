@@ -6,7 +6,6 @@
 .platform-container {
 	display: flex;
 	padding: 0px 88px;
-
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 80px;
@@ -139,6 +138,17 @@
 	width: 100%;
 	gap: 40px;
 	padding-bottom: 50px;
+}
+
+@media (min-width: 1600px) {
+	.platform-top {
+		width: 100%;
+		justify-content: space-around;
+	}
+
+	.platformCards {
+		width: 40%;
+	}
 }
 
 @media (max-width: 1000px) {

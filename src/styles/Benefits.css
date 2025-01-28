@@ -162,6 +162,24 @@
 	display: none;
 }
 
+@media (min-width: 1600px) {
+	.benefit {
+		width: 600px;
+	}
+
+	.benefits-circle {
+		left: 0;
+	}
+
+	.benefits-main {
+		justify-content: end;
+	}
+
+	.benefits-img {
+		margin-left: 0;
+	}
+}
+
 @media (max-width: 1200px) {
 	.benefit-title {
 		font-size: 25px;
