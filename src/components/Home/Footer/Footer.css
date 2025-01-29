@@ -23,6 +23,7 @@
 
 .footer-links-top {
 	display: flex;
+	align-items: flex-start;
 }
 
 .footer-links {

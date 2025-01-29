@@ -1,9 +1,9 @@
-import '../styles/Quote.css'
-import quoteStar from '../assets/stare-animation-end.png'
-import JenKyung from '../assets/JenKyung.png'
-import Vijay from '../assets/Vijay.png'
-import RobBrewer from '../assets/RobBrewer.png'
-import leftQuote from '../assets/leftQuote.png'
+import './Quote.css'
+import quoteStar from '../../../assets/stare-animation-end.png'
+import JenKyung from '../../../assets/JenKyung.png'
+import Vijay from '../../../assets/Vijay.png'
+import RobBrewer from '../../../assets/RobBrewer.png'
+import leftQuote from '../../../assets/leftQuote.png'
 import { useState, useEffect, useRef } from 'react'
 
 export function Quote() {
@@ -58,7 +58,6 @@ export function Quote() {
 		return () => observer.disconnect()
 	}, [])
 
-	// Логіка приховування зірок під час скролу
 	useEffect(() => {
 		let scrollTimeout
 

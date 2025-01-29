@@ -1,7 +1,7 @@
-import '../styles/Platform.css'
-import starsSub from '../assets/starsSub.png'
-import platStar from '../assets/platform-star.png'
-import platformCards from '../assets/platformCards.png'
+import './Platform.css'
+import starsSub from '../../../assets/starsSub.png'
+import platStar from '../../../assets/platform-star.png'
+import platformCards from '../../../assets/platformCards.png'
 
 export function Platform() {
 	return (

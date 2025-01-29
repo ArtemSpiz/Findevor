@@ -1,5 +1,7 @@
-import '../styles/Footer.css'
-import headerLogo from '../assets/headerLogo.png'
+import './Footer.css'
+import headerLogo from '../../../assets/headerLogo.png'
+
+import { NavLink } from 'react-router-dom'
 
 export function Footer() {
 	return (
@@ -26,9 +28,12 @@ export function Footer() {
 								<div className='footer-link'>
 									<div className='footer-link-title'>About</div>
 									<div className='footer-link-bottom'>
-										<div className='footer-link-subtitle'>Company</div>
-										<div className='footer-link-subtitle'>Security</div>
-										<div className='footer-link-subtitle'>News</div>
+										<NavLink className='text' to='/'>
+											Company
+										</NavLink>
+										<NavLink to='/security' className='text'>
+											Security
+										</NavLink>
 									</div>
 								</div>
 							</div>

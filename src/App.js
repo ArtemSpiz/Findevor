@@ -1,22 +1,15 @@
-import { Main } from './components/Main'
-import { Screens } from './components/Screens'
-import { Platform } from './components/Platfotm'
-import { Benefits } from './components/Benefits'
-import { Quote } from './components/Quote'
-import { Portfolio } from './components/Portfolio'
-import { Footer } from './components/Footer'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './Pages/Home'
+import Security from './Pages/Security'
 
 function App() {
 	return (
-		<div>
-			<Main></Main>
-			<Platform></Platform>
-			<Screens></Screens>
-			<Benefits></Benefits>
-			<Quote></Quote>
-			<Portfolio></Portfolio>
-			<Footer></Footer>
-		</div>
+		<Router>
+			<Routes>
+				<Route path='/' element={<Home />} />
+				<Route path='/security' element={<Security />} />
+			</Routes>
+		</Router>
 	)
 }
 

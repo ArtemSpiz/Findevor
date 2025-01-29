@@ -12,7 +12,7 @@
 
 .main-container {
 	display: flex;
-	background-image: url('../assets/light.png');
+	background-image: url('../../../assets/light.png');
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
@@ -351,7 +351,7 @@
 }
 
 .logos {
-	animation: scroll 20s linear infinite;
+	animation: scroll 60s linear infinite;
 	display: flex;
 	width: 100%;
 }
@@ -390,6 +390,10 @@
 	.firstCardImg,
 	.secondCardImg {
 		width: 50%;
+	}
+
+	.main-container {
+		height: 95vh;
 	}
 }
 
@@ -556,7 +560,7 @@
 @media (max-width: 500px) {
 	.main-container {
 		height: 100vh;
-		background-image: url('../assets/main-bgMob.png');
+		background-image: url('../../../assets/main-bgMob.png');
 		background-size: contain;
 	}
 

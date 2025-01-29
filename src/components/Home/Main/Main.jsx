@@ -1,42 +1,109 @@
+import './Main.css'
+import { Header } from '../Header/Header'
+
 import React from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { Header } from './Header'
-import '../styles/Main.css'
-import firstCard from '../assets/firstCard.png'
-import secondCard from '../assets/secondCard.png'
-import logo1 from '../assets/logo1.png'
-import logo2 from '../assets/logo2.png'
-import logo3 from '../assets/logo3.png'
-import logo4 from '../assets/logo4.png'
-import logo5 from '../assets/logo5.png'
-import logo6 from '../assets/logo6.png'
-import logo7 from '../assets/logo7.png'
-import logo8 from '../assets/logo8.png'
-import logo9 from '../assets/logo9.png'
-import logo10 from '../assets/logo10.png'
-import logo11 from '../assets/logo11.png'
-import logo12 from '../assets/logo12.png'
-import logo13 from '../assets/logo13.png'
-import logo14 from '../assets/logo14.png'
-import logo15 from '../assets/logo15.png'
-import logo16 from '../assets/logo16.png'
-import logo17 from '../assets/logo17.png'
-import logo18 from '../assets/logo18.png'
+import firstCard from '../../../assets/firstCard.png'
+import secondCard from '../../../assets/secondCard.png'
+import logo1 from '../../../assets/logo1.png'
+import logo2 from '../../../assets/logo2.png'
+import logo3 from '../../../assets/logo3.png'
+import logo4 from '../../../assets/logo4.png'
+import logo5 from '../../../assets/logo5.png'
+import logo6 from '../../../assets/logo6.png'
+import logo7 from '../../../assets/logo7.png'
+import logo8 from '../../../assets/logo8.png'
+import logo9 from '../../../assets/logo9.png'
+import logo10 from '../../../assets/logo10.png'
+import logo11 from '../../../assets/logo11.png'
+import logo12 from '../../../assets/logo12.png'
+import logo13 from '../../../assets/logo13.png'
+import logo14 from '../../../assets/logo14.png'
+import logo15 from '../../../assets/logo15.png'
+import logo16 from '../../../assets/logo16.png'
+import logo17 from '../../../assets/logo17.png'
+import logo18 from '../../../assets/logo18.png'
 
-import starStart from '../assets/stare-animation-end.png'
+import starStart from '../../../assets/stare-animation-end.png'
 import { useState } from 'react'
 
 gsap.registerPlugin(ScrollTrigger)
 
 export function Main() {
 	React.useEffect(() => {
-		if (window.innerWidth >= 1200) {
+		if (window.innerWidth >= 1600) {
 			const mainTimeline = gsap.timeline({
 				scrollTrigger: {
 					trigger: '.main',
 					start: 'bottom bottom',
-					end: '+=1000',
+					end: '+=500',
+					scrub: true,
+					pin: true,
+				},
+				paused: true,
+			})
+
+			gsap.set('.firstCard', {
+				position: 'absolute',
+				zIndex: -2,
+				rotate: '4deg',
+			})
+
+			gsap.set('.secondCard', {
+				position: 'absolute',
+				zIndex: -1,
+			})
+
+			mainTimeline
+				.to('.Header', { opacity: 0.3, duration: 0.5 })
+				.to('.main-top', { opacity: 0.3, duration: 0.7, zIndex: -4 }, '<')
+				.to('.main-footer', { opacity: 0.3, duration: 0.7 }, '<')
+				.fromTo(
+					'.firstCard',
+					{
+						y: '-10%',
+						duration: 1,
+						x: '75%',
+						width: '35%',
+					},
+					{
+						y: '-32%',
+						duration: 1,
+						x: '80%',
+						width: '50%',
+						rotate: '9deg',
+					},
+					'<'
+				)
+				.fromTo(
+					'.secondCard',
+					{
+						y: '-10%',
+						duration: 1,
+						x: '70%',
+						width: '35%',
+					},
+					{
+						width: '50%',
+						x: '70%',
+						y: '-28%',
+						duration: 1,
+					},
+					'<'
+				)
+
+			return () => {
+				mainTimeline.kill()
+			}
+		}
+
+		if (window.innerWidth >= 1200 && window.innerWidth < 1600) {
+			const mainTimeline = gsap.timeline({
+				scrollTrigger: {
+					trigger: '.main',
+					start: 'bottom bottom',
+					end: '+=500',
 					scrub: true,
 					pin: true,
 				},
@@ -70,7 +137,7 @@ export function Main() {
 						y: '-42%',
 						duration: 1,
 						x: '80%',
-						width: '65%',
+						width: '50%',
 						rotate: '9deg',
 					},
 					'<'
@@ -84,9 +151,9 @@ export function Main() {
 						width: '40%',
 					},
 					{
-						width: '65%',
+						width: '50%',
 						x: '70%',
-						y: '-35%',
+						y: '-40%',
 						duration: 1,
 					},
 					'<'
@@ -102,7 +169,7 @@ export function Main() {
 				scrollTrigger: {
 					trigger: '.main',
 					start: 'bottom bottom',
-					end: '+=1000',
+					end: '+=500',
 					scrub: true,
 					pin: true,
 				},
@@ -169,7 +236,7 @@ export function Main() {
 				scrollTrigger: {
 					trigger: '.main',
 					start: 'bottom bottom',
-					end: '+=1000',
+					end: '+=500',
 					scrub: true,
 					pin: true,
 				},

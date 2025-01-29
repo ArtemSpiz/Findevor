@@ -1,36 +1,36 @@
-import '../styles/Screens.css'
-import leftFirstScreen from '../assets/leftFirstScreen.png'
-import ask from '../assets/ask.png'
-import firstScreenFillImage from '../assets/firstScreenFill.png'
-import firstScreenFillImage2 from '../assets/firstScreenFill2.png'
-import firstScreenFillImage3 from '../assets/firstScreenFill3.png'
-import secondScreenImage from '../assets/secondScreenImage.png'
-import secondScreenImage2 from '../assets/secondScreenImage2.png'
-import secondScreenFill from '../assets/secondScreenFill.png'
-import thirdScreenImage from '../assets/thirdScreenImage.png'
-import thirdScreenFill from '../assets/thirdScreenFill.png'
-import thirdScreenFill2 from '../assets/thirdScreenFill2.png'
+import './Screens.css'
+import leftFirstScreen from '../../../assets/leftFirstScreen.png'
+import ask from '../../../assets/ask.png'
+import firstScreenFillImage from '../../../assets/firstScreenFill.png'
+import firstScreenFillImage2 from '../../../assets/firstScreenFill2.png'
+import firstScreenFillImage3 from '../../../assets/firstScreenFill3.png'
+import secondScreenImage from '../../../assets/secondScreenImage.png'
+import secondScreenImage2 from '../../../assets/secondScreenImage2.png'
+import secondScreenFill from '../../../assets/secondScreenFill.png'
+import thirdScreenImage from '../../../assets/thirdScreenImage.png'
+import thirdScreenFill from '../../../assets/thirdScreenFill.png'
+import thirdScreenFill2 from '../../../assets/thirdScreenFill2.png'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import React from 'react'
 import { useRef, useState } from 'react'
 
-import leftFirstScreenMob from '../assets/leftFirstScreenMob.png'
-import rightFirstScreenMobTop from '../assets/rightFirstScreenMobTop.png'
-import leftFirstScreenMobCenter from '../assets/leftFirstScreenMobCenter.png'
-import leftFirstScreenMobBottom from '../assets/leftFirstScreenMobBottom.png'
-import askMob from '../assets/askMob.png'
+import leftFirstScreenMob from '../../../assets/leftFirstScreenMob.png'
+import rightFirstScreenMobTop from '../../../assets/rightFirstScreenMobTop.png'
+import leftFirstScreenMobCenter from '../../../assets/leftFirstScreenMobCenter.png'
+import leftFirstScreenMobBottom from '../../../assets/leftFirstScreenMobBottom.png'
+import askMob from '../../../assets/askMob.png'
 
-import secondScreenImageMob from '../assets/secondScreenImageMob.png'
-import secondScreenImageMob2 from '../assets/secondScreenImageMob2.png'
+import secondScreenImageMob from '../../../assets/secondScreenImageMob.png'
+import secondScreenImageMob2 from '../../../assets/secondScreenImageMob2.png'
 
-import thirdScreenImageMob from '../assets/thirdScreenImageMob.png'
-import secondScreenFillImageMob from '../assets/secondScreenFillImageMob.png'
+import thirdScreenImageMob from '../../../assets/thirdScreenImageMob.png'
+import secondScreenFillImageMob from '../../../assets/secondScreenFillImageMob.png'
 
-import thirdScreenFilMob from '../assets/thirdScreenFilMob.png'
-import thirdScreenFilMob2 from '../assets/thirdScreenFilMob2.png'
+import thirdScreenFilMob from '../../../assets/thirdScreenFilMob.png'
+import thirdScreenFilMob2 from '../../../assets/thirdScreenFilMob2.png'
 
-import logoMobCLose from '../assets/false.png'
+import logoMobCLose from '../../../assets/false.png'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -40,7 +40,7 @@ export function Screens() {
 	const screensLeftFillRef = useRef(null)
 	const screensRightFillRef = useRef(null)
 	const screenSection = useRef(null)
-	const subtitles = ['SAM', 'Pre-Qualifier', 'Step Up']
+	const subtitles = ['Portfolio Intelligence', 'Pre-Qualifier', 'Step Up']
 	const subtitlesMob = ['SAM', 'Pre-Qualifier', 'Underwriting']
 	const [activeSubtitle, setActiveSubtitle] = React.useState(null)
 
@@ -74,9 +74,8 @@ export function Screens() {
 			scrollTrigger: {
 				trigger: screensElement,
 				start: 'top top',
-				end: `+=3000`,
+				end: `+=4000`,
 				scrub: 1,
-				markers: true,
 				id: 'Screens',
 				pin: true,
 				onUpdate(self) {
@@ -321,7 +320,11 @@ export function Screens() {
 												!isLeftCardOpen ? handleLeftCardClick : undefined
 											}
 										>
-											<img src={logoMobCLose} className='logo-mob-img'></img>
+											<img
+												alt='logoMobCLose'
+												src={logoMobCLose}
+												className='logo-mob-img'
+											></img>
 										</div>
 										<div
 											className={`screensLeft ${
@@ -647,7 +650,11 @@ export function Screens() {
 											!isRightCardOpen ? handleRightCardClick : undefined
 										}
 									>
-										<img src={logoMobCLose} className='logo-mob-img'></img>
+										<img
+											alt='logoMobCLose'
+											src={logoMobCLose}
+											className='logo-mob-img'
+										></img>
 									</div>
 									<div
 										className={`firstScreen-right-container ${

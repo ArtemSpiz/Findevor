@@ -1,12 +1,12 @@
-import '../styles/Portfolio.css'
-import starStartPort from '../assets/stare-animation-end.png'
-import starPort from '../assets/startAnimationPort.png'
+import './Portfolio.css'
+import starStartPort from '../../../assets/stare-animation-end.png'
+import starPort from '../../../assets/startAnimationPort.png'
 import React, { useState, useEffect } from 'react'
 
 export function Portfolio() {
 	return (
 		<>
-			<div className='portfolios'>
+			<div className='securPortfolios'>
 				<div className='portfolios-container'>
 					<div className='portfolio-star-left-mob'>
 						<img
@@ -20,16 +20,18 @@ export function Portfolio() {
 							<div className='portfolio-left'>
 								<div className='portfolio-title'>
 									Ready to transform your
-									<div className='portfolio-title2 desktop'>portfolio?</div>
+									<div className='portfolio-title2 desktop'>
+										underwriting workflow?
+									</div>
 									<div className='portfolio-title2 mob'>
-										insurance workflow?
+										underwriting workflow?
 									</div>
 								</div>
 								<div className='portfolio-subtitle desktop'>
-									Maximize profitability with smarter insights.
+									Simplify your underwriting workflow and work smarter.
 								</div>
-								<div className='portfolio-subtitle-mob mob '>
-									Simplify your insurance workflow and work smarter.
+								<div className='securPortfolio-subtitle-mob mob '>
+									Simplify your underwriting workflow and work smarter.
 								</div>
 							</div>
 							<div className='portfolio-right'>

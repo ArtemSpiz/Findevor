@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import '../styles/Benefits.css'
-import benefitsCircle from '../assets/benefitsCircle.png'
-import rocket from '../assets/rocket.png'
+import './Benefits.css'
+import benefitsCircle from '../../../assets/benefitsCircle.png'
+import rocket from '../../../assets/rocket.png'
 
 export function Benefits() {
 	const [activeBenefit, setActiveBenefit] = useState(1)
@@ -9,8 +9,8 @@ export function Benefits() {
 	const benefits = [
 		{
 			id: 1,
-			title: 'Recover lost revenue',
-			subtitle: 'with premium leakage solutions.',
+			title: 'Recover Lost Revenue',
+			subtitle: 'Address premium leakage with smarter underwriting solutions.',
 			icon: (
 				<svg
 					xmlns='http://www.w3.org/2000/svg'
@@ -138,8 +138,9 @@ export function Benefits() {
 		},
 		{
 			id: 2,
-			title: 'Improve profitability',
-			subtitle: 'with precise risk evaluation.',
+			title: 'Improve Profitability',
+			subtitle:
+				'Optimize decisions with precise risk evaluation and data analysis.',
 			icon: (
 				<svg
 					xmlns='http://www.w3.org/2000/svg'
@@ -224,8 +225,9 @@ export function Benefits() {
 		},
 		{
 			id: 3,
-			title: 'Expand with confidence',
-			subtitle: 'into underserved markets.',
+			title: 'Expand with Confidence',
+			subtitle:
+				'Seamlessly enter underserved markets with AI-powered insights.',
 			icon: (
 				<svg
 					xmlns='http://www.w3.org/2000/svg'
@@ -327,8 +329,165 @@ export function Benefits() {
 		},
 		{
 			id: 4,
-			title: 'Launch products faster',
-			subtitle: 'with streamlined workflows.',
+			title: 'Accelerate Time-to-Market',
+			subtitle:
+				' Launch new products faster with actionable data intelligence.',
+			icon: <img src={rocket} alt='Rocket icon' />,
+			iconMob: (
+				<svg
+					xmlns='http://www.w3.org/2000/svg'
+					width='35'
+					height='35'
+					viewBox='0 0 48 48'
+					fill='none'
+				>
+					<path
+						d='M32.3076 27.1435L19.717 33.8342L13.9928 28.11L20.6836 15.5194C22.5915 11.9292 26.1214 9.46774 30.1272 8.93426L38.6783 7.7955C39.4714 7.68984 40.1371 8.35557 40.0315 9.1487L38.8927 17.6997C38.3592 21.7055 35.8978 25.2354 32.3076 27.1435Z'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M9.60815 32.4948C6.68508 35.4178 8.08564 39.7414 8.08564 39.7414C8.08564 39.7414 12.4093 41.142 15.3323 38.2189'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M18.4233 19.3867C9.76082 18.0319 6.77678 26.7401 6.77678 26.7401L13.993 28.1102'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M29.0577 30.021C30.4125 38.6835 21.7043 41.6675 21.7043 41.6675L20.3342 34.4513'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M25.6241 22.203C24.0434 20.6223 24.0707 18.0323 25.6851 16.4179C27.2995 14.8035 29.8895 14.7762 31.4702 16.3569C33.051 17.9376 33.0236 20.5277 31.4093 22.1421C29.7949 23.7565 27.2048 23.7838 25.6241 22.203Z'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+				</svg>
+			),
+		},
+		{
+			id: 5,
+			title: 'Enhance Operational Efficiency',
+			subtitle:
+				'Streamline workflows to reduce manual costs and turnaround times.',
+			icon: <img src={rocket} alt='Rocket icon' />,
+			iconMob: (
+				<svg
+					xmlns='http://www.w3.org/2000/svg'
+					width='35'
+					height='35'
+					viewBox='0 0 48 48'
+					fill='none'
+				>
+					<path
+						d='M32.3076 27.1435L19.717 33.8342L13.9928 28.11L20.6836 15.5194C22.5915 11.9292 26.1214 9.46774 30.1272 8.93426L38.6783 7.7955C39.4714 7.68984 40.1371 8.35557 40.0315 9.1487L38.8927 17.6997C38.3592 21.7055 35.8978 25.2354 32.3076 27.1435Z'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M9.60815 32.4948C6.68508 35.4178 8.08564 39.7414 8.08564 39.7414C8.08564 39.7414 12.4093 41.142 15.3323 38.2189'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M18.4233 19.3867C9.76082 18.0319 6.77678 26.7401 6.77678 26.7401L13.993 28.1102'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M29.0577 30.021C30.4125 38.6835 21.7043 41.6675 21.7043 41.6675L20.3342 34.4513'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M25.6241 22.203C24.0434 20.6223 24.0707 18.0323 25.6851 16.4179C27.2995 14.8035 29.8895 14.7762 31.4702 16.3569C33.051 17.9376 33.0236 20.5277 31.4093 22.1421C29.7949 23.7565 27.2048 23.7838 25.6241 22.203Z'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+				</svg>
+			),
+		},
+		{
+			id: 6,
+			title: 'Drive Data-Driven Decisions',
+			subtitle:
+				'Gain clarity with insights from integrated internal and external data.',
+			icon: <img src={rocket} alt='Rocket icon' />,
+			iconMob: (
+				<svg
+					xmlns='http://www.w3.org/2000/svg'
+					width='35'
+					height='35'
+					viewBox='0 0 48 48'
+					fill='none'
+				>
+					<path
+						d='M32.3076 27.1435L19.717 33.8342L13.9928 28.11L20.6836 15.5194C22.5915 11.9292 26.1214 9.46774 30.1272 8.93426L38.6783 7.7955C39.4714 7.68984 40.1371 8.35557 40.0315 9.1487L38.8927 17.6997C38.3592 21.7055 35.8978 25.2354 32.3076 27.1435Z'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M9.60815 32.4948C6.68508 35.4178 8.08564 39.7414 8.08564 39.7414C8.08564 39.7414 12.4093 41.142 15.3323 38.2189'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M18.4233 19.3867C9.76082 18.0319 6.77678 26.7401 6.77678 26.7401L13.993 28.1102'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M29.0577 30.021C30.4125 38.6835 21.7043 41.6675 21.7043 41.6675L20.3342 34.4513'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M25.6241 22.203C24.0434 20.6223 24.0707 18.0323 25.6851 16.4179C27.2995 14.8035 29.8895 14.7762 31.4702 16.3569C33.051 17.9376 33.0236 20.5277 31.4093 22.1421C29.7949 23.7565 27.2048 23.7838 25.6241 22.203Z'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+				</svg>
+			),
+		},
+		{
+			id: 7,
+			title: 'Build Long-Term Partnerships',
+			subtitle:
+				'Enhance broker and client relationships with consistent results.',
 			icon: <img src={rocket} alt='Rocket icon' />,
 			iconMob: (
 				<svg

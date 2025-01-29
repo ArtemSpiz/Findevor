@@ -1,13 +1,14 @@
-import headerLogo from '../assets/headerLogo.png'
-import burgerMenuLogo from '../assets/false.png'
-import burgerMenuOpen from '../assets/burger-open.png'
-import burgerMenuClose from '../assets/burger-close.png'
+import headerLogo from '../../../assets/headerLogo.png'
+import burgerMenuLogo from '../../../assets/false.png'
+import burgerMenuOpen from '../../../assets/burger-open.png'
+import burgerMenuClose from '../../../assets/burger-close.png'
+import { NavLink } from 'react-router-dom'
 
-import '../styles/Header.css'
+import './Header.css'
 import React, { useState, useEffect } from 'react'
 
 export function Header() {
-	const [isMenuOpen, setIsMenuOpen] = useState(false) // Стан для випадаючого меню
+	const [isMenuOpen, setIsMenuOpen] = useState(false)
 
 	const toggleMenu = () => {
 		setIsMenuOpen(!isMenuOpen)
@@ -28,9 +29,12 @@ export function Header() {
 					<img src={headerLogo} alt='headerLogo' className='headerLogo' />
 				</div>
 				<div className='menu '>
-					<div className='text'>Company</div>
-					<div className='text'>Security</div>
-					<div className='text'>News</div>
+					<NavLink className='text' to='/'>
+						Company
+					</NavLink>
+					<NavLink to='/security' className='text'>
+						Security
+					</NavLink>
 				</div>
 				<div className='button'>
 					<button
@@ -76,9 +80,12 @@ export function Header() {
 
 							<div className='burgerMenu-inf'>
 								<div className='burgerMenu-infLinks'>
-									<div className='text'>Company</div>
-									<div className='text'>Security</div>
-									<div className='text'>News</div>
+									<NavLink className='text' to='/'>
+										Company
+									</NavLink>
+									<NavLink to='/security' className='text'>
+										Security
+									</NavLink>
 								</div>
 
 								<div className='burgerMenu-button'>

@@ -11,7 +11,7 @@
 	gap: 80px;
 	align-self: stretch;
 	background-size: cover;
-	background-image: url('../assets/light.png');
+	background-image: url('../../../assets/light.png');
 	background-repeat: no-repeat;
 	background-position: bottom;
 }
