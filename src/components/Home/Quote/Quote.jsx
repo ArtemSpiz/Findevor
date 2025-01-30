@@ -32,61 +32,50 @@ export function Quote() {
 		},
 	]
 
-	const [activeQuote, setActiveQuote] = useState(null)
-	const [isScrolling, setIsScrolling] = useState(false)
-	const quoteRefs = useRef([])
-
-	// Спостереження за цитатами
-	useEffect(() => {
-		const observer = new IntersectionObserver(
-			entries => {
-				entries.forEach(entry => {
-					if (entry.isIntersecting) {
-						setActiveQuote(entry.target.dataset.id)
-					}
-				})
-			},
-			{
-				threshold: 0.5,
-			}
-		)
-
-		quoteRefs.current.forEach(quote => {
-			if (quote) observer.observe(quote)
-		})
-
-		return () => observer.disconnect()
-	}, [])
+	const containerRef = useRef(null)
+	const [index, setIndex] = useState(0)
 
 	useEffect(() => {
-		let scrollTimeout
+		const interval = setInterval(() => {
+			setIndex(prevIndex => (prevIndex + 1) % quotes.length)
+		}, 15000)
+		return () => clearInterval(interval)
+	}, [quotes.length])
 
-		const handleScroll = () => {
-			setIsScrolling(true)
-			clearTimeout(scrollTimeout)
-			scrollTimeout = setTimeout(() => {
-				setIsScrolling(false)
-			}, 150)
+	useEffect(() => {
+		if (containerRef.current) {
+			containerRef.current.scrollTo({
+				left: index * containerRef.current.clientWidth,
+				behavior: 'smooth',
+			})
 		}
-
-		window.addEventListener('scroll', handleScroll)
-		return () => window.removeEventListener('scroll', handleScroll)
-	}, [])
+	}, [index])
 
 	return (
-		<div className='quotes'>
-			<div className='quote-container'>
-				<div className={`quote-star-top ${isScrolling ? 'hide-stars' : ''}`}>
-					<img src={quoteStar} alt='quote-star' className='quote-starImgLeft' />
-				</div>
-				<div className='quote-wrapper'>
-					<div className='quote-wrapcont'>
-						{quotes.map((quote, index) => (
+		<div className='quotes-scroll'>
+			<div className='quotes'>
+				<div className='quote-container'>
+					<div
+						className='securQuote-wrapcont'
+						ref={containerRef}
+						style={{
+							display: 'flex',
+							overflow: 'hidden',
+							scrollBehavior: 'smooth',
+						}}
+					>
+						<div className='securQuote-star-top'>
+							<img
+								src={quoteStar}
+								alt='quote-star'
+								className='quote-starImgLeft'
+							/>
+						</div>
+						{quotes.map(quote => (
 							<div
 								key={quote.id}
-								data-id={quote.id}
-								className={`quote ${activeQuote == quote.id ? 'active' : ''}`}
-								ref={el => (quoteRefs.current[index] = el)}
+								className='securQuote'
+								style={{ minWidth: '100%' }}
 							>
 								<div className='quote-wrapper-container'>
 									<div className='quote-wrapper-top'>
@@ -95,23 +84,16 @@ export function Quote() {
 											src={leftQuote}
 											alt='leftQuote'
 										/>
-										<div className='quote-wrapper-text'>{quote.text}</div>
-										<div className='quote-wrapper-right'>
+										<div className='securQuote-wrapper-text'>{quote.text}</div>
+									</div>
+									<div className='quote-wrapper-bottom'>
+										<div className='securQuotePicture'>
 											<img
-												className='quote-wrapper-rightImg'
-												src={leftQuote}
-												alt='leftQuote'
+												src={quote.picture}
+												alt={quote.author}
+												className='securQuotePictureImg'
 											/>
 										</div>
-									</div>
-
-									<div className='quote-wrapper-bottom'>
-										<img
-											src={quote.picture}
-											alt={quote.author}
-											className='quotePictureImg'
-										/>
-
 										<div className='wrapper-bottom-right'>
 											<div className='wrapper-bottom-name'>{quote.author}</div>
 											<div className='wrapper-bottom-position'>
@@ -122,14 +104,14 @@ export function Quote() {
 								</div>
 							</div>
 						))}
+						<div className='securQuote-star-bottom'>
+							<img
+								src={quoteStar}
+								alt='quote-star'
+								className='quote-starImgRight'
+							/>
+						</div>
 					</div>
-				</div>
-				<div className={`quote-star-bottom ${isScrolling ? 'hide-stars' : ''}`}>
-					<img
-						src={quoteStar}
-						alt='quote-star'
-						className='quote-starImgRight'
-					/>
 				</div>
 			</div>
 		</div>

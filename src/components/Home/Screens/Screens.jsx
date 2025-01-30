@@ -81,19 +81,15 @@ export function Screens() {
 				onUpdate(self) {
 					const progress = self.progress
 
-					if (progress >= 1) {
-						setActiveSubtitle(subtitles.length - 1)
-					} else {
-						const activeIndex = Math.floor(progress * subtitles.length)
-						setActiveSubtitle(activeIndex)
-					}
+					const activeIndex = Math.floor(progress * leftBlocks.length)
+					const subtitleIndex = Math.min(activeIndex, subtitles.length - 1)
+					const subtitleMobIndex = Math.min(
+						activeIndex,
+						subtitlesMob.length - 1
+					)
 
-					if (progress >= 1) {
-						setActiveSubtitle(subtitlesMob.length - 1)
-					} else {
-						const activeIndex = Math.floor(progress * subtitlesMob.length)
-						setActiveSubtitle(activeIndex)
-					}
+					setActiveSubtitle(subtitleIndex)
+					setActiveSubtitle(subtitleMobIndex)
 
 					const activeStars = progress * stars.length
 

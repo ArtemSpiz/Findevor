@@ -8,7 +8,7 @@ export function Quote() {
 	const quotes = [
 		{
 			id: 1,
-			text: 'In 2025, it appears the technology landscape is constantly evolving...',
+			text: 'In 2025, it appears the technology landscape is constantly evolving. Building trust through effective product security and technology risk management becomes crucial, as more and more businesses race to operationalize automation and AI.  Findevor is taking an intentionally proactive and holistic approach to operate in line with internationally recognised frameworks and information security best practice.',
 			author: 'Sam Goddard CISSP, CISM',
 			position:
 				'Regional Information Security Officer Fortune 500 Insurance Organization',
@@ -16,25 +16,52 @@ export function Quote() {
 		},
 		{
 			id: 2,
-			text: 'Findevor is taking an intentionally proactive and holistic approach...',
+			text: 'In 2025, it appears the technology landscape is constantly evolving. Building trust through effective product security and technology risk management becomes crucial, as more and more businesses race to operationalize automation and AI.  Findevor is taking an intentionally proactive and holistic approach to operate in line with internationally recognised frameworks and information security best practice.',
 			author: 'Vijay Kumar',
 			position: 'CTO of Tech Innovations',
 			picture: Sam,
 		},
 		{
 			id: 3,
-			text: 'Building trust through effective product security and risk management...',
+			text: 'In 2025, it appears the technology landscape is constantly evolving. Building trust through effective product security and technology risk management becomes crucial, as more and more businesses race to operationalize automation and AI.  Findevor is taking an intentionally proactive and holistic approach to operate in line with internationally recognised frameworks and information security best practice.',
 			author: 'Rob Brewer',
 			position: 'Cybersecurity Expert',
 			picture: Sam,
 		},
 	]
 
+	const containerRef = useRef(null)
+	const [index, setIndex] = useState(0)
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setIndex(prevIndex => (prevIndex + 1) % quotes.length)
+		}, 15000)
+		return () => clearInterval(interval)
+	}, [quotes.length])
+
+	useEffect(() => {
+		if (containerRef.current) {
+			containerRef.current.scrollTo({
+				left: index * containerRef.current.clientWidth,
+				behavior: 'smooth',
+			})
+		}
+	}, [index])
+
 	return (
 		<div className='quotes-scroll'>
 			<div className='quotes'>
 				<div className='quote-container'>
-					<div className='securQuote-wrapcont'>
+					<div
+						className='securQuote-wrapcont'
+						ref={containerRef}
+						style={{
+							display: 'flex',
+							overflow: 'hidden',
+							scrollBehavior: 'smooth',
+						}}
+					>
 						<div className='securQuote-star-top'>
 							<img
 								src={quoteStar}
@@ -43,7 +70,11 @@ export function Quote() {
 							/>
 						</div>
 						{quotes.map((quote, index) => (
-							<div key={quote.id} className='securQuote'>
+							<div
+								key={quote.id}
+								className='securQuote '
+								style={{ minWidth: '100%' }}
+							>
 								<div className='quote-wrapper-container'>
 									<div className='quote-wrapper-top'>
 										<img

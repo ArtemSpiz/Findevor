@@ -1,7 +1,7 @@
 .leading {
 	background: var(--black-900, #0a0a0a);
 	height: 100%;
-	padding-top: 136px;
+	padding: 136px 0px;
 }
 
 .leading-container {
@@ -51,7 +51,11 @@
 	width: 100%;
 	border-radius: 30px;
 	border: 1px solid var(--dark-oxford-blue-2, #101b2c);
-	background: rgba(17, 19, 25, 0.7);
+	background-image: url('../../../assets/personCardBg.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	background-position: center;
 	display: flex;
 	padding: 56px 40px 40px 40px;
 	flex-direction: column;
@@ -140,6 +144,10 @@
 }
 
 @media (max-width: 1000px) {
+	.leading {
+		padding: 100px 0px;
+	}
+
 	.leadingCard-title {
 		font-size: 25px;
 	}
@@ -182,5 +190,46 @@
 
 	.leadingCard {
 		width: auto;
+	}
+}
+
+@media (max-width: 600px) {
+	.leading {
+		padding: 64px 0px;
+	}
+	.leading-title {
+		font-size: 22px;
+	}
+
+	.leading-container {
+		gap: 24px;
+		padding: 0px 20px;
+	}
+
+	.leadingCard {
+		padding: 40px 24px 24px 24px;
+		gap: 24px;
+	}
+
+	.leadingCardTexts {
+		gap: 12px;
+	}
+
+	.leadingCardBottom {
+		gap: 12px;
+	}
+
+	.leadingCardImage {
+		width: 95px;
+		height: 96px;
+		flex-shrink: 0;
+	}
+
+	.leading-cards {
+		gap: 16px;
+	}
+
+	.leadingCard-title {
+		font-size: 18px;
 	}
 }
