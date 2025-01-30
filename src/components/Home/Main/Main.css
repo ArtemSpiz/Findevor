@@ -492,6 +492,9 @@
 	.bottomStars-right {
 		right: 0%;
 	}
+	.bottom-stars {
+		width: 120%;
+	}
 }
 
 @media (max-width: 600px) {
@@ -567,5 +570,41 @@
 	.star-animation {
 		width: 64px;
 		height: 8px;
+	}
+
+	@keyframes leftToCenter {
+		0% {
+			opacity: 0;
+			filter: brightness(0.5); /* Дуже яскрава зірка */
+			transform: translateX(80) scale(0.5);
+		}
+		50% {
+			opacity: 1;
+			filter: brightness(1); /* Нормальна яскравість */
+			transform: translateX(50) scale(1);
+		}
+		100% {
+			opacity: 0;
+			filter: brightness(2); /* Менш яскрава зірка */
+			transform: translateX(30) scale(0.7);
+		}
+	}
+
+	@keyframes rightToCenter {
+		0% {
+			opacity: 0;
+			filter: brightness(0.5); /* Дуже яскрава зірка */
+			transform: translateX(80) scale(0.5);
+		}
+		50% {
+			opacity: 1;
+			filter: brightness(1); /* Нормальна яскравість */
+			transform: translateX(50) scale(1);
+		}
+		100% {
+			opacity: 0;
+			filter: brightness(2); /* Менш яскрава зірка */
+			transform: translateX(30) scale(0.7);
+		}
 	}
 }

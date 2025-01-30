@@ -57,7 +57,7 @@
 	align-self: stretch;
 }
 
-.main-security-subtitle {
+.main-company-subtitle {
 	color: var(--oxford-blue-300, #abaecd);
 	text-align: center;
 
@@ -79,11 +79,12 @@
 	line-height: 120%;
 }
 
-.securMain-title2 {
+.compMain-title2 {
 	background: linear-gradient(90deg, #ebeaef 0%, #878689 100%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+	width: 775px;
 }
 
 .secur-main-subtitle {
@@ -292,6 +293,9 @@
 }
 
 @media (max-width: 1200px) {
+	.compMain-title2 {
+		width: 550px;
+	}
 	.firstCardImg,
 	.secondCardImg {
 		width: 100%;
@@ -415,6 +419,14 @@
 		font-size: 14px;
 		width: 300px;
 	}
+
+	.compMain-title2 {
+		width: 350px;
+	}
+
+	.securMain-top {
+		gap: 56px;
+	}
 }
 
 @media (max-width: 500px) {
@@ -436,7 +448,7 @@
 		padding-top: 80px;
 	}
 
-	.main-security-subtitle {
+	.main-company-subtitle {
 		font-size: 14px;
 	}
 }

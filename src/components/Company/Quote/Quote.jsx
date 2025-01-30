@@ -1,32 +1,31 @@
 import { useState, useEffect, useRef } from 'react'
 import './Quote.css'
 import quoteStar from '../../../assets/stare-animation-end.png'
-import Sam from '../../../assets/Sam.png'
+import Alex from '../../../assets/Alex.png'
 import leftQuote from '../../../assets/leftQuote.png'
 
 export function Quote() {
 	const quotes = [
 		{
 			id: 1,
-			text: 'In 2025, it appears the technology landscape is constantly evolving...',
-			author: 'Sam Goddard CISSP, CISM',
-			position:
-				'Regional Information Security Officer Fortune 500 Insurance Organization',
-			picture: Sam,
+			text: 'Taking a company from zero to IPO taught me the power of combining innovation with execution. At my last startup, we helped Fortune 500 banks recover tens of millions of dollars by transforming their credit underwriting with AI-powered tools. Now, at Findevor, we’re bringing that same expertise to an even greater need in insurance industry, empowering carriers to unlock new revenue and drive profitable growth. This is just the beginning!',
+			author: 'Alex Valdes',
+			position: 'Co-founder & CEO',
+			picture: Alex,
 		},
 		{
 			id: 2,
-			text: 'Findevor is taking an intentionally proactive and holistic approach...',
-			author: 'Vijay Kumar',
-			position: 'CTO of Tech Innovations',
-			picture: Sam,
+			text: 'Taking a company from zero to IPO taught me the power of combining innovation with execution. At my last startup, we helped Fortune 500 banks recover tens of millions of dollars by transforming their credit underwriting with AI-powered tools. Now, at Findevor, we’re bringing that same expertise to an even greater need in insurance industry, empowering carriers to unlock new revenue and drive profitable growth. This is just the beginning!',
+			author: 'Alex Valdes',
+			position: 'Co-founder & CEO',
+			picture: Alex,
 		},
 		{
 			id: 3,
-			text: 'Building trust through effective product security and risk management...',
-			author: 'Rob Brewer',
-			position: 'Cybersecurity Expert',
-			picture: Sam,
+			text: 'Taking a company from zero to IPO taught me the power of combining innovation with execution. At my last startup, we helped Fortune 500 banks recover tens of millions of dollars by transforming their credit underwriting with AI-powered tools. Now, at Findevor, we’re bringing that same expertise to an even greater need in insurance industry, empowering carriers to unlock new revenue and drive profitable growth. This is just the beginning!',
+			author: 'Alex Valdes',
+			position: 'Co-founder & CEO',
+			picture: Alex,
 		},
 	]
 

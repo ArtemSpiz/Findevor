@@ -30,6 +30,9 @@ export function Header() {
 				</div>
 				<div className='menu '>
 					<NavLink className='text' to='/'>
+						Home
+					</NavLink>
+					<NavLink className='text' to='/company'>
 						Company
 					</NavLink>
 					<NavLink to='/security' className='text'>
@@ -80,7 +83,7 @@ export function Header() {
 
 							<div className='burgerMenu-inf'>
 								<div className='burgerMenu-infLinks'>
-									<NavLink className='text' to='/'>
+									<NavLink className='text' to='/company'>
 										Company
 									</NavLink>
 									<NavLink to='/security' className='text'>

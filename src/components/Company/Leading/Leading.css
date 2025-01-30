@@ -1,0 +1,134 @@
+.leading {
+	background: var(--black-900, #0a0a0a);
+	height: 100%;
+	padding-top: 136px;
+}
+
+.leading-container {
+	display: flex;
+	flex-direction: column;
+
+	justify-content: center;
+	align-items: center;
+	padding: 0px 40px;
+	gap: 56px;
+	align-self: stretch;
+}
+
+.leading-title {
+	color: var(--white-900, #fafafa);
+
+	/* h2 */
+	font-family: 'Open Sans';
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%;
+	gap: 8px;
+	display: flex;
+}
+
+.leading-title2 {
+	background: var(
+		--primary-gradient,
+		linear-gradient(90deg, #78e7fe 0%, #4375fb 100%)
+	);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.leading-cards {
+	display: flex;
+	padding: 0px 80px;
+	align-items: flex-end;
+	gap: 56px;
+	align-self: stretch;
+	justify-content: center;
+}
+
+.leadingCard {
+	width: 100%;
+	border-radius: 30px;
+	border: 1px solid var(--dark-oxford-blue-2, #101b2c);
+	background: rgba(17, 19, 25, 0.7);
+	display: flex;
+	padding: 56px 40px 40px 40px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+}
+
+.leadingCardImage {
+	width: 156px;
+	height: 156px;
+	border-radius: 100px;
+	border: 1px solid #78e7fe;
+}
+
+.leadingCardImg {
+	width: 100%;
+	border-radius: 100px;
+	border: 1px solid #78e7fe;
+}
+
+.leadingCardBottom {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 24px;
+	align-self: stretch;
+}
+
+.leadingCardTexts {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 16px;
+	align-self: stretch;
+}
+
+.leadingCard-title {
+	color: var(--white-800, #ebeaef);
+
+	/* text L */
+	font-family: 'Open Sans';
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%; /* 38.4px */
+}
+
+.leadingCard-subtitles {
+	display: flex;
+	width: 294px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 4px;
+}
+
+.leadingCard-subtitle {
+	color: var(--white-800, #ebeaef);
+	text-align: center;
+
+	/* text S */
+	font-family: 'Open Sans';
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 150%; /* 24px */
+}
+
+.leadingCard-subtitle2 {
+	color: var(--oxford-blue-300, #abaecd);
+	text-align: center;
+
+	/* text S */
+	font-family: 'Open Sans';
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 150%; /* 24px */
+}
