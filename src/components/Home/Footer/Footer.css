@@ -79,7 +79,7 @@
 .footer-link-subtitle {
 	color: var(--white-800, #ebeaef);
 	text-align: center;
-
+	text-decoration: none;
 	/* text S bold */
 	font-family: 'Open Sans';
 	font-size: 16px;

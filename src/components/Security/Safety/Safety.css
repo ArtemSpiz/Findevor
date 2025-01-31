@@ -1,7 +1,7 @@
 .safety {
 	background: var(--black-900, #0a0a0a);
 	height: 100%;
-	padding-top: 136px;
+	padding: 136px 0px;
 }
 
 .MiniItemsMob {
@@ -13,6 +13,7 @@
 }
 
 .safety-itemsComp {
+	justify-content: center;
 	display: flex;
 	align-items: flex-start;
 	gap: 24px;
@@ -262,6 +263,9 @@
 }
 
 @media (max-width: 1000px) {
+	.safety {
+		padding: 100px 0px;
+	}
 	.safety-itemsComp {
 		display: grid;
 		grid-template-columns: 50% 50%;
@@ -369,6 +373,9 @@
 }
 
 @media (max-width: 500px) {
+	.safety {
+		padding: 64px 0px;
+	}
 	.mini-item-title {
 		width: 95px;
 	}

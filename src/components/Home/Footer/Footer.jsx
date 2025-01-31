@@ -19,7 +19,9 @@ export function Footer() {
 								<div className='footer-link first-links'>
 									<div className='footer-link-title'>Explore</div>
 									<div className='footer-link-bottom'>
-										<div className='footer-link-subtitle'>Home</div>
+										<NavLink className='footer-link-subtitle' to='/'>
+											Home
+										</NavLink>
 										<div className='footer-link-subtitle'>Product showcase</div>
 										<div className='footer-link-subtitle'>Why Choose us?</div>
 									</div>
@@ -28,10 +30,10 @@ export function Footer() {
 								<div className='footer-link'>
 									<div className='footer-link-title'>About</div>
 									<div className='footer-link-bottom'>
-										<NavLink className='text' to='/'>
+										<NavLink className='footer-link-subtitle' to='/company'>
 											Company
 										</NavLink>
-										<NavLink to='/security' className='text'>
+										<NavLink to='/security' className='footer-link-subtitle'>
 											Security
 										</NavLink>
 									</div>

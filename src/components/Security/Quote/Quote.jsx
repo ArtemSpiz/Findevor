@@ -18,32 +18,42 @@ export function Quote() {
 			id: 2,
 			text: 'In 2025, it appears the technology landscape is constantly evolving. Building trust through effective product security and technology risk management becomes crucial, as more and more businesses race to operationalize automation and AI.  Findevor is taking an intentionally proactive and holistic approach to operate in line with internationally recognised frameworks and information security best practice.',
 			author: 'Vijay Kumar',
-			position: 'CTO of Tech Innovations',
+			position:
+				'Regional Information Security Officer, Fortune 500 Insurance Organization',
 			picture: Sam,
 		},
 		{
 			id: 3,
 			text: 'In 2025, it appears the technology landscape is constantly evolving. Building trust through effective product security and technology risk management becomes crucial, as more and more businesses race to operationalize automation and AI.  Findevor is taking an intentionally proactive and holistic approach to operate in line with internationally recognised frameworks and information security best practice.',
 			author: 'Rob Brewer',
-			position: 'Cybersecurity Expert',
+			position:
+				'Regional Information Security Officer, Fortune 500 Insurance Organization',
 			picture: Sam,
 		},
 	]
 
 	const containerRef = useRef(null)
 	const [index, setIndex] = useState(0)
+	const [direction, setDirection] = useState(1)
 
 	useEffect(() => {
 		const interval = setInterval(() => {
-			setIndex(prevIndex => (prevIndex + 1) % quotes.length)
+			setIndex(prevIndex => {
+				let newIndex = prevIndex + direction
+				if (newIndex >= quotes.length - 1 || newIndex <= 0) {
+					setDirection(-direction)
+				}
+				return newIndex
+			})
 		}, 15000)
 		return () => clearInterval(interval)
-	}, [quotes.length])
+	}, [direction])
 
 	useEffect(() => {
 		if (containerRef.current) {
+			const scrollWidth = containerRef.current.scrollWidth / quotes.length
 			containerRef.current.scrollTo({
-				left: index * containerRef.current.clientWidth,
+				left: index * scrollWidth,
 				behavior: 'smooth',
 			})
 		}
@@ -69,11 +79,15 @@ export function Quote() {
 								className='quote-starImgLeft'
 							/>
 						</div>
-						{quotes.map((quote, index) => (
+						{quotes.map((quote, i) => (
 							<div
 								key={quote.id}
 								className='securQuote '
-								style={{ minWidth: '100%' }}
+								style={{
+									minWidth: '100%',
+									opacity: i === index ? 1 : 0,
+									transition: 'opacity 0.5s ease-in-out',
+								}}
 							>
 								<div className='quote-wrapper-container'>
 									<div className='quote-wrapper-top'>
@@ -84,7 +98,7 @@ export function Quote() {
 										/>
 										<div className='securQuote-wrapper-text'>{quote.text}</div>
 									</div>
-									<div className='quote-wrapper-bottom'>
+									<div className='securQuote-wrapper-bottom'>
 										<div className='securQuotePicture'>
 											<img
 												src={quote.picture}

@@ -235,26 +235,13 @@ export function Screens() {
 								<div className='leftBlocksText' ref={leftBlocksRef}>
 									<div className='firstScreen-texts screenLeftText'>
 										<div className='firstScreen-titles'>
-											<div className='firstScreen-title desktop-title-first'>
-												Portfolio
-											</div>
-											<div className='firstScreen-title2 desktop-title-first'>
-												Intelligence{' '}
-											</div>
-											<div className='firstScreen-title-mob'>Strategic </div>
-											<div className='firstScreen-title2-mob'>
-												Analytics Manager
-											</div>
+											<div className='firstScreen-title '>Portfolio</div>
+											<div className='firstScreen-title2'>Intelligence</div>
 										</div>
 										<div className='firstScreen-text'>
 											Your AI Agent for Strategic Analytics Management works
 											autonomously to uncover missed opportunities to grow your
 											book of business within risk appetite.
-										</div>
-
-										<div className='firstScreen-text-mob'>
-											SAM analyzes premiums, losses, and profits, identifies
-											growth opportunities, and automates tasks.
 										</div>
 									</div>
 

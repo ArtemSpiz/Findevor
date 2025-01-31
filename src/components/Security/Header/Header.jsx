@@ -29,9 +29,6 @@ export function Header() {
 					<img src={headerLogo} alt='headerLogo' className='headerLogo' />
 				</div>
 				<div className='menu '>
-					<NavLink className='text' to='/'>
-						Home
-					</NavLink>
 					<NavLink className='text' to='/company'>
 						Company
 					</NavLink>

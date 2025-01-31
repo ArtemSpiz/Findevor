@@ -1,7 +1,7 @@
 .benefits {
 	background: var(--black-900, #0a0a0a);
 	height: 100%;
-	padding-top: 136px;
+	padding: 136px 0px;
 	overflow: hidden;
 	position: relative;
 }
@@ -234,7 +234,7 @@
 	}
 
 	.benefits {
-		padding-top: 100px;
+		padding: 100px 0px;
 	}
 }
 
@@ -258,8 +258,7 @@
 	}
 
 	.benefits {
-		padding: 0px 0px;
-		padding-top: 68px;
+		padding: 68px 0px;
 	}
 
 	.benefit {

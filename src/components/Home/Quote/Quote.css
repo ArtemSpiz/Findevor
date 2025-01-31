@@ -398,9 +398,6 @@
 	.quote-wrapcont {
 		gap: 50px;
 	}
-	.wrapper-bottom-position {
-		width: 100%;
-	}
 
 	.quote-star-top {
 		top: 5%;
@@ -445,6 +442,9 @@
 
 	.quote-wrapper-bottom {
 		gap: 8px;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
 	}
 
 	.quotePictureImg {

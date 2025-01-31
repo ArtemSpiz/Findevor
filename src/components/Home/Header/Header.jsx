@@ -29,9 +29,6 @@ export function Header() {
 					<img src={headerLogo} alt='headerLogo' className='headerLogo' />
 				</div>
 				<div className='menu '>
-					<NavLink className='text' to='/'>
-						Home
-					</NavLink>
 					<NavLink className='text' to='/company'>
 						Company
 					</NavLink>
@@ -83,7 +80,7 @@ export function Header() {
 
 							<div className='burgerMenu-inf'>
 								<div className='burgerMenu-infLinks'>
-									<NavLink className='text' to='/'>
+									<NavLink className='text' to='/company'>
 										Company
 									</NavLink>
 									<NavLink to='/security' className='text'>

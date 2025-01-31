@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react'
 export function Portfolio() {
 	return (
 		<>
-			<div className='portfolios'>
+			<div className='portfolios home'>
 				<div className='portfolios-container'>
 					<div className='portfolio-star-left-mob'>
 						<img

@@ -122,7 +122,7 @@
 	line-height: 120%; /* 38.4px */
 }
 
-.quote-wrapper-bottom {
+.securQuote-wrapper-bottom {
 	display: flex;
 	width: 100%;
 	justify-content: center;
@@ -399,10 +399,6 @@
 		padding: 40px 25px;
 	}
 
-	.wrapper-bottom-position {
-		width: 100%;
-	}
-
 	.quote-star-top {
 		top: 5%;
 	}
@@ -442,9 +438,9 @@
 		gap: 0px;
 	}
 
-	.quote-wrapper-bottom {
+	.securQuote-wrapper-bottom {
 		gap: 8px;
-		align-items: flex-start;
+		align-items: start;
 	}
 
 	.securQuotePicture {

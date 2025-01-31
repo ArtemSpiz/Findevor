@@ -34,18 +34,26 @@ export function Quote() {
 
 	const containerRef = useRef(null)
 	const [index, setIndex] = useState(0)
+	const [direction, setDirection] = useState(1)
 
 	useEffect(() => {
 		const interval = setInterval(() => {
-			setIndex(prevIndex => (prevIndex + 1) % quotes.length)
+			setIndex(prevIndex => {
+				let newIndex = prevIndex + direction
+				if (newIndex >= quotes.length - 1 || newIndex <= 0) {
+					setDirection(-direction)
+				}
+				return newIndex
+			})
 		}, 15000)
 		return () => clearInterval(interval)
-	}, [quotes.length])
+	}, [direction])
 
 	useEffect(() => {
 		if (containerRef.current) {
+			const scrollWidth = containerRef.current.scrollWidth / quotes.length
 			containerRef.current.scrollTo({
-				left: index * containerRef.current.clientWidth,
+				left: index * scrollWidth,
 				behavior: 'smooth',
 			})
 		}
@@ -71,11 +79,15 @@ export function Quote() {
 								className='quote-starImgLeft'
 							/>
 						</div>
-						{quotes.map(quote => (
+						{quotes.map((quote, i) => (
 							<div
 								key={quote.id}
 								className='securQuote'
-								style={{ minWidth: '100%' }}
+								style={{
+									minWidth: '100%',
+									opacity: i === index ? 1 : 0,
+									transition: 'opacity 0.5s ease-in-out',
+								}}
 							>
 								<div className='quote-wrapper-container'>
 									<div className='quote-wrapper-top'>
@@ -84,7 +96,7 @@ export function Quote() {
 											src={leftQuote}
 											alt='leftQuote'
 										/>
-										<div className='securQuote-wrapper-text'>{quote.text}</div>
+										<div className='quote-wrapper-text'>{quote.text}</div>
 									</div>
 									<div className='quote-wrapper-bottom'>
 										<div className='securQuotePicture'>

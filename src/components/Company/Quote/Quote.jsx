@@ -8,21 +8,21 @@ export function Quote() {
 	const quotes = [
 		{
 			id: 1,
-			text: '1 Taking a company from zero to IPO taught me the power of combining innovation with execution. At my last startup, we helped Fortune 500 banks recover tens of millions of dollars by transforming their credit underwriting with AI-powered tools. Now, at Findevor, we’re bringing that same expertise to an even greater need in insurance industry, empowering carriers to unlock new revenue and drive profitable growth. This is just the beginning!',
+			text: 'Taking a company from zero to IPO taught me the power of combining innovation with execution. At my last startup, we helped Fortune 500 banks recover tens of millions of dollars by transforming their credit underwriting with AI-powered tools. Now, at Findevor, we’re bringing that same expertise to an even greater need in insurance industry, empowering carriers to unlock new revenue and drive profitable growth. This is just the beginning!',
 			author: 'Alex Valdes',
 			position: 'Co-founder & CEO',
 			picture: Alex,
 		},
 		{
 			id: 2,
-			text: '2 Taking a company from zero to IPO taught me the power of combining innovation with execution. At my last startup, we helped Fortune 500 banks recover tens of millions of dollars by transforming their credit underwriting with AI-powered tools. Now, at Findevor, we’re bringing that same expertise to an even greater need in insurance industry, empowering carriers to unlock new revenue and drive profitable growth. This is just the beginning!',
+			text: 'Taking a company from zero to IPO taught me the power of combining innovation with execution. At my last startup, we helped Fortune 500 banks recover tens of millions of dollars by transforming their credit underwriting with AI-powered tools. Now, at Findevor, we’re bringing that same expertise to an even greater need in insurance industry, empowering carriers to unlock new revenue and drive profitable growth. This is just the beginning!',
 			author: 'Alex Valdes',
 			position: 'Co-founder & CEO',
 			picture: Alex,
 		},
 		{
 			id: 3,
-			text: '3 Taking a company from zero to IPO taught me the power of combining innovation with execution. At my last startup, we helped Fortune 500 banks recover tens of millions of dollars by transforming their credit underwriting with AI-powered tools. Now, at Findevor, we’re bringing that same expertise to an even greater need in insurance industry, empowering carriers to unlock new revenue and drive profitable growth. This is just the beginning!',
+			text: 'Taking a company from zero to IPO taught me the power of combining innovation with execution. At my last startup, we helped Fortune 500 banks recover tens of millions of dollars by transforming their credit underwriting with AI-powered tools. Now, at Findevor, we’re bringing that same expertise to an even greater need in insurance industry, empowering carriers to unlock new revenue and drive profitable growth. This is just the beginning!',
 			author: 'Alex Valdes',
 			position: 'Co-founder & CEO',
 			picture: Alex,
@@ -31,26 +31,30 @@ export function Quote() {
 
 	const containerRef = useRef(null)
 	const [index, setIndex] = useState(0)
+	const [direction, setDirection] = useState(1)
 
 	useEffect(() => {
 		const interval = setInterval(() => {
 			setIndex(prevIndex => {
-				console.log(prevIndex)
-				return (prevIndex + 1) % quotes.length
+				let newIndex = prevIndex + direction
+				if (newIndex >= quotes.length - 1 || newIndex <= 0) {
+					setDirection(-direction)
+				}
+				return newIndex
 			})
-		}, 2000)
+		}, 15000)
 		return () => clearInterval(interval)
-	}, [quotes.length])
+	}, [direction])
 
 	useEffect(() => {
 		if (containerRef.current) {
+			const scrollWidth = containerRef.current.scrollWidth / quotes.length
 			containerRef.current.scrollTo({
-				left: index * containerRef.current.clientWidth,
+				left: index * scrollWidth,
 				behavior: 'smooth',
 			})
 		}
 	}, [index])
-
 	return (
 		<div className='quotes-scroll'>
 			<div className='quotes'>
@@ -73,8 +77,8 @@ export function Quote() {
 								className='securQuote'
 								style={{
 									minWidth: '100%',
-									// opacity: i === index ? 1 : 0,
-									// transition: 'opacity 0.5s ease-in-out',
+									opacity: i === index ? 1 : 0,
+									transition: 'opacity 0.5s ease-in-out',
 								}}
 							>
 								<div className='quote-wrapper-container'>

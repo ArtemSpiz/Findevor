@@ -41,7 +41,7 @@
 	display: flex;
 	align-items: center;
 	width: 69%;
-	gap: 50%;
+	gap: 80px;
 	align-items: stretch;
 	overflow-x: scroll;
 	scroll-snap-type: x mandatory;
@@ -157,6 +157,7 @@
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 400;
+	width: 228px;
 	line-height: 150%; /* 24px */
 }
 
@@ -273,6 +274,10 @@
 	.quote.active {
 		transform: scale(1);
 	}
+
+	.securQuote-wrapcont {
+		width: 50%;
+	}
 }
 
 @media (max-width: 1200px) {
@@ -304,6 +309,9 @@
 }
 
 @media (max-width: 1000px) {
+	.securQuote-wrapcont {
+		width: 700px;
+	}
 	@keyframes rightToLeftQuot {
 		0% {
 			opacity: 0;
@@ -345,7 +353,7 @@
 		height: 8px;
 	}
 	.securQuote {
-		width: 700px;
+		width: 600px;
 	}
 
 	.quote-wrapper-right {
@@ -373,7 +381,7 @@
 }
 
 @media (max-width: 900px) {
-	.securQuote {
+	.securQuote-wrapcont {
 		width: 600px;
 	}
 }
@@ -400,10 +408,6 @@
 		padding: 40px 25px;
 	}
 
-	.wrapper-bottom-position {
-		width: 100%;
-	}
-
 	.quote-star-top {
 		top: 5%;
 	}
@@ -411,9 +415,16 @@
 	.quote-star-bottom {
 		bottom: 5%;
 	}
+
+	.securQuote-wrapcont {
+		width: 400px;
+	}
 }
 
 @media (max-width: 600px) {
+	.securQuote-wrapcont {
+		width: 250px;
+	}
 	@keyframes rightToLeftQuot {
 		0% {
 			opacity: 0;
@@ -471,7 +482,7 @@
 	.wrapper-bottom-position,
 	.wrapper-bottom-name {
 		font-size: 12px;
-		width: 166px;
+		width: 180px;
 	}
 
 	.wrapper-bottom-right {
@@ -480,7 +491,7 @@
 
 	.quote-wrapper-bottom {
 		gap: 8px;
-		align-items: flex-start;
+		align-items: center;
 	}
 
 	.securQuotePicture {

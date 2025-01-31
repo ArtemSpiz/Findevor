@@ -306,16 +306,13 @@
 		right: 50%;
 		transform: translate(50%, 0);
 	}
-	.securPortfolios {
-		padding-bottom: 100px;
-	}
+
 	.portfolio-container {
 		flex-direction: column;
 		display: flex;
 	}
 
 	.portfolio {
-		width: 100%;
 		height: 100%;
 		justify-content: center;
 		display: flex;
@@ -386,12 +383,12 @@
 
 	.portfolio-star-left-mob {
 		left: 0;
-		bottom: 35%;
+		bottom: 30%;
 	}
 
 	.portfolio-star-right-mob {
 		right: 0;
-		bottom: 35%;
+		bottom: 30%;
 	}
 
 	.portfolio-star-top-anim {
@@ -408,6 +405,10 @@
 }
 
 @media (max-width: 700px) {
+	.securPortfolios {
+		padding: 100px 0px;
+	}
+
 	.portfolio-title {
 		font-size: 30px;
 		justify-content: center;
@@ -495,6 +496,6 @@
 	}
 
 	.securPortfolios {
-		padding-bottom: 64px;
+		padding: 64px 0px;
 	}
 }
