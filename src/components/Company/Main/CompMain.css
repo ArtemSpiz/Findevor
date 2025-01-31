@@ -290,6 +290,12 @@
 	.secondCardImg {
 		width: 50%;
 	}
+
+	.securMain-top {
+		justify-content: center;
+		height: 100%;
+		padding-top: 0px;
+	}
 }
 
 @media (max-width: 1200px) {

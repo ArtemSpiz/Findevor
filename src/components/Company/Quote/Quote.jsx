@@ -13,20 +13,6 @@ export function Quote() {
 			position: 'Co-founder & CEO',
 			picture: Alex,
 		},
-		{
-			id: 2,
-			text: 'Taking a company from zero to IPO taught me the power of combining innovation with execution. At my last startup, we helped Fortune 500 banks recover tens of millions of dollars by transforming their credit underwriting with AI-powered tools. Now, at Findevor, we’re bringing that same expertise to an even greater need in insurance industry, empowering carriers to unlock new revenue and drive profitable growth. This is just the beginning!',
-			author: 'Alex Valdes',
-			position: 'Co-founder & CEO',
-			picture: Alex,
-		},
-		{
-			id: 3,
-			text: 'Taking a company from zero to IPO taught me the power of combining innovation with execution. At my last startup, we helped Fortune 500 banks recover tens of millions of dollars by transforming their credit underwriting with AI-powered tools. Now, at Findevor, we’re bringing that same expertise to an even greater need in insurance industry, empowering carriers to unlock new revenue and drive profitable growth. This is just the beginning!',
-			author: 'Alex Valdes',
-			position: 'Co-founder & CEO',
-			picture: Alex,
-		},
 	]
 
 	const containerRef = useRef(null)
@@ -34,27 +20,30 @@ export function Quote() {
 	const [direction, setDirection] = useState(1)
 
 	useEffect(() => {
-		const interval = setInterval(() => {
-			setIndex(prevIndex => {
-				let newIndex = prevIndex + direction
-				if (newIndex >= quotes.length - 1 || newIndex <= 0) {
-					setDirection(-direction)
-				}
-				return newIndex
-			})
-		}, 15000)
-		return () => clearInterval(interval)
-	}, [direction])
+		if (quotes.length > 1) {
+			const interval = setInterval(() => {
+				setIndex(prevIndex => {
+					let newIndex = prevIndex + direction
+					if (newIndex >= quotes.length - 1 || newIndex <= 0) {
+						setDirection(-direction)
+					}
+					return newIndex
+				})
+			}, 5000)
+			return () => clearInterval(interval)
+		}
+	}, [direction, quotes.length])
 
 	useEffect(() => {
-		if (containerRef.current) {
+		if (quotes.length > 1 && containerRef.current) {
 			const scrollWidth = containerRef.current.scrollWidth / quotes.length
 			containerRef.current.scrollTo({
 				left: index * scrollWidth,
 				behavior: 'smooth',
 			})
 		}
-	}, [index])
+	}, [index, quotes.length])
+
 	return (
 		<div className='quotes-scroll'>
 			<div className='quotes'>

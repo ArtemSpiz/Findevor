@@ -14,22 +14,6 @@ export function Quote() {
 				'Regional Information Security Officer Fortune 500 Insurance Organization',
 			picture: Sam,
 		},
-		{
-			id: 2,
-			text: 'In 2025, it appears the technology landscape is constantly evolving. Building trust through effective product security and technology risk management becomes crucial, as more and more businesses race to operationalize automation and AI.  Findevor is taking an intentionally proactive and holistic approach to operate in line with internationally recognised frameworks and information security best practice.',
-			author: 'Vijay Kumar',
-			position:
-				'Regional Information Security Officer, Fortune 500 Insurance Organization',
-			picture: Sam,
-		},
-		{
-			id: 3,
-			text: 'In 2025, it appears the technology landscape is constantly evolving. Building trust through effective product security and technology risk management becomes crucial, as more and more businesses race to operationalize automation and AI.  Findevor is taking an intentionally proactive and holistic approach to operate in line with internationally recognised frameworks and information security best practice.',
-			author: 'Rob Brewer',
-			position:
-				'Regional Information Security Officer, Fortune 500 Insurance Organization',
-			picture: Sam,
-		},
 	]
 
 	const containerRef = useRef(null)
@@ -37,27 +21,29 @@ export function Quote() {
 	const [direction, setDirection] = useState(1)
 
 	useEffect(() => {
-		const interval = setInterval(() => {
-			setIndex(prevIndex => {
-				let newIndex = prevIndex + direction
-				if (newIndex >= quotes.length - 1 || newIndex <= 0) {
-					setDirection(-direction)
-				}
-				return newIndex
-			})
-		}, 15000)
-		return () => clearInterval(interval)
-	}, [direction])
+		if (quotes.length > 1) {
+			const interval = setInterval(() => {
+				setIndex(prevIndex => {
+					let newIndex = prevIndex + direction
+					if (newIndex >= quotes.length - 1 || newIndex <= 0) {
+						setDirection(-direction)
+					}
+					return newIndex
+				})
+			}, 5000)
+			return () => clearInterval(interval)
+		}
+	}, [direction, quotes.length])
 
 	useEffect(() => {
-		if (containerRef.current) {
+		if (quotes.length > 1 && containerRef.current) {
 			const scrollWidth = containerRef.current.scrollWidth / quotes.length
 			containerRef.current.scrollTo({
 				left: index * scrollWidth,
 				behavior: 'smooth',
 			})
 		}
-	}, [index])
+	}, [index, quotes.length])
 
 	return (
 		<div className='quotes-scroll'>

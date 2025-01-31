@@ -29,10 +29,20 @@ export function Header() {
 					<img src={headerLogo} alt='headerLogo' className='headerLogo' />
 				</div>
 				<div className='menu '>
-					<NavLink className='text' to='/company'>
+					<NavLink
+						className='text'
+						to='/company'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
 						Company
 					</NavLink>
-					<NavLink to='/security' className='text'>
+					<NavLink
+						to='/security'
+						className='text'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
 						Security
 					</NavLink>
 				</div>
@@ -80,10 +90,20 @@ export function Header() {
 
 							<div className='burgerMenu-inf'>
 								<div className='burgerMenu-infLinks'>
-									<NavLink className='text' to='/'>
+									<NavLink
+										className='text'
+										to='/company'
+										target='_blank'
+										rel='noopener noreferrer'
+									>
 										Company
 									</NavLink>
-									<NavLink to='/security' className='text'>
+									<NavLink
+										to='/security'
+										className='text'
+										target='_blank'
+										rel='noopener noreferrer'
+									>
 										Security
 									</NavLink>
 								</div>

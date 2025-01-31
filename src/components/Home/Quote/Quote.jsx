@@ -45,7 +45,7 @@ export function Quote() {
 				}
 				return newIndex
 			})
-		}, 15000)
+		}, 5000)
 		return () => clearInterval(interval)
 	}, [direction])
 
