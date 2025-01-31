@@ -9,270 +9,168 @@ export function Benefits() {
 	const benefits = [
 		{
 			id: 1,
-			title: 'Recover Lost Revenue',
-			subtitle: 'Address premium leakage with smarter underwriting solutions.',
+			title: 'Improve profitability',
+			subtitle:
+				'Optimize decisions with precise risk evaluation and data analysis.',
 			icon: (
 				<svg
 					xmlns='http://www.w3.org/2000/svg'
-					width='38'
-					height='38'
-					viewBox='0 0 38 38'
+					width='64'
+					height='64'
+					viewBox='0 0 64 64'
 					fill='none'
 				>
 					<path
-						d='M27 21C21.4772 21 17 18.7614 17 16C17 13.2386 21.4772 11 27 11C32.5228 11 37 13.2386 37 16C37 18.7614 32.5228 21 27 21Z'
+						d='M53.3327 53.3332H10.666V10.6665'
 						stroke='#2E3F5C'
 						stroke-width='2'
 						stroke-linecap='round'
 						stroke-linejoin='round'
 					/>
 					<path
-						d='M17 24C17 26.7614 21.4772 29 27 29C32.5228 29 37 26.7614 37 24'
+						d='M10.666 44L31.9993 24L39.9993 32L51.9993 20'
 						stroke='#2E3F5C'
 						stroke-width='2'
 						stroke-linecap='round'
 						stroke-linejoin='round'
 					/>
 					<path
-						d='M1 14C1 16.7614 5.47716 19 11 19C13.2517 19 15.3294 18.628 17.001 18'
+						d='M24 53.3332L24 38.6665'
 						stroke='#2E3F5C'
 						stroke-width='2'
 						stroke-linecap='round'
-						stroke-linejoin='round'
 					/>
 					<path
-						d='M1 21C1 23.7614 5.47716 26 11 26C13.2512 26 15.3286 25.628 17 25.0004'
+						d='M16 53.3332L16 46.6665'
 						stroke='#2E3F5C'
 						stroke-width='2'
 						stroke-linecap='round'
-						stroke-linejoin='round'
 					/>
 					<path
-						d='M1 6V28C1 30.7614 5.47716 33 11 33C13.2513 33 15.3286 32.6278 17 32'
+						d='M31.9846 53.3333L32 32'
 						stroke='#2E3F5C'
 						stroke-width='2'
 						stroke-linecap='round'
-						stroke-linejoin='round'
 					/>
 					<path
-						d='M21 12V6'
+						d='M40 53.3335L40 37.3335'
 						stroke='#2E3F5C'
 						stroke-width='2'
 						stroke-linecap='round'
-						stroke-linejoin='round'
 					/>
 					<path
-						d='M17 16V32C17 34.7614 21.4772 37 27 37C32.5228 37 37 34.7614 37 32V16'
+						d='M48 53.3333L48 32'
 						stroke='#2E3F5C'
 						stroke-width='2'
 						stroke-linecap='round'
-						stroke-linejoin='round'
-					/>
-					<path
-						d='M11 11C5.47716 11 1 8.76142 1 6C1 3.23858 5.47716 1 11 1C16.5228 1 21 3.23858 21 6C21 8.76142 16.5228 11 11 11Z'
-						stroke='#2E3F5C'
-						stroke-width='2'
-						stroke-linecap='round'
-						stroke-linejoin='round'
 					/>
 				</svg>
 			),
 			iconMob: (
 				<svg
 					xmlns='http://www.w3.org/2000/svg'
-					width='30'
-					height='30'
-					viewBox='0 0 20 20'
+					width='24'
+					height='24'
+					viewBox='0 0 64 64'
 					fill='none'
 				>
 					<path
-						d='M14 11C11.2386 11 9 9.8807 9 8.5C9 7.11929 11.2386 6 14 6C16.7614 6 19 7.11929 19 8.5C19 9.8807 16.7614 11 14 11Z'
+						d='M53.3327 53.3332H10.666V10.6665'
 						stroke='#2E3F5C'
+						stroke-width='2'
 						stroke-linecap='round'
 						stroke-linejoin='round'
 					/>
 					<path
-						d='M9 12.5C9 13.8807 11.2386 15 14 15C16.7614 15 19 13.8807 19 12.5'
+						d='M10.666 44L31.9993 24L39.9993 32L51.9993 20'
 						stroke='#2E3F5C'
+						stroke-width='2'
 						stroke-linecap='round'
 						stroke-linejoin='round'
 					/>
 					<path
-						d='M1 7.5C1 8.8807 3.23858 10 6 10C7.12583 10 8.1647 9.814 9.0005 9.5'
+						d='M24 53.3332L24 38.6665'
 						stroke='#2E3F5C'
+						stroke-width='2'
 						stroke-linecap='round'
-						stroke-linejoin='round'
 					/>
 					<path
-						d='M1 11C1 12.3807 3.23858 13.5 6 13.5C7.12561 13.5 8.1643 13.314 9 13.0002'
+						d='M16 53.3332L16 46.6665'
 						stroke='#2E3F5C'
+						stroke-width='2'
 						stroke-linecap='round'
-						stroke-linejoin='round'
 					/>
 					<path
-						d='M1 3.5V14.5C1 15.8807 3.23858 17 6 17C7.12563 17 8.1643 16.8139 9 16.5'
+						d='M31.9846 53.3333L32 32'
 						stroke='#2E3F5C'
+						stroke-width='2'
 						stroke-linecap='round'
-						stroke-linejoin='round'
 					/>
 					<path
-						d='M11 6.5V3.5'
+						d='M40 53.3335L40 37.3335'
 						stroke='#2E3F5C'
+						stroke-width='2'
 						stroke-linecap='round'
-						stroke-linejoin='round'
 					/>
 					<path
-						d='M9 8.5V16.5C9 17.8807 11.2386 19 14 19C16.7614 19 19 17.8807 19 16.5V8.5'
+						d='M48 53.3333L48 32'
 						stroke='#2E3F5C'
+						stroke-width='2'
 						stroke-linecap='round'
-						stroke-linejoin='round'
-					/>
-					<path
-						d='M6 6C3.23858 6 1 4.88071 1 3.5C1 2.11929 3.23858 1 6 1C8.7614 1 11 2.11929 11 3.5C11 4.88071 8.7614 6 6 6Z'
-						stroke='#2E3F5C'
-						stroke-linecap='round'
-						stroke-linejoin='round'
 					/>
 				</svg>
 			),
 		},
 		{
 			id: 2,
-			title: 'Improve Profitability',
-			subtitle:
-				'Optimize decisions with precise risk evaluation and data analysis.',
-			icon: (
-				<svg
-					xmlns='http://www.w3.org/2000/svg'
-					width='48'
-					height='48'
-					viewBox='0 0 48 48'
-					fill='none'
-				>
-					<path
-						d='M40 40H8V8'
-						stroke='#2E3F5C'
-						stroke-width='2'
-						stroke-linecap='round'
-						stroke-linejoin='round'
-					/>
-					<path
-						d='M8 33L24 18L30 24L39 15'
-						stroke='#2E3F5C'
-						stroke-width='2'
-						stroke-linecap='round'
-						stroke-linejoin='round'
-					/>
-					<path
-						d='M18 40L18 29'
-						stroke='#2E3F5C'
-						stroke-width='2'
-						stroke-linecap='round'
-					/>
-					<path
-						d='M12 40L12 35'
-						stroke='#2E3F5C'
-						stroke-width='2'
-						stroke-linecap='round'
-					/>
-					<path
-						d='M23.9885 40L24 24'
-						stroke='#2E3F5C'
-						stroke-width='2'
-						stroke-linecap='round'
-					/>
-					<path
-						d='M30 40L30 28'
-						stroke='#2E3F5C'
-						stroke-width='2'
-						stroke-linecap='round'
-					/>
-					<path
-						d='M36 40L36 24'
-						stroke='#2E3F5C'
-						stroke-width='2'
-						stroke-linecap='round'
-					/>
-				</svg>
-			),
-			iconMob: (
-				<svg
-					xmlns='http://www.w3.org/2000/svg'
-					width='35'
-					height='35'
-					viewBox='0 0 24 24'
-					fill='none'
-				>
-					<path
-						d='M20 20H4V4'
-						stroke='#2E3F5C'
-						stroke-linecap='round'
-						stroke-linejoin='round'
-					/>
-					<path
-						d='M4 16.5L12 9L15 12L19.5 7.5'
-						stroke='#2E3F5C'
-						stroke-linecap='round'
-						stroke-linejoin='round'
-					/>
-					<path d='M9 20L9 14.5' stroke='#2E3F5C' stroke-linecap='round' />
-					<path d='M6 20L6 17.5' stroke='#2E3F5C' stroke-linecap='round' />
-					<path d='M11.9942 20L12 12' stroke='#2E3F5C' stroke-linecap='round' />
-					<path d='M15 20L15 14' stroke='#2E3F5C' stroke-linecap='round' />
-					<path d='M18 20L18 12' stroke='#2E3F5C' stroke-linecap='round' />
-				</svg>
-			),
-		},
-		{
-			id: 3,
-			title: 'Expand with Confidence',
+			title: 'Expand with confidence',
 			subtitle:
 				'Seamlessly enter underserved markets with AI-powered insights.',
 			icon: (
 				<svg
 					xmlns='http://www.w3.org/2000/svg'
-					width='48'
-					height='48'
-					viewBox='0 0 48 48'
+					width='64'
+					height='64'
+					viewBox='0 0 64 64'
 					fill='none'
 				>
 					<path
-						d='M12 6H6M6 6V12M6 6L12 12'
+						d='M16 8H8M8 8V16M8 8L16 16'
 						stroke='#2E3F5C'
 						stroke-width='2'
 						stroke-linecap='round'
 						stroke-linejoin='round'
 					/>
 					<path
-						d='M36 6H42M42 6V12M42 6L36 12'
+						d='M48 8H56M56 8V16M56 8L48 16'
 						stroke='#2E3F5C'
 						stroke-width='2'
 						stroke-linecap='round'
 						stroke-linejoin='round'
 					/>
 					<path
-						d='M12 42H6M6 42V36M6 42L12 36'
+						d='M16 56H8M8 56V48M8 56L16 48'
 						stroke='#2E3F5C'
 						stroke-width='2'
 						stroke-linecap='round'
 						stroke-linejoin='round'
 					/>
 					<path
-						d='M36 42H42M42 42V36M42 42L36 36'
+						d='M48 56H56M56 56V48M56 56L48 48'
 						stroke='#2E3F5C'
 						stroke-width='2'
 						stroke-linecap='round'
 						stroke-linejoin='round'
 					/>
 					<path
-						d='M25.029 35.3827L33.029 30.5827C33.6314 30.2213 34 29.5703 34 28.8677V21.1325C34 20.4299 33.6314 19.779 33.029 19.4175L25.029 14.6175C24.3956 14.2375 23.6044 14.2375 22.971 14.6175L14.971 19.4175C14.3686 19.779 14 20.4299 14 21.1325V28.8677C14 29.5703 14.3686 30.2213 14.971 30.5827L22.971 35.3827C23.6044 35.7627 24.3956 35.7627 25.029 35.3827Z'
+						d='M33.3713 47.1768L44.038 40.7768C44.8412 40.2949 45.3327 39.4269 45.3327 38.4901V28.1766C45.3327 27.2398 44.8412 26.3718 44.038 25.8899L33.3713 19.4899C32.5268 18.9832 31.4719 18.9832 30.6273 19.4899L19.9607 25.8899C19.1575 26.3718 18.666 27.2398 18.666 28.1766V38.4901C18.666 39.4269 19.1575 40.2949 19.9607 40.7768L30.6273 47.1768C31.4719 47.6835 32.5268 47.6835 33.3713 47.1768Z'
 						stroke='#2E3F5C'
 						stroke-width='2'
 						stroke-linecap='round'
 						stroke-linejoin='round'
 					/>
 					<path
-						d='M15 21L24 25.999M24 25.999C24 25.999 31.5274 21.8984 33 21M24 25.999V35'
+						d='M20 28L32 34.6653M32 34.6653C32 34.6653 42.0365 29.1979 44 28M32 34.6653V46.6667'
 						stroke='#2E3F5C'
 						stroke-width='2'
 						stroke-linecap='round'
@@ -283,44 +181,187 @@ export function Benefits() {
 			iconMob: (
 				<svg
 					xmlns='http://www.w3.org/2000/svg'
-					width='35'
-					height='35'
-					viewBox='0 0 24 24'
+					width='24'
+					height='24'
+					viewBox='0 0 64 64'
 					fill='none'
 				>
 					<path
-						d='M6 3H3M3 3V6M3 3L6 6'
+						d='M16 8H8M8 8V16M8 8L16 16'
 						stroke='#2E3F5C'
+						stroke-width='2'
 						stroke-linecap='round'
 						stroke-linejoin='round'
 					/>
 					<path
-						d='M18 3H21M21 3V6M21 3L18 6'
+						d='M48 8H56M56 8V16M56 8L48 16'
 						stroke='#2E3F5C'
+						stroke-width='2'
 						stroke-linecap='round'
 						stroke-linejoin='round'
 					/>
 					<path
-						d='M6 21H3M3 21V18M3 21L6 18'
+						d='M16 56H8M8 56V48M8 56L16 48'
 						stroke='#2E3F5C'
+						stroke-width='2'
 						stroke-linecap='round'
 						stroke-linejoin='round'
 					/>
 					<path
-						d='M18 21H21M21 21V18M21 21L18 18'
+						d='M48 56H56M56 56V48M56 56L48 48'
 						stroke='#2E3F5C'
+						stroke-width='2'
 						stroke-linecap='round'
 						stroke-linejoin='round'
 					/>
 					<path
-						d='M12.5145 17.6914L16.5145 15.2914C16.8157 15.1107 17 14.7852 17 14.4339V10.5663C17 10.215 16.8157 9.88949 16.5145 9.70877L12.5145 7.30877C12.1978 7.11876 11.8022 7.11876 11.4855 7.30877L7.4855 9.70877C7.1843 9.88949 7 10.215 7 10.5663V14.4339C7 14.7852 7.1843 15.1107 7.4855 15.2914L11.4855 17.6914C11.8022 17.8814 12.1978 17.8814 12.5145 17.6914Z'
+						d='M33.3713 47.1768L44.038 40.7768C44.8412 40.2949 45.3327 39.4269 45.3327 38.4901V28.1766C45.3327 27.2398 44.8412 26.3718 44.038 25.8899L33.3713 19.4899C32.5268 18.9832 31.4719 18.9832 30.6273 19.4899L19.9607 25.8899C19.1575 26.3718 18.666 27.2398 18.666 28.1766V38.4901C18.666 39.4269 19.1575 40.2949 19.9607 40.7768L30.6273 47.1768C31.4719 47.6835 32.5268 47.6835 33.3713 47.1768Z'
 						stroke='#2E3F5C'
+						stroke-width='2'
 						stroke-linecap='round'
 						stroke-linejoin='round'
 					/>
 					<path
-						d='M7.5 10.5L12 12.9995M12 12.9995C12 12.9995 15.7637 10.9492 16.5 10.5M12 12.9995V17.5'
+						d='M20 28L32 34.6653M32 34.6653C32 34.6653 42.0365 29.1979 44 28M32 34.6653V46.6667'
 						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+				</svg>
+			),
+		},
+		{
+			id: 3,
+			title: 'Recover lost revenue',
+			subtitle: 'Address premium leakage with smarter underwriting solutions.',
+			icon: (
+				<svg
+					xmlns='http://www.w3.org/2000/svg'
+					width='50'
+					height='50'
+					viewBox='0 0 50 50'
+					fill='none'
+				>
+					<path
+						d='M35.6673 27.6668C28.3036 27.6668 22.334 24.682 22.334 21.0002C22.334 17.3183 28.3036 14.3335 35.6673 14.3335C43.031 14.3335 49.0006 17.3183 49.0006 21.0002C49.0006 24.682 43.031 27.6668 35.6673 27.6668Z'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M22.334 31.6665C22.334 35.3484 28.3036 38.3332 35.6673 38.3332C43.031 38.3332 49.0006 35.3484 49.0006 31.6665'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M1 18.3335C1 22.0154 6.96955 25.0002 14.3333 25.0002C17.3355 25.0002 20.1059 24.5042 22.3347 23.6668'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M1 27.6665C1 31.3484 6.96955 34.3332 14.3333 34.3332C17.335 34.3332 20.1048 33.8372 22.3333 33.0004'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M1 7.6665V36.9998C1 40.6817 6.96955 43.6665 14.3333 43.6665C17.335 43.6665 20.1048 43.1702 22.3333 42.3332'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M27.666 15.6665V7.6665'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M22.334 21V42.3333C22.334 46.0152 28.3036 49 35.6673 49C43.031 49 49.0006 46.0152 49.0006 42.3333V21'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M14.3333 14.3333C6.96955 14.3333 1 11.3486 1 7.66667C1 3.98477 6.96955 1 14.3333 1C21.6971 1 27.6667 3.98477 27.6667 7.66667C27.6667 11.3486 21.6971 14.3333 14.3333 14.3333Z'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+				</svg>
+			),
+			iconMob: (
+				<svg
+					xmlns='http://www.w3.org/2000/svg'
+					width='24'
+					height='24'
+					viewBox='0 0 50 50'
+					fill='none'
+				>
+					<path
+						d='M35.6673 27.6668C28.3036 27.6668 22.334 24.682 22.334 21.0002C22.334 17.3183 28.3036 14.3335 35.6673 14.3335C43.031 14.3335 49.0006 17.3183 49.0006 21.0002C49.0006 24.682 43.031 27.6668 35.6673 27.6668Z'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M22.334 31.6665C22.334 35.3484 28.3036 38.3332 35.6673 38.3332C43.031 38.3332 49.0006 35.3484 49.0006 31.6665'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M1 18.3335C1 22.0154 6.96955 25.0002 14.3333 25.0002C17.3355 25.0002 20.1059 24.5042 22.3347 23.6668'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M1 27.6665C1 31.3484 6.96955 34.3332 14.3333 34.3332C17.335 34.3332 20.1048 33.8372 22.3333 33.0004'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M1 7.6665V36.9998C1 40.6817 6.96955 43.6665 14.3333 43.6665C17.335 43.6665 20.1048 43.1702 22.3333 42.3332'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M27.666 15.6665V7.6665'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M22.334 21V42.3333C22.334 46.0152 28.3036 49 35.6673 49C43.031 49 49.0006 46.0152 49.0006 42.3333V21'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M14.3333 14.3333C6.96955 14.3333 1 11.3486 1 7.66667C1 3.98477 6.96955 1 14.3333 1C21.6971 1 27.6667 3.98477 27.6667 7.66667C27.6667 11.3486 21.6971 14.3333 14.3333 14.3333Z'
+						stroke='#2E3F5C'
+						stroke-width='2'
 						stroke-linecap='round'
 						stroke-linejoin='round'
 					/>
@@ -329,48 +370,50 @@ export function Benefits() {
 		},
 		{
 			id: 4,
-			title: 'Accelerate Time-to-Market',
+			title: 'Enhance Operational Efficiency',
 			subtitle:
-				' Launch new products faster with actionable data intelligence.',
-			icon: <img src={rocket} alt='Rocket icon' />,
-			iconMob: (
+				' Streamline workflows to reduce manual costs and turnaround times.',
+			icon: (
 				<svg
 					xmlns='http://www.w3.org/2000/svg'
-					width='35'
-					height='35'
-					viewBox='0 0 48 48'
+					width='64'
+					height='64'
+					viewBox='0 0 64 64'
 					fill='none'
 				>
 					<path
-						d='M32.3076 27.1435L19.717 33.8342L13.9928 28.11L20.6836 15.5194C22.5915 11.9292 26.1214 9.46774 30.1272 8.93426L38.6783 7.7955C39.4714 7.68984 40.1371 8.35557 40.0315 9.1487L38.8927 17.6997C38.3592 21.7055 35.8978 25.2354 32.3076 27.1435Z'
+						d='M32 40C36.4184 40 40 36.4184 40 32C40 27.5816 36.4184 24 32 24C27.5816 24 24 27.5816 24 32C24 36.4184 27.5816 40 32 40Z'
 						stroke='#2E3F5C'
 						stroke-width='2'
 						stroke-linecap='round'
 						stroke-linejoin='round'
 					/>
 					<path
-						d='M9.60815 32.4948C6.68508 35.4178 8.08564 39.7414 8.08564 39.7414C8.08564 39.7414 12.4093 41.142 15.3323 38.2189'
+						d='M50.2938 28.149L47.6593 21.7875L51.2 17.6L46.4 12.8L42.2353 16.3591L35.7387 13.6874L34.2447 8H29.5544L28.0378 13.7627L21.6906 16.4383L17.6 12.8L12.8 17.6L16.2881 21.8932L13.694 28.2711L8 29.6V34.4L13.7627 35.9732L16.4378 42.3193L12.8 46.4L17.6 51.2L21.8988 47.6967L28.1528 50.2695L29.6 56H34.4L35.8508 50.2717L42.2122 47.6372C43.2726 48.3951 46.4 51.2 46.4 51.2L51.2 46.4L47.6382 42.1986L50.2734 35.8352L55.9998 34.3453L56 29.6L50.2938 28.149Z'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+				</svg>
+			),
+			iconMob: (
+				<svg
+					xmlns='http://www.w3.org/2000/svg'
+					width='24'
+					height='24'
+					viewBox='0 0 64 64'
+					fill='none'
+				>
+					<path
+						d='M32 40C36.4184 40 40 36.4184 40 32C40 27.5816 36.4184 24 32 24C27.5816 24 24 27.5816 24 32C24 36.4184 27.5816 40 32 40Z'
 						stroke='#2E3F5C'
 						stroke-width='2'
 						stroke-linecap='round'
 						stroke-linejoin='round'
 					/>
 					<path
-						d='M18.4233 19.3867C9.76082 18.0319 6.77678 26.7401 6.77678 26.7401L13.993 28.1102'
-						stroke='#2E3F5C'
-						stroke-width='2'
-						stroke-linecap='round'
-						stroke-linejoin='round'
-					/>
-					<path
-						d='M29.0577 30.021C30.4125 38.6835 21.7043 41.6675 21.7043 41.6675L20.3342 34.4513'
-						stroke='#2E3F5C'
-						stroke-width='2'
-						stroke-linecap='round'
-						stroke-linejoin='round'
-					/>
-					<path
-						d='M25.6241 22.203C24.0434 20.6223 24.0707 18.0323 25.6851 16.4179C27.2995 14.8035 29.8895 14.7762 31.4702 16.3569C33.051 17.9376 33.0236 20.5277 31.4093 22.1421C29.7949 23.7565 27.2048 23.7838 25.6241 22.203Z'
+						d='M50.2938 28.149L47.6593 21.7875L51.2 17.6L46.4 12.8L42.2353 16.3591L35.7387 13.6874L34.2447 8H29.5544L28.0378 13.7627L21.6906 16.4383L17.6 12.8L12.8 17.6L16.2881 21.8932L13.694 28.2711L8 29.6V34.4L13.7627 35.9732L16.4378 42.3193L12.8 46.4L17.6 51.2L21.8988 47.6967L28.1528 50.2695L29.6 56H34.4L35.8508 50.2717L42.2122 47.6372C43.2726 48.3951 46.4 51.2 46.4 51.2L51.2 46.4L47.6382 42.1986L50.2734 35.8352L55.9998 34.3453L56 29.6L50.2938 28.149Z'
 						stroke='#2E3F5C'
 						stroke-width='2'
 						stroke-linecap='round'
@@ -381,48 +424,91 @@ export function Benefits() {
 		},
 		{
 			id: 5,
-			title: 'Enhance Operational Efficiency',
-			subtitle:
-				'Streamline workflows to reduce manual costs and turnaround times.',
-			icon: <img src={rocket} alt='Rocket icon' />,
-			iconMob: (
+			title: 'Accelerate Time-to-Market',
+			subtitle: 'Launch new products faster with actionable data intelligence.',
+			icon: (
 				<svg
 					xmlns='http://www.w3.org/2000/svg'
-					width='35'
-					height='35'
-					viewBox='0 0 48 48'
+					width='64'
+					height='64'
+					viewBox='0 0 64 64'
 					fill='none'
 				>
 					<path
-						d='M32.3076 27.1435L19.717 33.8342L13.9928 28.11L20.6836 15.5194C22.5915 11.9292 26.1214 9.46774 30.1272 8.93426L38.6783 7.7955C39.4714 7.68984 40.1371 8.35557 40.0315 9.1487L38.8927 17.6997C38.3592 21.7055 35.8978 25.2354 32.3076 27.1435Z'
+						d='M42.8306 27.7432L37.3335 45.3333H26.6668L21.1699 27.7432C19.6024 22.7272 20.598 17.2615 23.8332 13.1204L30.7394 4.28049C31.3799 3.46054 32.6204 3.46054 33.261 4.28049L40.1671 13.1204C43.4023 17.2615 44.3978 22.7272 42.8306 27.7432Z'
 						stroke='#2E3F5C'
 						stroke-width='2'
 						stroke-linecap='round'
 						stroke-linejoin='round'
 					/>
 					<path
-						d='M9.60815 32.4948C6.68508 35.4178 8.08564 39.7414 8.08564 39.7414C8.08564 39.7414 12.4093 41.142 15.3323 38.2189'
+						d='M26.666 53.3335C26.666 58.6668 31.9993 61.3335 31.9993 61.3335C31.9993 61.3335 37.3327 58.6668 37.3327 53.3335'
 						stroke='#2E3F5C'
 						stroke-width='2'
 						stroke-linecap='round'
 						stroke-linejoin='round'
 					/>
 					<path
-						d='M18.4233 19.3867C9.76082 18.0319 6.77678 26.7401 6.77678 26.7401L13.993 28.1102'
+						d='M22.6674 33.3335C13.3341 40.0002 18.6674 50.6668 18.6674 50.6668L26.6674 45.3335'
 						stroke='#2E3F5C'
 						stroke-width='2'
 						stroke-linecap='round'
 						stroke-linejoin='round'
 					/>
 					<path
-						d='M29.0577 30.021C30.4125 38.6835 21.7043 41.6675 21.7043 41.6675L20.3342 34.4513'
+						d='M42.4824 33.3335C51.8158 40.0002 46.4824 50.6668 46.4824 50.6668L38.4824 45.3335'
 						stroke='#2E3F5C'
 						stroke-width='2'
 						stroke-linecap='round'
 						stroke-linejoin='round'
 					/>
 					<path
-						d='M25.6241 22.203C24.0434 20.6223 24.0707 18.0323 25.6851 16.4179C27.2995 14.8035 29.8895 14.7762 31.4702 16.3569C33.051 17.9376 33.0236 20.5277 31.4093 22.1421C29.7949 23.7565 27.2048 23.7838 25.6241 22.203Z'
+						d='M31.9993 29.3332C29.0537 29.3332 26.666 26.9454 26.666 23.9998C26.666 21.0543 29.0537 18.6665 31.9993 18.6665C34.9449 18.6665 37.3327 21.0543 37.3327 23.9998C37.3327 26.9454 34.9449 29.3332 31.9993 29.3332Z'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+				</svg>
+			),
+			iconMob: (
+				<svg
+					xmlns='http://www.w3.org/2000/svg'
+					width='24'
+					height='24'
+					viewBox='0 0 64 64'
+					fill='none'
+				>
+					<path
+						d='M42.8306 27.7432L37.3335 45.3333H26.6668L21.1699 27.7432C19.6024 22.7272 20.598 17.2615 23.8332 13.1204L30.7394 4.28049C31.3799 3.46054 32.6204 3.46054 33.261 4.28049L40.1671 13.1204C43.4023 17.2615 44.3978 22.7272 42.8306 27.7432Z'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M26.666 53.3335C26.666 58.6668 31.9993 61.3335 31.9993 61.3335C31.9993 61.3335 37.3327 58.6668 37.3327 53.3335'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M22.6674 33.3335C13.3341 40.0002 18.6674 50.6668 18.6674 50.6668L26.6674 45.3335'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M42.4824 33.3335C51.8158 40.0002 46.4824 50.6668 46.4824 50.6668L38.4824 45.3335'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M31.9993 29.3332C29.0537 29.3332 26.666 26.9454 26.666 23.9998C26.666 21.0543 29.0537 18.6665 31.9993 18.6665C34.9449 18.6665 37.3327 21.0543 37.3327 23.9998C37.3327 26.9454 34.9449 29.3332 31.9993 29.3332Z'
 						stroke='#2E3F5C'
 						stroke-width='2'
 						stroke-linecap='round'
@@ -433,48 +519,54 @@ export function Benefits() {
 		},
 		{
 			id: 6,
-			title: 'Drive Data-Driven Decisions',
+			title: 'Build Long-Term Partnerships',
 			subtitle:
-				'Gain clarity with insights from integrated internal and external data.',
-			icon: <img src={rocket} alt='Rocket icon' />,
-			iconMob: (
+				'Enhance broker and client relationships with consistent results.',
+			icon: (
 				<svg
 					xmlns='http://www.w3.org/2000/svg'
-					width='35'
-					height='35'
-					viewBox='0 0 48 48'
+					width='64'
+					height='64'
+					viewBox='0 0 64 64'
 					fill='none'
 				>
 					<path
-						d='M32.3076 27.1435L19.717 33.8342L13.9928 28.11L20.6836 15.5194C22.5915 11.9292 26.1214 9.46774 30.1272 8.93426L38.6783 7.7955C39.4714 7.68984 40.1371 8.35557 40.0315 9.1487L38.8927 17.6997C38.3592 21.7055 35.8978 25.2354 32.3076 27.1435Z'
+						d='M18.666 48V45.3333C18.666 37.9696 24.6356 32 31.9993 32C39.3631 32 45.3327 37.9696 45.3327 45.3333V48'
 						stroke='#2E3F5C'
 						stroke-width='2'
 						stroke-linecap='round'
 						stroke-linejoin='round'
 					/>
 					<path
-						d='M9.60815 32.4948C6.68508 35.4178 8.08564 39.7414 8.08564 39.7414C8.08564 39.7414 12.4093 41.142 15.3323 38.2189'
+						d='M2.66602 48.0002V45.3335C2.66602 40.9151 6.24775 37.3335 10.666 37.3335'
 						stroke='#2E3F5C'
 						stroke-width='2'
 						stroke-linecap='round'
 						stroke-linejoin='round'
 					/>
 					<path
-						d='M18.4233 19.3867C9.76082 18.0319 6.77678 26.7401 6.77678 26.7401L13.993 28.1102'
+						d='M61.334 48.0002V45.3335C61.334 40.9151 57.7524 37.3335 53.334 37.3335'
 						stroke='#2E3F5C'
 						stroke-width='2'
 						stroke-linecap='round'
 						stroke-linejoin='round'
 					/>
 					<path
-						d='M29.0577 30.021C30.4125 38.6835 21.7043 41.6675 21.7043 41.6675L20.3342 34.4513'
+						d='M32 32C36.4184 32 40 28.4184 40 24C40 19.5817 36.4184 16 32 16C27.5816 16 24 19.5817 24 24C24 28.4184 27.5816 32 32 32Z'
 						stroke='#2E3F5C'
 						stroke-width='2'
 						stroke-linecap='round'
 						stroke-linejoin='round'
 					/>
 					<path
-						d='M25.6241 22.203C24.0434 20.6223 24.0707 18.0323 25.6851 16.4179C27.2995 14.8035 29.8895 14.7762 31.4702 16.3569C33.051 17.9376 33.0236 20.5277 31.4093 22.1421C29.7949 23.7565 27.2048 23.7838 25.6241 22.203Z'
+						d='M10.6673 37.3332C13.6128 37.3332 16.0007 34.9454 16.0007 31.9998C16.0007 29.0542 13.6128 26.6665 10.6673 26.6665C7.7218 26.6665 5.33398 29.0542 5.33398 31.9998C5.33398 34.9454 7.7218 37.3332 10.6673 37.3332Z'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M53.3333 37.3332C56.2789 37.3332 58.6667 34.9454 58.6667 31.9998C58.6667 29.0542 56.2789 26.6665 53.3333 26.6665C50.3877 26.6665 48 29.0542 48 31.9998C48 34.9454 50.3877 37.3332 53.3333 37.3332Z'
 						stroke='#2E3F5C'
 						stroke-width='2'
 						stroke-linecap='round'
@@ -482,51 +574,51 @@ export function Benefits() {
 					/>
 				</svg>
 			),
-		},
-		{
-			id: 7,
-			title: 'Build Long-Term Partnerships',
-			subtitle:
-				'Enhance broker and client relationships with consistent results.',
-			icon: <img src={rocket} alt='Rocket icon' />,
 			iconMob: (
 				<svg
 					xmlns='http://www.w3.org/2000/svg'
-					width='35'
-					height='35'
-					viewBox='0 0 48 48'
+					width='24'
+					height='24'
+					viewBox='0 0 64 64'
 					fill='none'
 				>
 					<path
-						d='M32.3076 27.1435L19.717 33.8342L13.9928 28.11L20.6836 15.5194C22.5915 11.9292 26.1214 9.46774 30.1272 8.93426L38.6783 7.7955C39.4714 7.68984 40.1371 8.35557 40.0315 9.1487L38.8927 17.6997C38.3592 21.7055 35.8978 25.2354 32.3076 27.1435Z'
+						d='M18.666 48V45.3333C18.666 37.9696 24.6356 32 31.9993 32C39.3631 32 45.3327 37.9696 45.3327 45.3333V48'
 						stroke='#2E3F5C'
 						stroke-width='2'
 						stroke-linecap='round'
 						stroke-linejoin='round'
 					/>
 					<path
-						d='M9.60815 32.4948C6.68508 35.4178 8.08564 39.7414 8.08564 39.7414C8.08564 39.7414 12.4093 41.142 15.3323 38.2189'
+						d='M2.66602 48.0002V45.3335C2.66602 40.9151 6.24775 37.3335 10.666 37.3335'
 						stroke='#2E3F5C'
 						stroke-width='2'
 						stroke-linecap='round'
 						stroke-linejoin='round'
 					/>
 					<path
-						d='M18.4233 19.3867C9.76082 18.0319 6.77678 26.7401 6.77678 26.7401L13.993 28.1102'
+						d='M61.334 48.0002V45.3335C61.334 40.9151 57.7524 37.3335 53.334 37.3335'
 						stroke='#2E3F5C'
 						stroke-width='2'
 						stroke-linecap='round'
 						stroke-linejoin='round'
 					/>
 					<path
-						d='M29.0577 30.021C30.4125 38.6835 21.7043 41.6675 21.7043 41.6675L20.3342 34.4513'
+						d='M32 32C36.4184 32 40 28.4184 40 24C40 19.5817 36.4184 16 32 16C27.5816 16 24 19.5817 24 24C24 28.4184 27.5816 32 32 32Z'
 						stroke='#2E3F5C'
 						stroke-width='2'
 						stroke-linecap='round'
 						stroke-linejoin='round'
 					/>
 					<path
-						d='M25.6241 22.203C24.0434 20.6223 24.0707 18.0323 25.6851 16.4179C27.2995 14.8035 29.8895 14.7762 31.4702 16.3569C33.051 17.9376 33.0236 20.5277 31.4093 22.1421C29.7949 23.7565 27.2048 23.7838 25.6241 22.203Z'
+						d='M10.6673 37.3332C13.6128 37.3332 16.0007 34.9454 16.0007 31.9998C16.0007 29.0542 13.6128 26.6665 10.6673 26.6665C7.7218 26.6665 5.33398 29.0542 5.33398 31.9998C5.33398 34.9454 7.7218 37.3332 10.6673 37.3332Z'
+						stroke='#2E3F5C'
+						stroke-width='2'
+						stroke-linecap='round'
+						stroke-linejoin='round'
+					/>
+					<path
+						d='M53.3333 37.3332C56.2789 37.3332 58.6667 34.9454 58.6667 31.9998C58.6667 29.0542 56.2789 26.6665 53.3333 26.6665C50.3877 26.6665 48 29.0542 48 31.9998C48 34.9454 50.3877 37.3332 53.3333 37.3332Z'
 						stroke='#2E3F5C'
 						stroke-width='2'
 						stroke-linecap='round'
@@ -536,33 +628,30 @@ export function Benefits() {
 			),
 		},
 	]
-	// Функція перемикання слайдів
 	const scrollBenefit = direction => {
 		setActiveBenefit(prev =>
 			direction === 'up'
-				? prev === benefits.length
-					? 1
-					: prev + 1
-				: prev === 1
-				? benefits.length
-				: prev - 1
+				? (prev + 1) % benefits.length
+				: (prev - 1 + benefits.length) % benefits.length
 		)
 	}
 
 	useEffect(() => {
-		const interval = setInterval(() => scrollBenefit('up'), 2000)
+		const interval = setInterval(() => scrollBenefit('up'), 3000)
 		return () => clearInterval(interval)
 	}, [])
 
 	const getClassName = index => {
 		const total = benefits.length
-		const isActive = index === activeBenefit - 1
-		const isPrev = index === (activeBenefit - 2 + total) % total
-		const isNext = index === activeBenefit % total
+		const isActive = index === activeBenefit
+		const isPrev = index === (activeBenefit - 1 + total) % total
+		const isNext = index === (activeBenefit + 1) % total
+		const isLast = index === (activeBenefit + 2) % total
 
-		if (isActive) return 'benefit visible'
-		if (isPrev) return 'benefit above'
-		if (isNext) return 'benefit below'
+		if (isActive) return 'benefit active'
+		if (isPrev) return 'benefit previous'
+		if (isNext) return 'benefit next'
+		if (isLast) return 'benefit last'
 		return 'benefit hidden'
 	}
 
@@ -573,10 +662,6 @@ export function Benefits() {
 					Why Choose <a className='benefits-title2'>Findevor?</a>
 				</div>
 				<div className='benefits-main'>
-					<div className='benefits-circle'>
-						<img src={benefitsCircle} className='benefits-img' alt='Circle' />
-					</div>
-
 					<div className='benefits-slider'>
 						{benefits.map((benefit, index) => (
 							<div key={benefit.id} className={getClassName(index)}>

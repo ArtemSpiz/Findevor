@@ -80,8 +80,11 @@ export function CompMain() {
 									<button
 										className='main-btn'
 										onClick={() =>
-											(window.location.href =
-												'https://www.findevor.ai/early-access')
+											window.open(
+												'https://www.findevor.ai/early-access',
+												'_blank',
+												'noopener,noreferrer'
+											)
 										}
 									>
 										Schedule a Demo

@@ -675,6 +675,9 @@
 }
 
 @media (max-width: 1300px) {
+	.firstScreen-text {
+		width: 450px;
+	}
 	.screens-container {
 		flex-direction: column-reverse;
 		height: 100%;
@@ -719,7 +722,7 @@
 	}
 
 	.screenLeftText {
-		transform: translate(50%, -65%);
+		transform: translate(50%, -50%);
 		right: 50%;
 		gap: 8px;
 	}
@@ -895,9 +898,24 @@
 		line-height: 140%; /* 16.8px */
 		gap: 8px;
 	}
+
+	.screen-left {
+		bottom: 0;
+	}
 }
 
 @media (max-width: 700px) {
+	.screen-left {
+		bottom: -10%;
+	}
+
+	.screenLeftText {
+		transform: translate(50%, -50%);
+	}
+
+	.firstScreen-text {
+		width: 350px;
+	}
 	.allScreens-wrapper {
 		padding-top: 64px;
 	}
@@ -1163,7 +1181,7 @@
 	}
 
 	.firstScreen-text {
-		width: 300px;
+		width: 320px;
 	}
 
 	.screen-left {
@@ -1171,6 +1189,6 @@
 	}
 
 	.screenLeftText {
-		transform: translate(50%, -52%);
+		transform: translate(50%, -45%);
 	}
 }

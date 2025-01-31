@@ -108,7 +108,7 @@ export function Quote() {
 										</div>
 										<div className='wrapper-bottom-right'>
 											<div className='wrapper-bottom-name'>{quote.author}</div>
-											<div className='wrapper-bottom-position'>
+											<div className='wrapper-bottom-position-home'>
 												{quote.position}
 											</div>
 										</div>

@@ -38,7 +38,8 @@
 }
 
 .securMain-top {
-	padding-top: 64px;
+	justify-content: center;
+	height: 100%;
 	align-items: center;
 	gap: 64px;
 	display: flex;
@@ -299,6 +300,9 @@
 }
 
 @media (max-width: 1200px) {
+	.securMain-top {
+		padding-top: 60px;
+	}
 	.compMain-title2 {
 		width: 550px;
 	}
@@ -363,21 +367,6 @@
 	}
 }
 
-@media (max-width: 1100px) {
-	.main-logo {
-		justify-content: center;
-		width: 96px;
-	}
-
-	.logos {
-		gap: 32px;
-	}
-
-	.logo-track {
-		gap: 32px;
-	}
-}
-
 @media (max-width: 1000px) {
 	.star-animation {
 		width: 200px;
@@ -405,6 +394,9 @@
 }
 
 @media (max-width: 600px) {
+	.securMain-top {
+		padding-top: 80px;
+	}
 	.secur-main-title {
 		font-size: 35px;
 	}

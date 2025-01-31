@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom'
 export function Footer() {
 	return (
 		<>
-			<div className='footer'>
+			<div className='footerPrivacy'>
 				<div className='footer-container'>
 					<div className='footer-top'>
 						<img

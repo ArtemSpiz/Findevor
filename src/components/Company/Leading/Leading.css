@@ -67,8 +67,10 @@
 .leadingCardImage {
 	width: 156px;
 	height: 156px;
-	border-radius: 100px;
-	border: 1px solid #78e7fe;
+}
+
+.leadingCardImage-bottom {
+	cursor: pointer;
 }
 
 .leadingCardImg {

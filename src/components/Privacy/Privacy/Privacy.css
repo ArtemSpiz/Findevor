@@ -1,0 +1,96 @@
+.privacy {
+	height: 100%;
+}
+
+.privacy-container {
+	display: flex;
+	padding: 20px 200px;
+	flex-direction: column;
+	align-items: center;
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 20px;
+	align-self: stretch;
+}
+
+.privacy-title2 {
+	color: #afadbb;
+
+	/* h1 */
+	font-family: 'Open Sans';
+	font-size: 64px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%; /* 76.8px */
+}
+
+.privacy-title {
+	color: #afadbb;
+
+	/* text L */
+	font-family: 'Open Sans';
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%; /* 38.4px */
+}
+
+.privacy-text {
+	color: #afadbb;
+
+	/* text XS */
+	font-family: 'Open Sans';
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 150%; /* 21px */
+}
+
+.privacy-subtitle2 {
+	color: #afadbb;
+
+	/* text S */
+	font-family: 'Open Sans';
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 150%; /* 24px */
+}
+
+.privacy-subtitle {
+	color: #afadbb;
+
+	/* text M */
+	font-family: 'Open Sans';
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 140%; /* 33.6px */
+}
+
+.privacy-texts-top {
+	display: flex;
+	gap: 12px;
+	flex-direction: column;
+}
+
+.privacy-top {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	align-self: stretch;
+}
+
+.privacy-texts {
+	display: flex;
+	gap: 20px;
+	flex-direction: column;
+}
+
+.privacy-top ul {
+	margin: 0;
+	padding-inline-start: 20px;
+}

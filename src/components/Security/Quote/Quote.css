@@ -417,6 +417,10 @@
 		gap: 24px;
 	}
 
+	.wrapper-bottom-name svg {
+		display: none;
+	}
+
 	.securQuote {
 		width: 260px;
 		justify-content: center;
@@ -431,7 +435,7 @@
 	.wrapper-bottom-position,
 	.wrapper-bottom-name {
 		font-size: 12px;
-		width: 166px;
+		width: 165px;
 	}
 
 	.wrapper-bottom-right {
@@ -441,6 +445,7 @@
 	.securQuote-wrapper-bottom {
 		gap: 8px;
 		align-items: start;
+		flex-direction: column;
 	}
 
 	.securQuotePicture {

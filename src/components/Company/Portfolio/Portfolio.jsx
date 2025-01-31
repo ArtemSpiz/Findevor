@@ -46,8 +46,11 @@ export function Portfolio() {
 									<button
 										className='portfolio-btn'
 										onClick={() =>
-											(window.location.href =
-												'https://www.findevor.ai/early-access')
+											window.open(
+												'https://www.findevor.ai/early-access',
+												'_blank',
+												'noopener,noreferrer'
+											)
 										}
 									>
 										Schedule a Demo

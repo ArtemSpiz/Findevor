@@ -6,10 +6,9 @@
 .platform-container {
 	display: flex;
 	padding: 0px 88px;
+	height: 100vh;
 	flex-direction: column;
-	align-items: flex-start;
-	gap: 80px;
-	align-self: stretch;
+
 	background-size: cover;
 	background-image: url('../../../assets/light.png');
 	background-repeat: no-repeat;
@@ -19,6 +18,8 @@
 .platform-top {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	height: 100%;
 }
 
 .platform-texts {

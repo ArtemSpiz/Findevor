@@ -375,8 +375,11 @@ export function Main() {
 									<button
 										className='main-btn'
 										onClick={() =>
-											(window.location.href =
-												'https://www.findevor.ai/early-access')
+											window.open(
+												'https://www.findevor.ai/early-access',
+												'_blank',
+												'noopener,noreferrer'
+											)
 										}
 									>
 										Schedule a Demo
@@ -476,45 +479,125 @@ export function Main() {
 								<div className='main-logos'>
 									<div className='logo-track'>
 										<div className='logos'>
-											<img className='main-logo' src={logo1} alt={logo1} />
-											<img className='main-logo' src={logo2} alt={logo1} />
-											<img className='main-logo' src={logo3} alt={logo1} />
-											<img className='main-logo' src={logo4} alt={logo1} />
-											<img className='main-logo' src={logo5} alt={logo1} />
-											<img className='main-logo' src={logo6} alt={logo1} />
-											<img className='main-logo' src={logo7} alt={logo1} />
-											<img className='main-logo' src={logo8} alt={logo1} />
-											<img className='main-logo' src={logo9} alt={logo1} />
-											<img className='main-logo' src={logo10} alt={logo1} />
-											<img className='main-logo' src={logo11} alt={logo1} />
-											<img className='main-logo' src={logo12} alt={logo1} />
-											<img className='main-logo' src={logo13} alt={logo1} />
-											<img className='main-logo' src={logo14} alt={logo1} />
-											<img className='main-logo' src={logo15} alt={logo1} />
-											<img className='main-logo' src={logo16} alt={logo1} />
-											<img className='main-logo' src={logo17} alt={logo1} />
-											<img className='main-logo' src={logo18} alt={logo1} />
+											<div className='main-logo'>
+												<img
+													className='main-logo-image'
+													src={logo1}
+													alt={logo1}
+												/>
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo2} alt={logo1} />
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo3} alt={logo1} />
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo4} alt={logo1} />
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo5} alt={logo1} />
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo6} alt={logo1} />
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo7} alt={logo1} />
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo8} alt={logo1} />
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo9} alt={logo1} />
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo10} alt={logo1} />
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo11} alt={logo1} />
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo12} alt={logo1} />
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo13} alt={logo1} />
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo14} alt={logo1} />
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo15} alt={logo1} />
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo16} alt={logo1} />
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo17} alt={logo1} />
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo18} alt={logo1} />
+											</div>
 										</div>
 
 										<div className='logos'>
-											<img className='main-logo' src={logo1} alt={logo1} />
-											<img className='main-logo' src={logo2} alt={logo1} />
-											<img className='main-logo' src={logo3} alt={logo1} />
-											<img className='main-logo' src={logo4} alt={logo1} />
-											<img className='main-logo' src={logo5} alt={logo1} />
-											<img className='main-logo' src={logo6} alt={logo1} />
-											<img className='main-logo' src={logo7} alt={logo1} />
-											<img className='main-logo' src={logo8} alt={logo1} />
-											<img className='main-logo' src={logo9} alt={logo1} />
-											<img className='main-logo' src={logo10} alt={logo1} />
-											<img className='main-logo' src={logo11} alt={logo1} />
-											<img className='main-logo' src={logo12} alt={logo1} />
-											<img className='main-logo' src={logo13} alt={logo1} />
-											<img className='main-logo' src={logo14} alt={logo1} />
-											<img className='main-logo' src={logo15} alt={logo1} />
-											<img className='main-logo' src={logo16} alt={logo1} />
-											<img className='main-logo' src={logo17} alt={logo1} />
-											<img className='main-logo' src={logo18} alt={logo1} />
+											<div className='main-logo'>
+												<img
+													className='main-logo-image'
+													src={logo1}
+													alt={logo1}
+												/>
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo2} alt={logo1} />
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo3} alt={logo1} />
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo4} alt={logo1} />
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo5} alt={logo1} />
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo6} alt={logo1} />
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo7} alt={logo1} />
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo8} alt={logo1} />
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo9} alt={logo1} />
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo10} alt={logo1} />
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo11} alt={logo1} />
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo12} alt={logo1} />
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo13} alt={logo1} />
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo14} alt={logo1} />
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo15} alt={logo1} />
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo16} alt={logo1} />
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo17} alt={logo1} />
+											</div>
+											<div className='main-logo'>
+												<img className='main-logo' src={logo18} alt={logo1} />
+											</div>
 										</div>
 									</div>
 								</div>

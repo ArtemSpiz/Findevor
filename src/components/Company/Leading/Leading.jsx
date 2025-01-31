@@ -33,6 +33,13 @@ export function Leading() {
 
 								<div className='leadingCardImage-bottom'>
 									<svg
+										onClick={() =>
+											window.open(
+												'https://www.linkedin.com/in/lxvaldes/',
+												'_blank',
+												'noopener,noreferrer'
+											)
+										}
 										xmlns='http://www.w3.org/2000/svg'
 										width='40'
 										height='40'
@@ -83,6 +90,13 @@ export function Leading() {
 
 								<div className='leadingCardImage-bottom'>
 									<svg
+										onClick={() =>
+											window.open(
+												'https://www.linkedin.com/in/virgiltataru/',
+												'_blank',
+												'noopener,noreferrer'
+											)
+										}
 										xmlns='http://www.w3.org/2000/svg'
 										width='40'
 										height='40'

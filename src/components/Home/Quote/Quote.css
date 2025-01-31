@@ -145,7 +145,7 @@
 	line-height: 150%; /* 24px */
 }
 
-.wrapper-bottom-position {
+.wrapper-bottom-position-home {
 	color: var(--oxford-blue-300, #abaecd);
 	width: 294px;
 	/* text S */
@@ -318,7 +318,7 @@
 		font-size: 15px;
 	}
 
-	.wrapper-bottom-position {
+	.wrapper-bottom-position-home {
 		font-size: 14px;
 	}
 
@@ -430,7 +430,7 @@
 		height: 24px;
 	}
 
-	.wrapper-bottom-position,
+	.wrapper-bottom-position-home,
 	.wrapper-bottom-name {
 		font-size: 12px;
 		width: 175px;

@@ -10,6 +10,10 @@
 	height: auto;
 }
 
+.securQuotePicture svg {
+	display: none;
+}
+
 .quote-container {
 	overflow: hidden;
 	background: radial-gradient(
@@ -140,6 +144,10 @@
 }
 
 .wrapper-bottom-name {
+	align-items: center;
+	display: flex;
+	gap: 8px;
+
 	color: var(--white-800, #ebeaef);
 
 	/* text S bold */
@@ -148,6 +156,10 @@
 	font-style: normal;
 	font-weight: 600;
 	line-height: 150%; /* 24px */
+}
+
+.wrapper-bottom-name svg {
+	cursor: pointer;
 }
 
 .wrapper-bottom-position {
@@ -469,6 +481,12 @@
 		gap: 24px;
 	}
 
+	.securQuotePicture {
+		padding: 0px 0px;
+		position: relative;
+		width: 100%;
+	}
+
 	.securQuote {
 		width: 260px;
 		justify-content: center;
@@ -488,20 +506,32 @@
 	.wrapper-bottom-position,
 	.wrapper-bottom-name {
 		font-size: 12px;
-		width: 180px;
+		width: 165px;
 	}
 
 	.wrapper-bottom-right {
 		gap: 0px;
 	}
 
+	.wrapper-bottom-name svg {
+		display: none;
+	}
+
+	.securQuotePicture svg {
+		position: absolute;
+		right: 0;
+		display: flex;
+		width: 16px;
+		bottom: 0;
+		cursor: pointer;
+		height: 16px;
+	}
+
 	.quote-wrapper-bottom {
 		gap: 8px;
 		align-items: center;
-	}
-
-	.securQuotePicture {
-		padding: 8px 0px;
+		flex-direction: column;
+		align-items: self-start;
 	}
 
 	.securQuotePictureImg {
