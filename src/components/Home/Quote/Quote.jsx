@@ -34,22 +34,16 @@ export function Quote() {
 			link: 'https://www.linkedin.com/in/rob-brewer-93a12015/',
 		},
 	]
-
 	const containerRef = useRef(null)
 	const [index, setIndex] = useState(0)
 	const [direction, setDirection] = useState(1)
 
+	// Використання useLayoutEffect для встановлення початкового положення
 	useLayoutEffect(() => {
 		if (containerRef.current) {
-			containerRef.current.scrollTo({
-				left: 0,
-				behavior: 'auto',
-			})
+			containerRef.current.style.scrollBehavior = 'auto' // Відключаємо анімацію на старті
+			containerRef.current.scrollTo({ left: 0 })
 		}
-	}, [])
-
-	useEffect(() => {
-		setIndex(0) // Гарантовано оновлюємо стан після першого рендера
 	}, [])
 
 	useEffect(() => {
@@ -59,7 +53,7 @@ export function Quote() {
 
 				if (newIndex >= quotes.length - 1 || newIndex <= 0) {
 					setDirection(-direction)
-					newIndex = Math.max(0, Math.min(quotes.length - 1, newIndex)) // Запобігаємо виходу за межі
+					newIndex = prevIndex + -direction // Одразу змінюємо напрямок
 				}
 
 				return newIndex
@@ -72,9 +66,9 @@ export function Quote() {
 	useEffect(() => {
 		if (containerRef.current) {
 			const scrollWidth = containerRef.current.scrollWidth / quotes.length
+			containerRef.current.style.scrollBehavior = 'smooth' // У Safari буває потрібно задати стилем
 			containerRef.current.scrollTo({
 				left: index * scrollWidth,
-				behavior: 'smooth',
 			})
 		}
 	}, [index])

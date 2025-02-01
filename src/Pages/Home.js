@@ -9,9 +9,9 @@ import { Footer } from '../components/Home/Footer/Footer'
 function Home() {
 	return (
 		<div>
-			{/* <Main></Main>
+			<Main></Main>
 			<Platform></Platform>
-			<Screens></Screens> */}
+			<Screens></Screens>
 			<Benefits></Benefits>
 			<Quote></Quote>
 			<Portfolio></Portfolio>
