@@ -34,34 +34,49 @@ export function Quote() {
 			link: 'https://www.linkedin.com/in/rob-brewer-93a12015/',
 		},
 	]
+
 	const containerRef = useRef(null)
+	const indexRef = useRef(0) // зберігає поточний індекс без ререндеру
 	const [index, setIndex] = useState(0)
-	const [direction, setDirection] = useState(1)
 
+	// Автоматичний скрол
 	useEffect(() => {
-		if (quotes.length > 1) {
-			const interval = setInterval(() => {
-				setIndex(prevIndex => {
-					let newIndex = prevIndex + direction
-					if (newIndex >= quotes.length - 1 || newIndex <= 0) {
-						setDirection(-direction)
-					}
-					return newIndex
-				})
-			}, 5000)
-			return () => clearInterval(interval)
-		}
-	}, [direction, quotes.length])
+		const interval = setInterval(() => {
+			let newIndex = indexRef.current + 1
+			if (newIndex >= quotes.length) {
+				newIndex = 0
+			}
+			indexRef.current = newIndex
+			setIndex(newIndex)
+			scrollToIndex(newIndex)
+		}, 5000)
 
-	useEffect(() => {
-		if (quotes.length > 1 && containerRef.current) {
+		return () => clearInterval(interval)
+	}, [quotes.length])
+
+	// Функція для прокрутки до конкретного індексу
+	const scrollToIndex = newIndex => {
+		if (containerRef.current) {
 			const scrollWidth = containerRef.current.scrollWidth / quotes.length
 			containerRef.current.scrollTo({
-				left: index * scrollWidth,
+				left: newIndex * scrollWidth,
 				behavior: 'smooth',
 			})
 		}
-	}, [index, quotes.length])
+	}
+
+	// Відстеження ручного скролу
+	const handleScroll = () => {
+		if (containerRef.current) {
+			const scrollLeft = containerRef.current.scrollLeft
+			const scrollWidth = containerRef.current.scrollWidth / quotes.length
+			const newIndex = Math.round(scrollLeft / scrollWidth)
+			if (newIndex !== indexRef.current) {
+				indexRef.current = newIndex
+				setIndex(newIndex)
+			}
+		}
+	}
 
 	return (
 		<div className='quotes-scroll'>
@@ -70,10 +85,12 @@ export function Quote() {
 					<div
 						className='securQuote-wrapcont'
 						ref={containerRef}
+						onScroll={handleScroll}
 						style={{
 							display: 'flex',
 							overflowX: 'auto',
 							scrollBehavior: 'smooth',
+							scrollSnapType: 'x mandatory',
 						}}
 					>
 						<div className='securQuote-star-top'>
@@ -89,6 +106,7 @@ export function Quote() {
 								className='securQuote'
 								style={{
 									minWidth: '100%',
+									opacity: i === index ? 1 : 0,
 									transition: 'opacity 0.5s ease-in-out',
 								}}
 							>
