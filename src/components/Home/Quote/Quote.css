@@ -32,7 +32,7 @@
 	display: flex;
 	align-items: center;
 	width: 100%;
-	overflow-x: hidden;
+	overflow-x: scroll;
 	position: relative;
 }
 

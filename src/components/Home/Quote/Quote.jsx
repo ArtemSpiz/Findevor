@@ -37,35 +37,31 @@ export function Quote() {
 	const containerRef = useRef(null)
 	const [index, setIndex] = useState(0)
 	const [direction, setDirection] = useState(1)
-	const [isInitialized, setIsInitialized] = useState(false)
-
-	// Initialize component
-	useEffect(() => {
-		setIsInitialized(true)
-	}, [])
 
 	useEffect(() => {
-		const interval = setInterval(() => {
-			setIndex(prevIndex => {
-				let newIndex = prevIndex + direction
-				if (newIndex >= quotes.length - 1 || newIndex <= 0) {
-					setDirection(-direction)
-				}
-				return newIndex
-			})
-		}, 15000)
-		return () => clearInterval(interval)
+		if (quotes.length > 1) {
+			const interval = setInterval(() => {
+				setIndex(prevIndex => {
+					let newIndex = prevIndex + direction
+					if (newIndex >= quotes.length - 1 || newIndex <= 0) {
+						setDirection(-direction)
+					}
+					return newIndex
+				})
+			}, 5000)
+			return () => clearInterval(interval)
+		}
 	}, [direction, quotes.length])
 
 	useEffect(() => {
-		if (containerRef.current && isInitialized) {
+		if (quotes.length > 1 && containerRef.current) {
 			const scrollWidth = containerRef.current.scrollWidth / quotes.length
 			containerRef.current.scrollTo({
 				left: index * scrollWidth,
 				behavior: 'smooth',
 			})
 		}
-	}, [index, quotes.length, isInitialized])
+	}, [index, quotes.length])
 
 	return (
 		<div className='quotes-scroll'>
@@ -76,7 +72,7 @@ export function Quote() {
 						ref={containerRef}
 						style={{
 							display: 'flex',
-							overflow: 'hidden',
+							overflowX: 'auto',
 							scrollBehavior: 'smooth',
 						}}
 					>
@@ -93,7 +89,6 @@ export function Quote() {
 								className='securQuote'
 								style={{
 									minWidth: '100%',
-									opacity: i === index ? 1 : 0,
 									transition: 'opacity 0.5s ease-in-out',
 								}}
 							>
