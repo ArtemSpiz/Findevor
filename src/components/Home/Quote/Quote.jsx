@@ -4,7 +4,7 @@ import JenKyung from '../../../assets/JenKyung.png'
 import Vijay from '../../../assets/Vijay.png'
 import RobBrewer from '../../../assets/RobBrewer.png'
 import leftQuote from '../../../assets/leftQuote.png'
-import { useState, useEffect, useLayoutEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 export function Quote() {
 	const quotes = [
@@ -37,41 +37,35 @@ export function Quote() {
 	const containerRef = useRef(null)
 	const [index, setIndex] = useState(0)
 	const [direction, setDirection] = useState(1)
+	const [isInitialized, setIsInitialized] = useState(false)
 
-	// Використання useLayoutEffect для встановлення початкового положення
-	useLayoutEffect(() => {
-		if (containerRef.current) {
-			containerRef.current.style.scrollBehavior = 'auto' // Відключаємо анімацію на старті
-			containerRef.current.scrollTo({ left: 0 })
-		}
+	// Initialize component
+	useEffect(() => {
+		setIsInitialized(true)
 	}, [])
 
 	useEffect(() => {
 		const interval = setInterval(() => {
 			setIndex(prevIndex => {
 				let newIndex = prevIndex + direction
-
 				if (newIndex >= quotes.length - 1 || newIndex <= 0) {
 					setDirection(-direction)
-					newIndex = prevIndex + -direction // Одразу змінюємо напрямок
 				}
-
 				return newIndex
 			})
-		}, 5000)
-
+		}, 15000)
 		return () => clearInterval(interval)
-	}, [direction])
+	}, [direction, quotes.length])
 
 	useEffect(() => {
-		if (containerRef.current) {
+		if (containerRef.current && isInitialized) {
 			const scrollWidth = containerRef.current.scrollWidth / quotes.length
-			containerRef.current.style.scrollBehavior = 'smooth' // У Safari буває потрібно задати стилем
 			containerRef.current.scrollTo({
 				left: index * scrollWidth,
+				behavior: 'smooth',
 			})
 		}
-	}, [index])
+	}, [index, quotes.length, isInitialized])
 
 	return (
 		<div className='quotes-scroll'>
