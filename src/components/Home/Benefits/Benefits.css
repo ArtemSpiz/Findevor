@@ -111,7 +111,7 @@
 	display: flex;
 	flex-direction: column;
 	position: relative;
-	height: 485px;
+	height: 520px;
 	overflow: hidden;
 }
 
@@ -137,19 +137,19 @@
 }
 
 .benefit.previous {
-	opacity: 0.5;
+	opacity: 0.4;
 	transform: scale(0.9) translateY(0%);
 	z-index: 2;
 }
 
 .benefit.next {
-	opacity: 0.7;
+	opacity: 0.5;
 	transform: scale(0.9) translateY(255%);
 	z-index: 2;
 }
 
 .benefit.last {
-	opacity: 0.3;
+	opacity: 0.2;
 	transform: scale(0.9) translateY(365%);
 	z-index: 1;
 }
@@ -203,7 +203,7 @@
 	}
 
 	.benefits-slider {
-		height: 500px;
+		height: 530px;
 	}
 
 	.benefit.active {
@@ -215,13 +215,11 @@
 		z-index: 3;
 	}
 	.benefit.next {
-		opacity: 0.7;
 		transform: scale(0.9) translateY(240%);
 		z-index: 2;
 	}
 
 	.benefit.last {
-		opacity: 0.3;
 		transform: scale(0.9) translateY(350%);
 		z-index: 1;
 	}
@@ -290,13 +288,11 @@
 		z-index: 3;
 	}
 	.benefit.next {
-		opacity: 0.7;
 		transform: scale(0.9) translateY(240%);
 		z-index: 2;
 	}
 
 	.benefit.last {
-		opacity: 0.3;
 		transform: scale(0.9) translateY(350%);
 		z-index: 1;
 	}
@@ -318,7 +314,7 @@
 	}
 
 	.benefits-slider {
-		height: 430px;
+		height: 460px;
 	}
 
 	.benefit-subtitle {
@@ -348,7 +344,7 @@
 		font-size: 22px;
 	}
 	.benefits-slider {
-		height: 370px;
+		height: 405px;
 	}
 	.benefit {
 		width: 280px;
@@ -373,18 +369,18 @@
 
 	.benefit.previous {
 		opacity: 0.5;
+
 		transform: scale(0.9) translateX(12%) translateY(0%);
 		z-index: 2;
 	}
 
 	.benefit.next {
-		opacity: 0.7;
+		opacity: 0.5;
 		transform: scale(0.9) translateX(12%) translateY(250%);
 		z-index: 2;
 	}
 
 	.benefit.last {
-		opacity: 0.3;
 		transform: scale(0.9) translateX(12%) translateY(360%);
 		z-index: 1;
 	}

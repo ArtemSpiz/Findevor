@@ -1,10 +1,10 @@
-.privacy {
+.terms {
 	height: 100%;
 }
 
-.privacy-container {
+.terms-container {
 	display: flex;
-	padding: 60px 200px;
+	padding: 80px 200px;
 	flex-direction: column;
 	align-items: center;
 	align-self: stretch;
@@ -15,18 +15,18 @@
 	align-self: stretch;
 }
 
-.privacy-title2 {
+.terms-title2 {
 	color: #afadbb;
 
-	/* h1 */
+	/* text L */
 	font-family: 'Open Sans';
-	font-size: 64px;
+	font-size: 40px;
 	font-style: normal;
 	font-weight: 400;
-	line-height: 120%; /* 76.8px */
+	line-height: 120%; /* 38.4px */
 }
 
-.privacy-title {
+.terms-title {
 	color: #afadbb;
 
 	/* text L */
@@ -37,7 +37,7 @@
 	line-height: 120%; /* 38.4px */
 }
 
-.privacy-text {
+.terms-text {
 	color: #afadbb;
 
 	/* text XS */
@@ -48,7 +48,7 @@
 	line-height: 150%; /* 21px */
 }
 
-.privacy-subtitle2 {
+.terms-subtitle2 {
 	color: #afadbb;
 
 	/* text S */
@@ -59,7 +59,7 @@
 	line-height: 150%; /* 24px */
 }
 
-.privacy-subtitle {
+.terms-subtitle {
 	color: #afadbb;
 
 	/* text M */
@@ -70,13 +70,13 @@
 	line-height: 140%; /* 33.6px */
 }
 
-.privacy-texts-top {
+.terms-texts-top {
 	display: flex;
 	gap: 12px;
 	flex-direction: column;
 }
 
-.privacy-top {
+.terms-top {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -84,19 +84,43 @@
 	align-self: stretch;
 }
 
-.privacy-texts {
+.terms-texts {
 	display: flex;
 	gap: 10px;
 	flex-direction: column;
 }
 
-.privacy-top ul {
+.terms-top ul {
 	margin: 0;
 	padding-inline-start: 20px;
 }
 
 @media (max-width: 1000px) {
-	.privacy-container {
-		padding: 0px 0px;
+	.terms-container {
+		padding: 40px 40px;
+	}
+}
+
+@media (max-width: 600px) {
+	.terms-container {
+		padding: 20px 20px;
+	}
+
+	.terms-title2 {
+		font-size: 25px;
+		width: 300px;
+	}
+
+	.terms-title {
+		font-size: 22px;
+		width: 300px;
+	}
+
+	.terms-subtitle2 {
+		font-size: 16px;
+	}
+
+	.terms-subtitle {
+		font-size: 20px;
 	}
 }

@@ -31,6 +31,7 @@ import thirdScreenFilMob from '../../../assets/thirdScreenFilMob.png'
 import thirdScreenFilMob2 from '../../../assets/thirdScreenFilMob2.png'
 
 import logoMobCLose from '../../../assets/false.png'
+import Avatar from '../../../assets/Avatar.png'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -243,6 +244,12 @@ export function Screens() {
 											autonomously to uncover missed opportunities to grow your
 											book of business within risk appetite.
 										</div>
+
+										<div className='firstScreen-text-mob'>
+											Your AI Agent for Strategic Analytics Management works
+											autonomously to uncover missed opportunities to grow your
+											book of business within risk appetite.
+										</div>
 									</div>
 
 									<div className='secondScreen-texts screenLeftText'>
@@ -256,8 +263,9 @@ export function Screens() {
 											adherence.
 										</div>
 										<div className='firstScreen-text-mob'>
-											Pre-Qualifier analyzes reports to find financial risks,
-											potential savings, and revenue prospects.
+											Pre-Qualifier triages submissions based on appetite to
+											enhance turnarounds, conversions, and underwriting
+											adherence.
 										</div>
 									</div>
 
@@ -267,14 +275,17 @@ export function Screens() {
 											<div className='firstScreen-title'>Underwriting </div>
 										</div>
 										<div className='firstScreen-text'>
-											Step-Up Underwriting runs simulations to reevaluate
-											previously rejected submissions using new underwriting
-											criteria.
+											Step-Up Underwriting provides tools for controlled
+											re-evaluation of rejected submissions and the gradual roll
+											out of new guidelines by geography, premium volume, and
+											more.
 										</div>
 
 										<div className='firstScreen-text-mob'>
-											Step-Up Underwriting runs simulations to calculate risk
-											scores and assess approval statuses.
+											Step-Up Underwriting provides tools for controlled
+											re-evaluation of rejected submissions and the gradual roll
+											out of new guidelines by geography, premium volume, and
+											more.
 										</div>
 									</div>
 								</div>
@@ -299,14 +310,14 @@ export function Screens() {
 											className={`logo-mob ${
 												isLeftCardOpen ? 'open' : 'closed'
 											}`}
-											onClick={
-												!isLeftCardOpen ? handleLeftCardClick : undefined
-											}
 										>
 											<img
 												alt='logoMobCLose'
 												src={logoMobCLose}
 												className='logo-mob-img'
+												onClick={
+													!isLeftCardOpen ? handleLeftCardClick : undefined
+												}
 											></img>
 										</div>
 										<div
@@ -637,6 +648,9 @@ export function Screens() {
 											alt='logoMobCLose'
 											src={logoMobCLose}
 											className='logo-mob-img'
+											onClick={
+												!isLeftCardOpen ? handleLeftCardClick : undefined
+											}
 										></img>
 									</div>
 									<div

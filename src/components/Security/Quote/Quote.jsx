@@ -94,7 +94,7 @@ export function Quote() {
 											<svg
 												onClick={() =>
 													window.open(
-														'https://www.linkedin.com/in/lxvaldes/',
+														'https://www.linkedin.com/in/sam-g-784526185/',
 														'_blank',
 														'noopener,noreferrer'
 													)
@@ -132,7 +132,7 @@ export function Quote() {
 												<svg
 													onClick={() =>
 														window.open(
-															'https://www.linkedin.com/in/lxvaldes/',
+															'https://www.linkedin.com/in/sam-g-784526185/',
 															'_blank',
 															'noopener,noreferrer'
 														)

@@ -61,10 +61,10 @@ export function Footer() {
 						</div>
 
 						<div className='footer-bottom-links'>
-							<NavLink className='footer-link-title' to='/privacy'>
+							<NavLink className='footer-link-title' to='/privacy_policy'>
 								Privacy Policy
 							</NavLink>
-							<NavLink className='footer-link-title' to='/terms'>
+							<NavLink className='footer-link-title' to='/terms_of_service'>
 								Terms of service
 							</NavLink>
 						</div>

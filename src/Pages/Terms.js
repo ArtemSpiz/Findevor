@@ -1,15 +1,15 @@
 import { Header } from '../components/Home/Header/Header'
-import { Privacy } from '../components/Privacy/Privacy/Privacy'
+import { Terms } from '../components/Terms/Terms/Terms'
 import { Footer } from '../components/Privacy/Footer/Footer'
 
-function PrivacyPolicy() {
+function TermsOfService() {
 	return (
 		<div>
 			<Header></Header>
-			<Privacy></Privacy>
+			<Terms></Terms>
 			<Footer></Footer>
 		</div>
 	)
 }
 
-export default PrivacyPolicy
+export default TermsOfService

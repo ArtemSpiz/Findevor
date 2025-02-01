@@ -2,6 +2,7 @@ import './Platform.css'
 import starsSub from '../../../assets/starsSub.png'
 import platStar from '../../../assets/platform-star.png'
 import platformCards from '../../../assets/platformCards.png'
+import platformCardsMob from '../../../assets/platformCardsMob.png'
 
 export function Platform() {
 	return (
@@ -31,6 +32,12 @@ export function Platform() {
 								src={platformCards}
 								className='platformCardsImg'
 								alt='platformCards'
+							></img>
+
+							<img
+								src={platformCardsMob}
+								className='platformCardsImgMob'
+								alt='platformCardsMob'
 							></img>
 						</div>
 					</div>
