@@ -5,7 +5,9 @@ export function Privacy() {
 		<>
 			<div className='privacy'>
 				<div className='privacy-container'>
-					<div className='privacy-title'>Privacy Policy for Findevor, Inc.</div>
+					<div className='privacy-title2'>
+						Privacy Policy for Findevor, Inc.
+					</div>
 					<div className='privacy-subtitle2'>
 						At Findevor, Inc., your privacy is important to us. This Privacy
 						Policy explains how we collect, use, and protect the personal

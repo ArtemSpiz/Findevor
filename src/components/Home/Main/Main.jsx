@@ -197,14 +197,14 @@ export function Main() {
 				.fromTo(
 					'.firstCard',
 					{
-						y: -250,
+						y: -170,
 						duration: 1,
 						x: '75%',
 					},
 					{
-						y: '-90%',
+						y: -230,
 						duration: 1,
-						x: '90%',
+						x: '80%',
 						width: 300,
 						rotate: '9deg',
 					},
@@ -213,14 +213,14 @@ export function Main() {
 				.fromTo(
 					'.secondCard',
 					{
-						y: -270,
+						y: -170,
 						duration: 1,
 						x: '70%',
 					},
 					{
 						width: 300,
 						x: '65%',
-						y: '-80%',
+						y: -230,
 						duration: 1,
 					},
 					'<'
@@ -264,14 +264,14 @@ export function Main() {
 				.fromTo(
 					'.firstCard',
 					{
-						y: -180,
+						y: -165,
 						duration: 1,
 						x: '75%',
 					},
 					{
-						y: -250,
+						y: -200,
 						duration: 1,
-						x: '90%',
+						x: '85%',
 						width: 300,
 						rotate: '9deg',
 					},
@@ -280,14 +280,14 @@ export function Main() {
 				.fromTo(
 					'.secondCard',
 					{
-						y: -180,
+						y: -165,
 						duration: 1,
 						x: '70%',
 					},
 					{
 						width: 300,
-						x: '65%',
-						y: -250,
+						x: '70%',
+						y: -195,
 						duration: 1,
 					},
 					'<'

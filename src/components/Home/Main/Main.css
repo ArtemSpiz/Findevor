@@ -400,6 +400,9 @@
 }
 
 @media (max-width: 1200px) {
+	.main-container {
+		background-size: auto;
+	}
 	.firstCardImg,
 	.secondCardImg {
 		width: 100%;

@@ -4,7 +4,7 @@
 
 .terms-container {
 	display: flex;
-	padding: 80px 200px;
+
 	flex-direction: column;
 	align-items: center;
 	align-self: stretch;
@@ -107,7 +107,7 @@
 	}
 
 	.terms-title2 {
-		font-size: 25px;
+		font-size: 30px;
 		width: 300px;
 	}
 
